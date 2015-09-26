@@ -1,0 +1,9 @@
+C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\DAL\bin\Debug\DAL.dll.config
+C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\DAL\bin\Debug\DAL.dll
+C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\DAL\bin\Debug\DAL.pdb
+C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\DAL\obj\Debug\DAL.dll
+C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\DAL\obj\Debug\DAL.pdb
