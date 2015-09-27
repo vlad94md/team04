@@ -22,5 +22,10 @@ namespace DAL
             twitterDB.SaveChanges();
             return true;
         }
+
+        public bool IsLoginPassCorrect(User user)
+        {
+            return twitterDB.Users.Any(x => x.Username == user.Username && x.Passwrd == user.Passwrd);
+        }
     }
 }

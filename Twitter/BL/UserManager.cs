@@ -24,5 +24,10 @@ namespace BL
         {
             crud.AddNewUser( userConverter.ConvertToDB(user) );
         }
+
+        public bool IsLoginPassCorrect(LogInUserModel currentUser)
+        {
+            return crud.IsLoginPassCorrect( userConverter.ConvertToDB(currentUser) );
+        }
     }
 }

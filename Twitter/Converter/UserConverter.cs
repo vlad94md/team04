@@ -21,5 +21,16 @@ namespace Converter
 
             return newUser;
         }
+
+        public User ConvertToDB(LogInUserModel user)
+        {
+            var currentUser = new User
+            {
+                Username = user.Username,
+                Passwrd = user.Passwrd
+            };
+
+            return currentUser;
+        }
     }
 }

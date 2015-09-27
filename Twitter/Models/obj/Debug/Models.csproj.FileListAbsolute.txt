@@ -4,6 +4,5 @@ C:\Users\Vlad\Documents\Visual Studio 2012\Projects\Twitter\Models\obj\Debug\Mod
 C:\Users\Vlad\Documents\Visual Studio 2012\Projects\Twitter\Models\obj\Debug\Models.pdb
 E:\IT\Endava\Twitter\GIT\team04\Twitter\Models\bin\Debug\Models.dll
 E:\IT\Endava\Twitter\GIT\team04\Twitter\Models\bin\Debug\Models.pdb
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 E:\IT\Endava\Twitter\GIT\team04\Twitter\Models\obj\Debug\Models.dll
 E:\IT\Endava\Twitter\GIT\team04\Twitter\Models\obj\Debug\Models.pdb
