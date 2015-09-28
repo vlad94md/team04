@@ -1,66 +1,37 @@
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\WebUI.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\WebUI.pdb
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\Models.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\Newtonsoft.Json.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.Helpers.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.Mvc.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.Razor.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.WebPages.Deployment.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.WebPages.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.WebPages.Razor.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\Models.pdb
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\Newtonsoft.Json.xml
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.Helpers.xml
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.Mvc.xml
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.Razor.xml
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.WebPages.xml
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.WebPages.Deployment.xml
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\System.Web.WebPages.Razor.xml
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\obj\Debug\WebUI.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\obj\Debug\WebUI.pdb
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\BL.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\DAL.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\Converter.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\EntityFramework.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\BL.pdb
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\DAL.pdb
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\Converter.pdb
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\EntityFramework.xml
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\EntityFramework.SqlServer.dll
-C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\WebUI\bin\EntityFramework.SqlServer.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\WebUI.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\WebUI.pdb
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\BL.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\EntityFramework.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\EntityFramework.SqlServer.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Microsoft.Web.Infrastructure.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Models.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Newtonsoft.Json.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.Helpers.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.Mvc.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.Razor.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.Deployment.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.Razor.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\DAL.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Converter.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\BL.pdb
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Models.pdb
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\EntityFramework.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\EntityFramework.SqlServer.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Newtonsoft.Json.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.Helpers.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.Mvc.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.Razor.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.Deployment.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.Razor.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\DAL.pdb
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Converter.pdb
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\obj\Debug\WebUI.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\obj\Debug\WebUI.pdb
+D:\GIT\team04\Twitter\WebUI\bin\WebUI.dll
+D:\GIT\team04\Twitter\WebUI\bin\WebUI.pdb
+D:\GIT\team04\Twitter\WebUI\bin\BL.dll
+D:\GIT\team04\Twitter\WebUI\bin\Microsoft.Web.Infrastructure.dll
+D:\GIT\team04\Twitter\WebUI\bin\Models.dll
+D:\GIT\team04\Twitter\WebUI\bin\System.Net.Http.Formatting.dll
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.Helpers.dll
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.Http.dll
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.Http.WebHost.dll
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.Mvc.dll
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.Razor.dll
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.Deployment.dll
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.dll
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.Razor.dll
+D:\GIT\team04\Twitter\WebUI\bin\DAL.dll
+D:\GIT\team04\Twitter\WebUI\bin\Converter.dll
+D:\GIT\team04\Twitter\WebUI\bin\EntityFramework.dll
+D:\GIT\team04\Twitter\WebUI\bin\BL.pdb
+D:\GIT\team04\Twitter\WebUI\bin\Models.pdb
+D:\GIT\team04\Twitter\WebUI\bin\Microsoft.Web.Infrastructure.xml
+D:\GIT\team04\Twitter\WebUI\bin\System.Net.Http.Formatting.xml
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.Helpers.xml
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.Http.xml
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.Http.WebHost.xml
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.Mvc.xml
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.Razor.xml
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.xml
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.Deployment.xml
+D:\GIT\team04\Twitter\WebUI\bin\System.Web.WebPages.Razor.xml
+D:\GIT\team04\Twitter\WebUI\bin\DAL.pdb
+D:\GIT\team04\Twitter\WebUI\bin\Converter.pdb
+D:\GIT\team04\Twitter\WebUI\bin\EntityFramework.xml
+D:\GIT\team04\Twitter\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
+D:\GIT\team04\Twitter\WebUI\obj\Debug\WebUI.dll
+D:\GIT\team04\Twitter\WebUI\obj\Debug\WebUI.pdb
+D:\GIT\team04\Twitter\WebUI\bin\Newtonsoft.Json.dll
+D:\GIT\team04\Twitter\WebUI\bin\Newtonsoft.Json.xml

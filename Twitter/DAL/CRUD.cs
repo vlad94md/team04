@@ -13,19 +13,29 @@ namespace DAL
 
         public CRUD()
         {
-            twitterDB = new TwitterEntities();
+            //twitterDB = new TwitterEntities();
         }
 
         public bool AddNewUser(User user)
         {
-            twitterDB.Users.Add(user);
-            twitterDB.SaveChanges();
-            return true;
+            bool result = false;
+            using (twitterDB = new TwitterEntities())
+            {
+                twitterDB.Users.Add(user);
+                twitterDB.SaveChanges();
+                result = true;
+            }
+            return result;
         }
 
         public bool IsLoginPassCorrect(User user)
         {
-            return twitterDB.Users.Any(x => x.Username == user.Username && x.Passwrd == user.Passwrd);
+            bool result = false;
+            using (twitterDB = new TwitterEntities())
+            {
+                result = twitterDB.Users.Any(x => x.Username == user.Username && x.Passwrd == user.Passwrd);
+            }
+            return result;
         }
     }
 }

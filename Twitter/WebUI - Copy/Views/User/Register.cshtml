@@ -1,0 +1,27 @@
+﻿@model Models.UserModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.ValidationSummary()
+            <h2>Don't have a Twitter account? Sign up now!</h2> 
+            <p>Your Full Name: @Html.TextBoxFor(x => x.FullName) </p>
+            <p>Your Username: @Html.TextBoxFor(x => x.Username) </p>
+            <p>Your Email: @Html.TextBoxFor(x => x.Email)</p>
+            <p>Your Password: @Html.PasswordFor(x => x.Passwrd)</p>
+            <input type="submit" value="Register!" />   
+        }        
+    </div>
+</body>
+</html>

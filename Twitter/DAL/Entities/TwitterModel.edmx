@@ -9,15 +9,15 @@
           <EntitySet Name="Follows" EntityType="TwitterModel.Store.Follows" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Tweets" EntityType="TwitterModel.Store.Tweets" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Users" EntityType="TwitterModel.Store.Users" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK__Follows__Publish__571DF1D5" Association="TwitterModel.Store.FK__Follows__Publish__571DF1D5">
+          <AssociationSet Name="FK__Follows__Publish__173876EA" Association="TwitterModel.Store.FK__Follows__Publish__173876EA">
             <End Role="Users" EntitySet="Users" />
             <End Role="Follows" EntitySet="Follows" />
           </AssociationSet>
-          <AssociationSet Name="FK__Follows__Subscri__5812160E" Association="TwitterModel.Store.FK__Follows__Subscri__5812160E">
+          <AssociationSet Name="FK__Follows__Subscri__182C9B23" Association="TwitterModel.Store.FK__Follows__Subscri__182C9B23">
             <End Role="Users" EntitySet="Users" />
             <End Role="Follows" EntitySet="Follows" />
           </AssociationSet>
-          <AssociationSet Name="FK__Tweets__User_Id__5441852A" Association="TwitterModel.Store.FK__Tweets__User_Id__5441852A">
+          <AssociationSet Name="FK__Tweets__User_Id__145C0A3F" Association="TwitterModel.Store.FK__Tweets__User_Id__145C0A3F">
             <End Role="Users" EntitySet="Users" />
             <End Role="Tweets" EntitySet="Tweets" />
           </AssociationSet>
@@ -50,7 +50,7 @@
           <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
           <Property Name="Passwrd" Type="varchar" Nullable="false" MaxLength="60" />
         </EntityType>
-        <Association Name="FK__Follows__Publish__571DF1D5">
+        <Association Name="FK__Follows__Publish__173876EA">
           <End Role="Users" Type="TwitterModel.Store.Users" Multiplicity="1" />
           <End Role="Follows" Type="TwitterModel.Store.Follows" Multiplicity="*" />
           <ReferentialConstraint>
@@ -62,7 +62,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Follows__Subscri__5812160E">
+        <Association Name="FK__Follows__Subscri__182C9B23">
           <End Role="Users" Type="TwitterModel.Store.Users" Multiplicity="1" />
           <End Role="Follows" Type="TwitterModel.Store.Follows" Multiplicity="*" />
           <ReferentialConstraint>
@@ -74,7 +74,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Tweets__User_Id__5441852A">
+        <Association Name="FK__Tweets__User_Id__145C0A3F">
           <End Role="Users" Type="TwitterModel.Store.Users" Multiplicity="1" />
           <End Role="Tweets" Type="TwitterModel.Store.Tweets" Multiplicity="*" />
           <ReferentialConstraint>
@@ -95,15 +95,15 @@
           <EntitySet Name="Follows" EntityType="TwitterModel.Follow" />
           <EntitySet Name="Tweets" EntityType="TwitterModel.Tweet" />
           <EntitySet Name="Users" EntityType="TwitterModel.User" />
-          <AssociationSet Name="FK__Follows__Publish__571DF1D5" Association="TwitterModel.FK__Follows__Publish__571DF1D5">
+          <AssociationSet Name="FK__Follows__Publish__173876EA" Association="TwitterModel.FK__Follows__Publish__173876EA">
             <End Role="Users" EntitySet="Users" />
             <End Role="Follows" EntitySet="Follows" />
           </AssociationSet>
-          <AssociationSet Name="FK__Follows__Subscri__5812160E" Association="TwitterModel.FK__Follows__Subscri__5812160E">
+          <AssociationSet Name="FK__Follows__Subscri__182C9B23" Association="TwitterModel.FK__Follows__Subscri__182C9B23">
             <End Role="Users" EntitySet="Users" />
             <End Role="Follows" EntitySet="Follows" />
           </AssociationSet>
-          <AssociationSet Name="FK__Tweets__User_Id__5441852A" Association="TwitterModel.FK__Tweets__User_Id__5441852A">
+          <AssociationSet Name="FK__Tweets__User_Id__145C0A3F" Association="TwitterModel.FK__Tweets__User_Id__145C0A3F">
             <End Role="Users" EntitySet="Users" />
             <End Role="Tweets" EntitySet="Tweets" />
           </AssociationSet>
@@ -115,8 +115,8 @@
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="Publisher_Id" Type="Int32" Nullable="false" />
           <Property Name="Subscriber_Id" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="User" Relationship="TwitterModel.FK__Follows__Publish__571DF1D5" FromRole="Follows" ToRole="Users" />
-          <NavigationProperty Name="User1" Relationship="TwitterModel.FK__Follows__Subscri__5812160E" FromRole="Follows" ToRole="Users" />
+          <NavigationProperty Name="User" Relationship="TwitterModel.FK__Follows__Publish__173876EA" FromRole="Follows" ToRole="Users" />
+          <NavigationProperty Name="User1" Relationship="TwitterModel.FK__Follows__Subscri__182C9B23" FromRole="Follows" ToRole="Users" />
         </EntityType>
         <EntityType Name="Tweet">
           <Key>
@@ -127,7 +127,7 @@
           <Property Name="Title" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Body" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
           <Property Name="Date_time" Type="DateTime" Nullable="false" Precision="3" />
-          <NavigationProperty Name="User" Relationship="TwitterModel.FK__Tweets__User_Id__5441852A" FromRole="Tweets" ToRole="Users" />
+          <NavigationProperty Name="User" Relationship="TwitterModel.FK__Tweets__User_Id__145C0A3F" FromRole="Tweets" ToRole="Users" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -138,11 +138,11 @@
           <Property Name="Username" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
           <Property Name="Email" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="Passwrd" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="Follows" Relationship="TwitterModel.FK__Follows__Publish__571DF1D5" FromRole="Users" ToRole="Follows" />
-          <NavigationProperty Name="Follows1" Relationship="TwitterModel.FK__Follows__Subscri__5812160E" FromRole="Users" ToRole="Follows" />
-          <NavigationProperty Name="Tweets" Relationship="TwitterModel.FK__Tweets__User_Id__5441852A" FromRole="Users" ToRole="Tweets" />
+          <NavigationProperty Name="Follows" Relationship="TwitterModel.FK__Follows__Publish__173876EA" FromRole="Users" ToRole="Follows" />
+          <NavigationProperty Name="Follows1" Relationship="TwitterModel.FK__Follows__Subscri__182C9B23" FromRole="Users" ToRole="Follows" />
+          <NavigationProperty Name="Tweets" Relationship="TwitterModel.FK__Tweets__User_Id__145C0A3F" FromRole="Users" ToRole="Tweets" />
         </EntityType>
-        <Association Name="FK__Follows__Publish__571DF1D5">
+        <Association Name="FK__Follows__Publish__173876EA">
           <End Role="Users" Type="TwitterModel.User" Multiplicity="1" />
           <End Role="Follows" Type="TwitterModel.Follow" Multiplicity="*" />
           <ReferentialConstraint>
@@ -154,7 +154,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Follows__Subscri__5812160E">
+        <Association Name="FK__Follows__Subscri__182C9B23">
           <End Role="Users" Type="TwitterModel.User" Multiplicity="1" />
           <End Role="Follows" Type="TwitterModel.Follow" Multiplicity="*" />
           <ReferentialConstraint>
@@ -166,7 +166,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Tweets__User_Id__5441852A">
+        <Association Name="FK__Tweets__User_Id__145C0A3F">
           <End Role="Users" Type="TwitterModel.User" Multiplicity="1" />
           <End Role="Tweets" Type="TwitterModel.Tweet" Multiplicity="*" />
           <ReferentialConstraint>
@@ -229,7 +229,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

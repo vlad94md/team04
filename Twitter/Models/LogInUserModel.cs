@@ -16,7 +16,12 @@ namespace Models
         public string Passwrd
         {
             get { return password; }
-            set { password = new PasswordEncryption().GetHashString(value); }
+            set 
+            {
+                if (value != null)
+                    password = new PasswordEncryption().GetHashString(value);
+                else password = value; 
+            }
         }
         private string password;
     }
