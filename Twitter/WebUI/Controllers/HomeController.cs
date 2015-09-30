@@ -1,21 +1,20 @@
-﻿using BL;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Models;
 using System;
-
+using Services;
 namespace WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private UserManager userManager;
+        private UserService userManager;
         //private bool loggedIn = false;
 
         public HomeController()
         {
-            userManager = new UserManager();
+            userManager = new UserService();
 
             //var temp = new LogInUserModel();
             //try

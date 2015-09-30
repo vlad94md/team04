@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CRUD.cs" />
+    <Compile Include="BaseDal.cs" />
     <Compile Include="Entities\Follow.cs">
       <DependentUpon>TwitterModel.tt</DependentUpon>
     </Compile>

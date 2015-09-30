@@ -4,18 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Models;
-using BL;
+using Services;
 
 namespace WebUI.Controllers
 {
 
         public class UserController : Controller
         {
-            UserManager userManager;
+            UserService userManager;
 
             public UserController()
             {
-                userManager = new UserManager();
+                userManager = new UserService();
             }
 
             public ActionResult Register()
