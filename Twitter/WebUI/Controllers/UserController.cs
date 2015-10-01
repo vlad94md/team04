@@ -17,23 +17,38 @@ namespace WebUI.Controllers
             this.userService = _userService;
         }
 
-        public ActionResult Register()
+        public ActionResult SignUp()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult Register(UserModel newUser)
+        public ActionResult SignUp(UserModel newUser)
         {
             if (ModelState.IsValid)
             {
-                userService.AddNewUser(newUser);
-                return RedirectToAction("LogIn", "User", new { Msg = "Register successfully" });
+                if (userService.IsUsernameUnique(newUser.Username))
+                {
+                    if (userService.IsEmailUnique(newUser.Email))
+                    {
+                        if (userService.AddNewUser(newUser))
+                        {
+                            return RedirectToAction("LogIn", "User");
+                        }
+                    }
+                    else
+                    {
+                        ViewBag.errorMessage = "Email is already in use!";
+                        return View();
+                    }
+                }
+                else
+                {
+                    ViewBag.errorMessage = "Username is already in use!";
+                    return View();
+                }
             }
-            else
-            {
-                return View();
-            }
+            return View();
         }
 
         public ActionResult LogIn()
@@ -46,21 +61,17 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                //if (userService.IsLoginPassCorrect(currentUser))
-                //{
-                //    return RedirectToAction("Newsfeed", "Home", new { Msg = "Logged In" });
-                //}
-                //else
-                //{
-                //    return View();
-                //}
-
-                return View(); // delete after decomment
+                if (userService.IsUsernamePassCorrect(currentUser))
+                {
+                    return RedirectToAction("Newsfeed", "Home");
+                }
+                else
+                {
+                    ViewBag.errorMessage = "Username or Password is incorrect!";
+                    return View();
+                }
             }
-            else
-            {
-                return View();
-            }
+            return View();
         }
     }
 }

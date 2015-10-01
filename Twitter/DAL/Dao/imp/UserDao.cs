@@ -48,15 +48,35 @@ namespace DAL
             return result;
         }
 
-        
-        //public bool IsLoginPassCorrect(User user)
-        //{
-        //    bool result = false;
-        //    using (twitterDB = new TwitterEntities())
-        //    {
-        //        result = twitterDB.Users.Any(x => x.Username == user.Username && x.Passwrd == user.Passwrd);
-        //    }
-        //    return result;
-        //}
+
+        public bool IsUsernameExists(string username)
+        {
+            bool result = false;
+            using (context = new TwitterEntities())
+            {
+                result = context.Users.Any(x => x.Username == username);
+            }
+            return result;
+        }
+
+        public bool IsEmailExists(string email)
+        {
+            bool result = false;
+            using (context = new TwitterEntities())
+            {
+                result = context.Users.Any(x => x.Email == email);
+            }
+            return result;
+        }
+
+        public User GetByUsername(string username)
+        {
+            User result = null;
+            using (context = new TwitterEntities())
+            {
+                result = context.Users.FirstOrDefault(x => x.Username == username);
+            }
+            return result;
+        }
     }
 }

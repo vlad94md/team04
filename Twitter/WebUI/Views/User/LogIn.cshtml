@@ -12,14 +12,14 @@
 </head>
 <body>
     <div>
-        <h1> Welcome to Twitter! :)</h1>
-
-        @using (Html.BeginForm())
+        @using (Html.BeginForm("LogIn", "User"))
         {
             @Html.ValidationSummary()
+            <h2>Log In form:</h2> 
             <p>Username: @Html.TextBoxFor(x => x.Username) </p>
             <p>Password: @Html.PasswordFor(x => x.Passwrd)</p>
-            <input type="submit" value="Log In!" />   
+            <input type="submit" value="Log In!" />
+            <h2 class="text-danger">@ViewBag.errorMessage</h2>   
         }        
     </div>
 </body>

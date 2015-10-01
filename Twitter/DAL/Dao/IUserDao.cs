@@ -7,8 +7,11 @@ using DAL.Entities;
 
 namespace DAL
 {
-    public interface IUserDao
+    public interface IUserDao : IBaseDao<User>
     {
-        bool Add(User user);
+        //bool Add(User user);
+        bool IsUsernameExists(string username);
+        bool IsEmailExists(string email);
+        User GetByUsername(string username);
     }
 }

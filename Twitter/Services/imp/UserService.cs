@@ -23,10 +23,24 @@ namespace Services
             return userContext.Add(UserConverter.ConvertToDB(user));
         }
 
-        //public bool IsLoginPassCorrect(LogInUserModel currentUser)
-        //{
-        //    //return crud.IsLoginPassCorrect( UserConverter.ConvertToDB(currentUser) );
-        //    throw new NotImplementedException();
-        //}
+        public bool IsUsernameUnique(string username)
+        {
+            return !userContext.IsUsernameExists(username);
+        }
+
+        public bool IsEmailUnique(string email)
+        {
+            return !userContext.IsEmailExists(email);
+        }
+
+        public bool IsUsernamePassCorrect(LogInUserModel model)
+        {
+            var curUser = userContext.GetByUsername(model.Username);
+            if (curUser != null)
+            {
+                return curUser.Passwrd == model.Passwrd;
+            }
+            return false;
+        }
     }
 }

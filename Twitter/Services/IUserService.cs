@@ -10,5 +10,8 @@ namespace Services
     public interface IUserService
     {
         bool AddNewUser(UserModel user);
+        bool IsUsernameUnique(string username);
+        bool IsEmailUnique(string email);
+        bool IsUsernamePassCorrect(LogInUserModel currentUser);
     }
 }

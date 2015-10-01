@@ -164,7 +164,7 @@
     <Content Include="Views\Home\Newsfeed.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\User\SignUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\User\LogIn.cshtml" />
