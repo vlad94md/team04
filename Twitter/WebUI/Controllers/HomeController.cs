@@ -9,29 +9,12 @@ namespace WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private UserService userManager;
+        private IUserService userService;
         //private bool loggedIn = false;
 
-        public HomeController()
+        public HomeController(IUserService _userService)
         {
-            userManager = new UserService();
-
-            //var temp = new LogInUserModel();
-            //try
-            //{
-            //    temp.Username = Request.Cookies["LoggedUsername"].Value;
-            //    temp.Passwrd = Request.Cookies["LoggedPassword"].Value;
-            //}
-            //catch (NullReferenceException)
-            //{
-            //    temp.Username = "";
-            //    temp.Passwrd = "";
-            //}
-
-            //if (userManager.IsLoginPassCorrect(temp))
-            //{
-            //    loggedIn = true;
-            //}
+            userService = _userService;
         }
 
         public ActionResult Index()

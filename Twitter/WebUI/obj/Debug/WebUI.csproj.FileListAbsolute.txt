@@ -35,3 +35,7 @@ D:\GIT\team04\Twitter\WebUI\obj\Debug\WebUI.dll
 D:\GIT\team04\Twitter\WebUI\obj\Debug\WebUI.pdb
 D:\GIT\team04\Twitter\WebUI\bin\Newtonsoft.Json.dll
 D:\GIT\team04\Twitter\WebUI\bin\Newtonsoft.Json.xml
+D:\GIT\team04\Twitter\WebUI\bin\Autofac.dll
+D:\GIT\team04\Twitter\WebUI\bin\Autofac.Integration.Mvc.dll
+D:\GIT\team04\Twitter\WebUI\bin\Autofac.xml
+D:\GIT\team04\Twitter\WebUI\bin\Autofac.Integration.Mvc.xml

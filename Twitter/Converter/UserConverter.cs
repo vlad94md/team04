@@ -8,9 +8,9 @@ using DAL.Entities;
 
 namespace Converter
 {
-    public class UserConverter
+    public static class UserConverter
     {
-        public User ConvertToDB(UserModel user)
+        public static User ConvertToDB(UserModel user)
         {
             var newUser = new User { 
                 FullName = user.FullName, 
@@ -22,7 +22,7 @@ namespace Converter
             return newUser;
         }
 
-        public User ConvertToDB(LogInUserModel user)
+        public static User ConvertToDB(LogInUserModel user)
         {
             var currentUser = new User
             {

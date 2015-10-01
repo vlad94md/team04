@@ -46,7 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseDal.cs" />
+    <Compile Include="Dao\IFollowsDao.cs" />
+    <Compile Include="Dao\imp\FollowsDao.cs" />
+    <Compile Include="Dao\imp\TweetsDao.cs" />
+    <Compile Include="Dao\imp\UserDao.cs" />
+    <Compile Include="Dao\ITweetsDao.cs" />
+    <Compile Include="Dao\IUserDao.cs" />
     <Compile Include="Entities\Follow.cs">
       <DependentUpon>TwitterModel.tt</DependentUpon>
     </Compile>
