@@ -4,17 +4,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Models;
-using BL;
+using Services;
 
 namespace WebUI.Controllers
 {
     public class UserController : Controller
     {
-        UserManager userManager;
+        private IUserService userService;
 
-        public UserController()
+        public UserController(IUserService _userService)
         {
-            userManager = new UserManager();
+            this.userService = _userService;
         }
 
         public ActionResult Register()
@@ -27,8 +27,8 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                userManager.AddNewUser(newUser);
-                return RedirectToAction("LogIn","User", new { Msg = "Register successfully" });
+                userService.AddNewUser(newUser);
+                return RedirectToAction("LogIn", "User", new { Msg = "Register successfully" });
             }
             else
             {
@@ -46,36 +46,21 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (userManager.IsLoginPassCorrect(currentUser))
-                {
-                    var cookieLogin = new HttpCookie("LoggedUsername")
-                    {
-                        Name = "LoggedUsername",
-                        Value = currentUser.Username,
-                        Expires = DateTime.Now.AddMinutes(5),
-                    };
+                //if (userService.IsLoginPassCorrect(currentUser))
+                //{
+                //    return RedirectToAction("Newsfeed", "Home", new { Msg = "Logged In" });
+                //}
+                //else
+                //{
+                //    return View();
+                //}
 
-                    var cookiePass = new HttpCookie("LoggedPassword")
-                    {
-                        Name = "LoggedPassword",
-                        Value = currentUser.Passwrd,
-                        Expires = DateTime.Now.AddMinutes(5),
-                    };
-                    Response.SetCookie(cookieLogin);
-                    Response.SetCookie(cookiePass);
-
-                    return RedirectToAction("Newsfeed", "Home", new { Msg = "Logged In" });
-                }
-                else
-                {
-                    return View();
-                }
+                return View(); // delete after decomment
             }
             else
             {
                 return View();
             }
         }
-
     }
 }

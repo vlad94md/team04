@@ -1,39 +1,20 @@
-﻿using BL;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Models;
-
+using System;
+using Services;
 namespace WebUI.Controllers
 {
     public class HomeController : Controller
     {
+        private IUserService userService;
+        //private bool loggedIn = false;
 
-        UserManager userManager;
-        bool loggedIn = false;
-
-        public HomeController()
+        public HomeController(IUserService _userService)
         {
-            userManager = new UserManager();
-
-            var temp = new LogInUserModel();
-            try
-            {
-                temp.Username = Request.Cookies["LoggedUsername"].Value;
-                temp.Passwrd = Request.Cookies["LoggedPassword"].Value;
-            }
-            catch (NullReferenceException)
-            {
-                temp.Username = "";
-                temp.Passwrd = "";
-            }
-
-            if (userManager.IsLoginPassCorrect(temp))
-            {
-                loggedIn = true;
-            }
+            userService = _userService;
         }
 
         public ActionResult Index()
@@ -43,11 +24,10 @@ namespace WebUI.Controllers
 
         public ActionResult Newsfeed()
         {
-            if (loggedIn)
+            if (true)
                 return View();
-            else 
+            else
                 return RedirectToAction("Index", "Home", new { Msg = "Not logged In" });
         }
-
     }
 }
