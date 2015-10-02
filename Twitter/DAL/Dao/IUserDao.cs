@@ -12,6 +12,6 @@ namespace DAL
         //bool Add(User user);
         ICollection<User> GetList();
         User GetByUsername(string username);
-        User Get(int? id);
+        User Get(int id);
     }
 }

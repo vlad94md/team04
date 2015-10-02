@@ -15,3 +15,4 @@ C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Models\bin\Debug\Models.d
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Models\bin\Debug\Models.pdb
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Models\obj\Debug\Models.dll
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Models\obj\Debug\Models.pdb
+D:\GIT\team04\Twitter\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
