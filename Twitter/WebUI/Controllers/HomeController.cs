@@ -25,9 +25,13 @@ namespace WebUI.Controllers
         public ActionResult Newsfeed()
         {
             if (true)
+            {
                 return View();
-            else
-                return RedirectToAction("Index", "Home", new { Msg = "Not logged In" });
+            }
+            //else
+            //{
+            //    return RedirectToAction("Index", "Home", new { Msg = "Not logged In" });
+            //}
         }
     }
 }
