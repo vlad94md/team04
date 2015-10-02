@@ -9,7 +9,7 @@ namespace DAL
 {
     public class FollowsDao : IFollowsDao
     {
-        TwitterEntities context;
+       // TwitterEntities context;
 
     }
 }

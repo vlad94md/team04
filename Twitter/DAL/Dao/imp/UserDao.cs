@@ -37,12 +37,12 @@ namespace DAL
             return result;
         }
 
-        public bool Delete(User book)
+        public bool Delete(User user)
         {
             bool result = false;
             using (context = new TwitterEntities())
             {
-                context.Users.Remove(book);
+                context.Users.Remove(user);
                 result = context.SaveChanges() > 0;
             }
             return result;
