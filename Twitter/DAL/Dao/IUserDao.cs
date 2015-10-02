@@ -10,8 +10,7 @@ namespace DAL
     public interface IUserDao : IBaseDao<User>
     {
         //bool Add(User user);
-        bool IsUsernameExists(string username);
-        bool IsEmailExists(string email);
+        ICollection<User> GetList();
         User GetByUsername(string username);
     }
 }

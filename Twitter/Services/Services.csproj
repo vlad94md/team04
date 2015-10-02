@@ -39,6 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IFollowService.cs" />
+    <Compile Include="imp\FollowService.cs" />
+    <Compile Include="imp\TweetService.cs" />
+    <Compile Include="ITweetService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="imp\UserService.cs" />

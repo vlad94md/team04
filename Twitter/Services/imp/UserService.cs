@@ -25,12 +25,16 @@ namespace Services
 
         public bool IsUsernameUnique(string username)
         {
-            return !userContext.IsUsernameExists(username);
+            var allUsers = userContext.GetList();
+
+            return !allUsers.Any(x => x.Username == username);
         }
 
         public bool IsEmailUnique(string email)
         {
-            return !userContext.IsEmailExists(email);
+            var allUsers = userContext.GetList();
+
+            return !allUsers.Any(x => x.Email == email);
         }
 
         public bool IsUsernamePassCorrect(LogInUserModel model)
