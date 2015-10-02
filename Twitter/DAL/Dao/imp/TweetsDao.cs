@@ -10,6 +10,12 @@ namespace DAL
     public class TweetsDao : ITweetsDao
     {
         TwitterEntities context;
+        IUserDao userDao;
+
+        public TweetsDao(IUserDao userContext)
+        {
+            this.userDao = userContext;
+        }
 
         public ICollection<Tweet> GetList()
         {
@@ -26,6 +32,8 @@ namespace DAL
             bool result = false;
             using (context = new TwitterEntities())
             {
+                tweet.User = userDao.Get(tweet.User_Id);
+
                 context.Tweets.Add(tweet);
                 result = context.SaveChanges() > 0;
             }

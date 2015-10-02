@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Models.TweetModel
+
+@{
     Layout = null;
 }
 
@@ -13,9 +15,13 @@
     <div>
         Newsfeed
     </div>
-    <p>Whats new ?</p>
-    <textarea>
-        
-    </textarea>
+
+    @using(Html.BeginForm())
+    {
+        <p>Whats new ?</p>
+        @Html.TextAreaFor(model => model.Body)
+        <input type="submit" value="Tweet!" />
+        @Html.ValidationSummary()
+    }
 </body>
 </html>

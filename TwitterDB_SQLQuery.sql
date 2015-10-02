@@ -12,7 +12,6 @@ CREATE TABLE Tweets
 (
 Id int Identity(1,1) primary key,
 User_Id int not null,
-Title varchar(50) not null,
 Body varchar(250) not null,
 Date_time datetime not null,
 FOREIGN KEY (User_Id) REFERENCES Users(Id)

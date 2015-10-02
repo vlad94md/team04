@@ -10,7 +10,6 @@ namespace Models
     {
         public int Id { get; set; }
         public int User_Id { get; set; }
-        public string Title { get; set; }
         public string Body { get; set; }
         public System.DateTime Date_time { get; set; }
 

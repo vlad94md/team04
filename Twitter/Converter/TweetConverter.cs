@@ -14,6 +14,8 @@ namespace Converter
         {
             var newTweet = new Tweet
             {
+                User = new User(),
+                User_Id = tweet.User_Id,
                 Body = tweet.Body,
                 Date_time = DateTime.Now
             };

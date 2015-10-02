@@ -9,18 +9,19 @@ namespace WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private IUserService userService;
-        //private bool loggedIn = false;
+        private ITweetService tweetS;
 
-        public HomeController(IUserService _userService)
+        public HomeController(ITweetService _tweetS)
         {
-            userService = _userService;
+            this.tweetS = _tweetS;
         }
 
         public ActionResult Index()
         {
             return View();
         }
+
+
 
         public ActionResult Newsfeed()
         {
@@ -32,6 +33,19 @@ namespace WebUI.Controllers
             //{
             //    return RedirectToAction("Index", "Home", new { Msg = "Not logged In" });
             //}
+        }
+
+        [HttpPost]
+        public ActionResult Newsfeed(TweetModel tweet)
+        {
+            if (ModelState.IsValid)
+            {
+                TweetModel test = new TweetModel() { Body = "test", Date_time = DateTime.Now, User_Id = 1};
+                tweetS.AddNewTweet(test);
+                return RedirectToAction("Home", "Index");
+
+            }
+            return View();
         }
     }
 }

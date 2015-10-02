@@ -57,5 +57,15 @@ namespace DAL
             }
             return result;
         }
+
+        public User Get(int? id)
+        {
+            User result = null;
+            using (context = new TwitterEntities())
+            {
+                result = context.Users.FirstOrDefault(x => x.Id == id);
+            }
+            return result;
+        }
     }
 }
