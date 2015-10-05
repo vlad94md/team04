@@ -19,7 +19,12 @@ namespace WebUI.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            if (HttpContext.Session["CurrentUser"] != null)
+            {
+                return RedirectToAction("Newsfeed", "Tweet");
+            }
+            else
+                return View();
         }
     }
 }

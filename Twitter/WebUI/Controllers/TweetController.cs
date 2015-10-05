@@ -19,14 +19,16 @@ namespace WebUI.Controllers
             this.userService = _userService;
         }
 
+        [HttpGet]
         public ActionResult Newsfeed()
         {
-            // get list of tweetviewmodel of current user and put into View
-            return View();
+            LogInUserViewModel currentUser = (LogInUserViewModel)HttpContext.Session["CurrentUser"];
+            var tweets = tweetService.GetListByUsername(currentUser.Username);
+            return View(tweets);
         }
 
         [HttpPost]
-        public ActionResult Newsfeed(TweetModel tweet)
+        public ActionResult AddNewTweet(TweetModel tweet)
         {
             if (ModelState.IsValid)
             {
@@ -38,8 +40,8 @@ namespace WebUI.Controllers
                     User_Id = userService.GetIdByUsername(currentUser.Username)
                 };
 
-                tweetService.AddNewTweet(newTweet);
-                return RedirectToAction("Index", "Home");
+                tweetService.Add(newTweet);
+                return RedirectToAction("Newsfeed", "Tweet");
 
             }
             return View();

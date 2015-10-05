@@ -9,6 +9,7 @@ namespace Services
 {
     public interface ITweetService
     {
-        bool AddNewTweet(TweetModel tweet);
+        bool Add(TweetModel tweet);
+        List<TweetViewModel> GetListByUsername(string username);
     }
 }

@@ -1,4 +1,4 @@
-﻿@model Models.TweetViewModel
+﻿@model List<Models.TweetViewModel>
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -15,23 +15,23 @@
     <div>
         <h2>Newsfeed</h2>
     </div>
+    @Html.Partial("AddNewTweet", new Models.TweetModel())
 
-    @using(Html.BeginForm())
-    {
-        <p>Whats new?</p>
-        @Html.TextAreaFor(model => model.Body)
-        <input type="submit" class="tweet" value="Tweet!" />
-        @Html.ValidationSummary()
-    }
-
-    @Html.Partial("CurrentUserString", (HttpContext.Current.Session["CurrentUser"] as Models.LogInUserViewModel) );
-
-    <button type="button" value="Register" onclick="location.href='@Url.Action("LogOut", "Tweet")'">Log out!</button>
+    @Html.Partial("CurrentUserString", (HttpContext.Current.Session["CurrentUser"] as Models.LogInUserViewModel) )
+    <button type="button" value="logout" onclick="location.href='@Url.Action("LogOut", "Tweet")'">Log out!</button>
 
     
-    <h3>My Tweeets:</h3>
-    
-    <script>
+    <h3>My Tweets:</h3>
+    <div id="tweets">
+        @foreach (var item in Model)
+        {
+            @item.Body <br />
+            @item.DateAdded <br />
+        }
+    </div>
+
+
+@*    <script>
         $(document).ready(function () {
             $(".tweet").click(function () {
                 $.ajax({
@@ -46,6 +46,6 @@
                 })
             });
         });
-    </script>
+    </script>*@
 </body>
 </html>

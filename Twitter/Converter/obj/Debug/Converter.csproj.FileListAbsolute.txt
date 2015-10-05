@@ -9,17 +9,6 @@ C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\Converter\bin\Debug\
 C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache
 C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\Converter\obj\Debug\Converter.dll
 C:\Users\Vlad\documents\visual studio 2012\Projects\Twitter\Converter\obj\Debug\Converter.pdb
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\Converter.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\Converter.pdb
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\DAL.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\Models.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\EntityFramework.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\DAL.pdb
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\Models.pdb
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\EntityFramework.xml
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\obj\Debug\Converter.dll
-E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\obj\Debug\Converter.pdb
 D:\GIT\team04\Twitter\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache
 D:\GIT\team04\Twitter\Converter\bin\Debug\Converter.dll
 D:\GIT\team04\Twitter\Converter\bin\Debug\Converter.pdb
@@ -42,3 +31,14 @@ C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Converter\bin\Debug\Entit
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Converter\obj\Debug\Converter.dll
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Converter\obj\Debug\Converter.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\Converter.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\Converter.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\DAL.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\Models.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\EntityFramework.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\DAL.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\Models.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\EntityFramework.xml
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\obj\Debug\Converter.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\obj\Debug\Converter.pdb

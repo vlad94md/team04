@@ -1,0 +1,9 @@
+﻿@model Models.TweetModel
+
+@using (Html.BeginForm("AddNewTweet", "Tweet"))
+{
+    <p>Whats new?</p>
+    @Html.TextAreaFor(model => model.Body)
+    <input type="submit" class="tweet" value="Tweet!" />
+    @Html.ValidationSummary()
+}
