@@ -22,5 +22,16 @@ namespace Converter
 
             return newTweet;
         }
+
+        public static TweetViewModel ConvertToModel(Tweet tweet)
+        {
+            var newTweet = new TweetViewModel
+            {
+                Body = tweet.Body,
+                DateAdded = tweet.Date_time
+            };
+
+            return newTweet;
+        }
     }
 }

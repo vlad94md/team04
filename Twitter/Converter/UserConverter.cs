@@ -22,7 +22,7 @@ namespace Converter
             return newUser;
         }
 
-        public static User ConvertToDB(LogInUserModel user)
+        public static User ConvertToDB(LogInUserViewModel user)
         {
             var currentUser = new User
             {

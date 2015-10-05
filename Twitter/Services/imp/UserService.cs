@@ -37,7 +37,7 @@ namespace Services
             return !allUsers.Any(x => x.Email == email);
         }
 
-        public bool IsUsernamePassCorrect(LogInUserModel model)
+        public bool IsUsernamePassCorrect(LogInUserViewModel model)
         {
             var curUser = userContext.GetByUsername(model.Username);
             if (curUser != null)
@@ -45,6 +45,11 @@ namespace Services
                 return curUser.Passwrd == model.Passwrd;
             }
             return false;
+        }
+
+        public int GetIdByUsername(string username)
+        {
+            return userContext.GetByUsername(username).Id;
         }
     }
 }

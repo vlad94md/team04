@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class LogInUserModel
+    public class LogInUserViewModel
     {
         [Required(ErrorMessage = "Please enter your username")]
         public string Username { get; set; }

@@ -8,6 +8,7 @@ using Services;
 
 namespace WebUI.Controllers
 {
+    [AllowAnonymous]
     public class UserController : Controller
     {
         private IUserService userService;
@@ -57,13 +58,14 @@ namespace WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult LogIn(LogInUserModel currentUser)
+        public ActionResult LogIn(LogInUserViewModel currentUser)
         {
             if (ModelState.IsValid)
             {
                 if (userService.IsUsernamePassCorrect(currentUser))
                 {
-                    return RedirectToAction("Newsfeed", "Home");
+                    HttpContext.Session["CurrentUser"] = currentUser;
+                    return RedirectToAction("Newsfeed", "Tweet");
                 }
                 else
                 {

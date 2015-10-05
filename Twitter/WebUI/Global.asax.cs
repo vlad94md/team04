@@ -6,6 +6,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 using WebUI.App_Start;
+using DAL.Entities;
+using Models;
 
 namespace WebUI
 {
@@ -21,6 +23,15 @@ namespace WebUI
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             DependencyConfig.Config();
+        }
+
+
+        protected void Session_Start(Object sender, EventArgs e)
+        {
+
+            LogInUserViewModel currentUser = null;
+            HttpContext.Current.Session.Timeout = 800;
+            HttpContext.Current.Session.Add("CurrentUser", currentUser);
         }
     }
 }

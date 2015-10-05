@@ -12,6 +12,8 @@ namespace Services
         bool AddNewUser(UserModel user);
         bool IsUsernameUnique(string username);
         bool IsEmailUnique(string email);
-        bool IsUsernamePassCorrect(LogInUserModel currentUser);
+        bool IsUsernamePassCorrect(LogInUserViewModel currentUser);
+
+        int GetIdByUsername(string username);
     }
 }

@@ -40,11 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LogInUserModel.cs" />
+    <Compile Include="ViewModels\LogInUserViewModel.cs" />
     <Compile Include="PasswordEncryption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TweetModel.cs" />
     <Compile Include="UserModel.cs" />
+    <Compile Include="ViewModels\TweetViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
