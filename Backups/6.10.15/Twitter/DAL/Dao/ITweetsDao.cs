@@ -9,6 +9,5 @@ namespace DAL
 {
     public interface ITweetsDao : IBaseDao<Tweet>
     {
-        ICollection<Tweet> GetList();
     }
 }

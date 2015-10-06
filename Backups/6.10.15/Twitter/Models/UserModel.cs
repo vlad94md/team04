@@ -22,12 +22,11 @@ namespace Models
         [RegularExpression(@".+\@.+\..+", ErrorMessage = "Please enter a valid email address")]
         [MaxLength(100, ErrorMessage = "Email should contain maximum of 100 characters")]
         public string Email { get; set; }
-
-        
+       
         //[StringLength(60,MinimumLength= 8, ErrorMessage = "Minimum 8 characters")]
         //[MinLength(3, ErrorMessage = "Password must be at least 6 characters")]
-            [Required(ErrorMessage = "Please enter your password")]
-            [StringLength(50, MinimumLength = 5,ErrorMessage="5 chars minimum length!")]
+        [Required(ErrorMessage = "Please enter your password")]
+        [StringLength(60, MinimumLength = 5,ErrorMessage="5 chars minimum length!")]
         public string Passwrd 
         {
             get { return password; }

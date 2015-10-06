@@ -30,9 +30,10 @@ namespace WebUI.Controllers
         [HttpPost]
         public ActionResult AddNewTweet(TweetModel tweet)
         {
-            if (ModelState.IsValid)
+            LogInUserViewModel currentUser = (LogInUserViewModel)HttpContext.Session["CurrentUser"];
+
+            if (tweet.Body != null)
             {
-                LogInUserViewModel currentUser = (LogInUserViewModel)HttpContext.Session["CurrentUser"];
                 TweetModel newTweet = new TweetModel() 
                 { 
                     Body = tweet.Body, 
@@ -42,9 +43,11 @@ namespace WebUI.Controllers
 
                 tweetService.Add(newTweet);
                 return RedirectToAction("Newsfeed", "Tweet");
-
             }
-            return View(); // error when body is empty!
+
+            var currentUserTweets = tweetService.GetListByUsername(currentUser.Username);
+            ViewBag.errorMessage = "Tweet body can't be empty!";
+            return View("Newsfeed", currentUserTweets);
         }
 
         public ActionResult LogOut()

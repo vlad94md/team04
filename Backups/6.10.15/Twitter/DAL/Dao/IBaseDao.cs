@@ -8,6 +8,8 @@ namespace DAL
 {
     public interface IBaseDao<T>
     {
+        ICollection<T> GetList();
         bool Add(T t);
+        bool Delete(T t);
     }
 }
