@@ -14,5 +14,7 @@ namespace Services
         bool IsEmailUnique(string email);
         bool IsUsernamePassCorrect(LogInUserViewModel currentUser);
         int GetIdByUsername(string username);
+        UserViewModel GetById(int id);
+        List<UserViewModel> GetAll();
     }
 }

@@ -1,0 +1,38 @@
+﻿@model List<Models.UserViewModel>
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>All</title>
+</head>
+<body>
+    <div>
+        <h2>All Users</h2>
+
+        @foreach (var user in Model)
+        {
+            <span>
+                Fullname: 
+                @Html.ActionLink(@user.FullName, "Info", "People", new { id = user.Id }, null)
+                <br />
+            </span>
+            <span>
+                Username: 
+                @user.Username <br />
+            </span>
+            <span>
+                E-mail: 
+                @user.Email <br />
+            </span>  
+            <hr>
+        }
+    </div>
+</body>
+</html>

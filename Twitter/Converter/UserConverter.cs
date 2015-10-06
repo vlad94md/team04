@@ -32,5 +32,18 @@ namespace Converter
 
             return currentUser;
         }
+
+        public static UserViewModel ConvertToViewModel(User user)
+        {
+            var userViewModel = new UserViewModel
+            {
+                 Id = user.Id,
+                 FullName = user.FullName,
+                 Username = user.Username,
+                 Email = user.Email
+            };
+
+            return userViewModel;
+        }
     }
 }

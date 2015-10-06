@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using DAL;
 using Models;
 using Converter;
+using DAL.Entities;
 
 namespace Services
 {
@@ -50,6 +51,23 @@ namespace Services
         public int GetIdByUsername(string username)
         {
             return userContext.GetByUsername(username).Id;
+        }
+
+        public UserViewModel GetById(int id)
+        {
+            User currUser = userContext.Get(id);
+            return UserConverter.ConvertToViewModel(currUser);
+        }
+
+        public List<UserViewModel> GetAll()
+        {
+            List<UserViewModel> result = new List<UserViewModel>();
+            var allUsers = userContext.GetList();
+            foreach (var item in allUsers)
+            {
+                result.Add(UserConverter.ConvertToViewModel(item));
+            }
+            return result;
         }
     }
 }

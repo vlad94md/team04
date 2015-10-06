@@ -46,6 +46,7 @@
     <Compile Include="TweetModel.cs" />
     <Compile Include="UserModel.cs" />
     <Compile Include="ViewModels\TweetViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

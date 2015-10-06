@@ -115,6 +115,7 @@
     <Compile Include="App_Start\DependencyConfig.cs" />
     <Compile Include="Attributes\TwitterAuthorize.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PeopleController.cs" />
     <Compile Include="Controllers\TweetController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -141,8 +142,10 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Tweet\ListOfTweets.cshtml" />
     <Content Include="Views\Tweet\AddNewTweet.cshtml" />
+    <Content Include="Views\People\All.cshtml" />
+    <Content Include="Views\People\Info.cshtml" />
+    <Content Include="Views\People\UserInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -1,0 +1,29 @@
+﻿@model Models.UserModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h1>Welcome to Twitter! :)</h1>
+
+    @using (Html.BeginForm("LogIn", "User"))
+    {
+        @Html.ValidationSummary()
+        <p>Username: @Html.TextBoxFor(x => x.Username) </p>
+        <p>Password: @Html.PasswordFor(x => x.Passwrd)</p>
+        <input type="submit" value="Log In!" />
+    }
+
+    <br />
+    <h2>Don't have a Twitter account? Sign up now!</h2>
+    <button type="button" value="Register" onclick="location.href='@Url.Action("SignUp", "User")'">Sign Up!</button>
+
+</body>
+</html>

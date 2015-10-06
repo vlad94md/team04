@@ -1,0 +1,26 @@
+﻿@model Models.UserModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LogIn</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("LogIn", "User"))
+        {
+            @Html.ValidationSummary()
+            <h2>Log In form:</h2> 
+            <p>Username: @Html.TextBoxFor(x => x.Username) </p>
+            <p>Password: @Html.PasswordFor(x => x.Passwrd)</p>
+            <input type="submit" value="Log In!" />
+            <h2 class="text-danger">@ViewBag.errorMessage</h2>   
+        }        
+    </div>
+</body>
+</html>

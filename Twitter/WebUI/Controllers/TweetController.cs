@@ -44,7 +44,7 @@ namespace WebUI.Controllers
                 return RedirectToAction("Newsfeed", "Tweet");
 
             }
-            return View();
+            return View(); // error when body is empty!
         }
 
         public ActionResult LogOut()
