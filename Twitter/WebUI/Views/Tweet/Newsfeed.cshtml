@@ -19,9 +19,8 @@
 
     @Html.Partial("CurrentUserString", (HttpContext.Current.Session["CurrentUser"] as Models.LogInUserViewModel) )
     <button type="button" value="logout" onclick="location.href='@Url.Action("LogOut", "Tweet")'">Log out!</button>
-
-    
-    <h3>My Tweets:</h3>
+   
+    <h3>Tweets:</h3>
     <div id="tweets">
         @foreach (var item in Model)
         {

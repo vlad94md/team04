@@ -1,8 +1,0 @@
-D:\GIT\team04\Twitter\DAL\bin\Debug\DAL.dll.config
-D:\GIT\team04\Twitter\DAL\bin\Debug\DAL.dll
-D:\GIT\team04\Twitter\DAL\bin\Debug\DAL.pdb
-D:\GIT\team04\Twitter\DAL\bin\Debug\EntityFramework.dll
-D:\GIT\team04\Twitter\DAL\bin\Debug\EntityFramework.xml
-D:\GIT\team04\Twitter\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-D:\GIT\team04\Twitter\DAL\obj\Debug\DAL.dll
-D:\GIT\team04\Twitter\DAL\obj\Debug\DAL.pdb

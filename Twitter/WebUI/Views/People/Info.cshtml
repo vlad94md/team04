@@ -23,6 +23,11 @@
         {
             @item.Body <br />
             @item.DateAdded <br />
+            if (ViewBag.currentUserPage == true)
+            {
+                <button type="button" value="logout" onclick="location.href='@Url.Action("Edit", "Tweet")'">Edit</button>
+                <button type="button" value="logout" onclick="location.href='@Url.Action("Delete", "Tweet")'">Delete</button>
+            }
             <br />
         }
     </div>

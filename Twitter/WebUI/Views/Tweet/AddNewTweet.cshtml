@@ -5,5 +5,5 @@
     <p>Whats new?</p>
     @Html.TextAreaFor(model => model.Body)
     <input type="submit" class="tweet" value="Tweet!" />
-    @Html.ValidationSummary()
+    <h2 class="text-danger">@ViewBag.errorMessage</h2>
 }

@@ -35,7 +35,7 @@ namespace Services
             {
                 if (item.User_Id == currUserId)
                 {
-                    result.Add(TweetConverter.ConvertToModel(item));
+                    result.Add(TweetConverter.ConvertToViewModel(item));
                 }
             }
             result = result.OrderByDescending(x => x.DateAdded).ToList();

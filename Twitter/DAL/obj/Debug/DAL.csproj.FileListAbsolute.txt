@@ -21,3 +21,10 @@ E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\EntityFramework.dll
 E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\EntityFramework.xml
 E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\obj\Debug\DAL.dll
 E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\obj\Debug\DAL.pdb
+D:\GIT\team04\Backups\6.10.15\Twitter\DAL\bin\Debug\DAL.dll.config
+D:\GIT\team04\Backups\6.10.15\Twitter\DAL\bin\Debug\DAL.dll
+D:\GIT\team04\Backups\6.10.15\Twitter\DAL\bin\Debug\DAL.pdb
+D:\GIT\team04\Backups\6.10.15\Twitter\DAL\bin\Debug\EntityFramework.dll
+D:\GIT\team04\Backups\6.10.15\Twitter\DAL\bin\Debug\EntityFramework.xml
+D:\GIT\team04\Backups\6.10.15\Twitter\DAL\obj\Debug\DAL.dll
+D:\GIT\team04\Backups\6.10.15\Twitter\DAL\obj\Debug\DAL.pdb

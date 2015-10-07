@@ -42,3 +42,14 @@ E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\bin\Debug\EntityFramework.xml
 E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache
 E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\obj\Debug\Converter.dll
 E:\IT\Endava\Twitter\GIT\team04\Twitter\Converter\obj\Debug\Converter.pdb
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\bin\Debug\Converter.dll
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\bin\Debug\Converter.pdb
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\bin\Debug\DAL.dll
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\bin\Debug\Models.dll
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\bin\Debug\EntityFramework.dll
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\bin\Debug\DAL.pdb
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\bin\Debug\Models.pdb
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\bin\Debug\EntityFramework.xml
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\obj\Debug\Converter.dll
+D:\GIT\team04\Backups\6.10.15\Twitter\Converter\obj\Debug\Converter.pdb

@@ -23,7 +23,7 @@ namespace Converter
             return newTweet;
         }
 
-        public static TweetViewModel ConvertToModel(Tweet tweet)
+        public static TweetViewModel ConvertToViewModel(Tweet tweet)
         {
             var newTweet = new TweetViewModel
             {
