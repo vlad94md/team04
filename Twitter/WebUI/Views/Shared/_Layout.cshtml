@@ -10,6 +10,7 @@
 </head>
 <body>
     <ul>
+        <li>@Html.ActionLink("MyPage", "Info", "People", new { id = ((Models.UserViewModel)HttpContext.Current.Session["CurrentUser"]).Id }, null)</li>
         <li>@Html.ActionLink("All Users", "All", "People")</li>
         <li>@Html.ActionLink("Newsfeed", "Newsfeed", "Tweet")</li>
     </ul>
