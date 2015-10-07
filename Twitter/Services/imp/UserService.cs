@@ -38,24 +38,25 @@ namespace Services
             return !allUsers.Any(x => x.Email == email);
         }
 
-        public bool IsUsernamePassCorrect(LogInUserViewModel model)
+        public UserViewModel IsUsernamePassCorrect(LogInUserViewModel model)
         {
-            var curUser = userContext.GetByUsername(model.Username);
+            var curUser = userContext.GetList().FirstOrDefault(x => x.Username == model.Username);
             if (curUser != null)
             {
-                return curUser.Passwrd == model.Passwrd;
+                if (curUser.Passwrd == model.Passwrd)
+                    return UserConverter.ConvertToViewModel(curUser);
             }
-            return false;
+            return null;
         }
 
-        public int GetIdByUsername(string username)
-        {
-            return userContext.GetByUsername(username).Id;
-        }
+        //public int GetIdByUsername(string username)
+        //{
+        //    return userContext.GetByUsername(username).Id;
+        //}
 
         public UserViewModel GetById(int id)
         {
-            User currUser = userContext.Get(id);
+            User currUser = userContext.GetById(id);
             return UserConverter.ConvertToViewModel(currUser);
         }
 

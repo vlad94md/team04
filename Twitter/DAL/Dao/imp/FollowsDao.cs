@@ -7,9 +7,8 @@ using DAL.Entities;
 
 namespace DAL
 {
-    public class FollowsDao : IFollowsDao
+    public class FollowsDao : BaseDao<Follow>
     {
-       // TwitterEntities context;
-
+        
     }
 }

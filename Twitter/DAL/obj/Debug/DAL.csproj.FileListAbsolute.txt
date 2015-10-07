@@ -13,7 +13,6 @@ C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\DAL\bin\Debug\EntityFrame
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\DAL\obj\Debug\DAL.dll
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\DAL\obj\Debug\DAL.pdb
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-D:\GIT\team04\Twitter\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\DAL.dll.config
 E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\DAL.dll
 E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\DAL.pdb

@@ -22,15 +22,15 @@ namespace WebUI.Controllers
         [HttpGet]
         public ActionResult Newsfeed()
         {
-            LogInUserViewModel currentUser = (LogInUserViewModel)HttpContext.Session["CurrentUser"];
-            var tweets = tweetService.GetListByUsername(currentUser.Username);
+            var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            var tweets = tweetService.GetListById(currentUser.Id);
             return View(tweets);
         }
 
         [HttpPost]
         public ActionResult AddNewTweet(TweetModel tweet)
         {
-            LogInUserViewModel currentUser = (LogInUserViewModel)HttpContext.Session["CurrentUser"];
+            var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
 
             if (tweet.Body != null)
             {
@@ -38,14 +38,14 @@ namespace WebUI.Controllers
                 { 
                     Body = tweet.Body, 
                     Date_time = DateTime.Now, 
-                    User_Id = userService.GetIdByUsername(currentUser.Username)
+                    User_Id = currentUser.Id
                 };
 
                 tweetService.Add(newTweet);
                 return RedirectToAction("Newsfeed", "Tweet");
             }
 
-            var currentUserTweets = tweetService.GetListByUsername(currentUser.Username);
+            var currentUserTweets = tweetService.GetListById(currentUser.Id);
             ViewBag.errorMessage = "Tweet body can't be empty!";
             return View("Newsfeed", currentUserTweets);
         }

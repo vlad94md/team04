@@ -28,12 +28,11 @@ namespace WebUI.Controllers
         public ActionResult Info(int id)
         {
             UserViewModel thisUser = userService.GetById(id);
-            var tweets = tweetService.GetListByUsername(thisUser.Username);
+            var tweets = tweetService.GetListById(thisUser.Id);
             ViewBag.UserInfo = thisUser;
 
-            LogInUserViewModel currentAuthorized = (LogInUserViewModel)HttpContext.Session["CurrentUser"];
-            var currentAuthorizedID = userService.GetIdByUsername(currentAuthorized.Username);
-            if (currentAuthorizedID == id)
+            var currentAuthorized = (UserViewModel)HttpContext.Session["CurrentUser"];
+            if (currentAuthorized.Id == id)
             {
                 ViewBag.currentUserPage = true;
             }

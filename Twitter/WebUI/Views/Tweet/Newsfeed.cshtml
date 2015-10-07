@@ -17,7 +17,7 @@
     </div>
     @Html.Partial("AddNewTweet", new Models.TweetModel())
 
-    @Html.Partial("CurrentUserString", (HttpContext.Current.Session["CurrentUser"] as Models.LogInUserViewModel) )
+    @Html.Partial("CurrentUserString", (HttpContext.Current.Session["CurrentUser"] as Models.UserViewModel) )
     <button type="button" value="logout" onclick="location.href='@Url.Action("LogOut", "Tweet")'">Log out!</button>
    
     <h3>Tweets:</h3>

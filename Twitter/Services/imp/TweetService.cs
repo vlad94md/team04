@@ -25,21 +25,22 @@ namespace Services
             return tweetContext.Add(TweetConverter.ConvertToDB(tweet));
         }
 
-        public List<TweetViewModel> GetListByUsername(string username)
+        public List<TweetViewModel> GetListById(int userId)
         {
             List<TweetViewModel> result = new List<TweetViewModel>();
             var allTweets = tweetContext.GetList();
-            var currUserId = userContext.GetByUsername(username).Id;
+            var currUser = userContext.GetById(userId);
 
             foreach (var item in allTweets)
             {
-                if (item.User_Id == currUserId)
+                if (item.User_Id == currUser.Id)
                 {
                     result.Add(TweetConverter.ConvertToViewModel(item));
                 }
             }
             result = result.OrderByDescending(x => x.DateAdded).ToList();
             return result;
-        }      
+        }
+
     }
 }

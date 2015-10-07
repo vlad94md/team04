@@ -62,9 +62,10 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (userService.IsUsernamePassCorrect(currentUser))
+                var acceptedUser = userService.IsUsernamePassCorrect(currentUser);
+                if (acceptedUser != null)
                 {
-                    HttpContext.Session["CurrentUser"] = currentUser;
+                    HttpContext.Session["CurrentUser"] = acceptedUser;
                     return RedirectToAction("Newsfeed", "Tweet");
                 }
                 else

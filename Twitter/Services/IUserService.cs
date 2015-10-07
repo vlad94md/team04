@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using DAL.Entities;
+using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,8 @@ namespace Services
         bool AddNewUser(UserModel user);
         bool IsUsernameUnique(string username);
         bool IsEmailUnique(string email);
-        bool IsUsernamePassCorrect(LogInUserViewModel currentUser);
-        int GetIdByUsername(string username);
+        UserViewModel IsUsernamePassCorrect(LogInUserViewModel currentUser);
+        //LogInUserViewModel GetByUsername(string username);
         UserViewModel GetById(int id);
         List<UserViewModel> GetAll();
     }

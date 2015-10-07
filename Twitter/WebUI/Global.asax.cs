@@ -28,8 +28,7 @@ namespace WebUI
 
         protected void Session_Start(Object sender, EventArgs e)
         {
-
-            LogInUserViewModel currentUser = null;
+            UserViewModel currentUser = null;
             HttpContext.Current.Session.Timeout = 800;
             HttpContext.Current.Session.Add("CurrentUser", currentUser);
         }
