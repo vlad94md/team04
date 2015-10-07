@@ -20,7 +20,7 @@
             <p>Your Email: @Html.TextBoxFor(x => x.Email)</p>
             <p>Your Password: @Html.PasswordFor(x => x.Passwrd)</p>
             <input type="submit" value="Register!" />   
-            <h2 class="text-danger">@ViewBag.errorMessage</h2>
+            <h3 class="text-danger">@ViewBag.errorMessage</h3>
             @Html.ValidationSummary()
         }        
     </div>

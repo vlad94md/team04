@@ -22,6 +22,8 @@ namespace WebUI.Controllers
         public ActionResult All()
         {
             var allUsers = userService.GetAll();
+            var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            allUsers.Remove(allUsers.Find( x => x.Id == currentUser.Id));
             return View(allUsers);
         }
 

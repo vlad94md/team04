@@ -27,6 +27,7 @@ namespace Converter
         {
             var newTweet = new TweetViewModel
             {
+                User_Id = tweet.User_Id,
                 Body = tweet.Body,
                 DateAdded = tweet.Date_time
             };

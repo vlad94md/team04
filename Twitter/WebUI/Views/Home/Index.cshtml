@@ -11,19 +11,13 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>Welcome to Twitter! :)</h1>
+    <center>
+        <h1>Welcome to Twitter! :)</h1>
 
-    @using (Html.BeginForm("LogIn", "User"))
-    {
-        @Html.ValidationSummary()
-        <p>Username: @Html.TextBoxFor(x => x.Username) </p>
-        <p>Password: @Html.PasswordFor(x => x.Passwrd)</p>
-        <input type="submit" value="Log In!" />
-    }
-
-    <br />
-    <h2>Don't have a Twitter account? Sign up now!</h2>
-    <button type="button" value="Register" onclick="location.href='@Url.Action("SignUp", "User")'">Sign Up!</button>
-
+        <button type="button" value="LogIn" onclick="location.href='@Url.Action("LogIn", "User")'">Sign In!</button>
+        <br />
+        <br />
+        <button type="button" value="Register" onclick="location.href='@Url.Action("SignUp", "User")'">Register!</button>
+    </center>
 </body>
 </html>

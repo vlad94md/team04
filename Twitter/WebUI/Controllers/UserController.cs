@@ -28,27 +28,27 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (userService.IsUsernameUnique(newUser.Username))
+                if (GetErrors(newUser) == null)
                 {
-                    if (userService.IsEmailUnique(newUser.Email))
-                    {
-                        if (userService.AddNewUser(newUser))
-                        {
-                            return RedirectToAction("LogIn", "User");
-                        }
-                    }
-                    else
-                    {
-                        ViewBag.errorMessage = "Email is already in use!";
-                        return View();
-                    }
+                    userService.AddNewUser(newUser);
+                    return RedirectToAction("RegisterSuccess", "User");
                 }
-                else
-                {
-                    ViewBag.errorMessage = "Username is already in use!";
-                    return View();
-                }
+                ViewBag.errorMessage = GetErrors(newUser);
             }
+            return View();
+        }
+
+        private string GetErrors(UserModel newUser)
+        {
+            if (!userService.IsUsernameUnique(newUser.Username))
+                return "Username is already in use!";
+            if (!userService.IsEmailUnique(newUser.Email))
+                return "Email is already in use!";
+            return null;
+        }
+
+        public ActionResult RegisterSuccess()
+        {
             return View();
         }
 
@@ -75,6 +75,12 @@ namespace WebUI.Controllers
                 }
             }
             return View();
+        }
+
+        public ActionResult LogOut()
+        {
+            HttpContext.Session["CurrentUser"] = null;
+            return RedirectToAction("Index", "Home");
         }
     }
 }

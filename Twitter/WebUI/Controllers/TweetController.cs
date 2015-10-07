@@ -28,16 +28,16 @@ namespace WebUI.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddNewTweet(TweetModel tweet)
+        public ActionResult Add(TweetModel tweet)
         {
             var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
 
-            if (tweet.Body != null)
+            if (ModelState.IsValid)
             {
-                TweetModel newTweet = new TweetModel() 
-                { 
-                    Body = tweet.Body, 
-                    Date_time = DateTime.Now, 
+                TweetModel newTweet = new TweetModel()
+                {
+                    Body = tweet.Body,
+                    Date_time = DateTime.Now,
                     User_Id = currentUser.Id
                 };
 
@@ -46,14 +46,7 @@ namespace WebUI.Controllers
             }
 
             var currentUserTweets = tweetService.GetListById(currentUser.Id);
-            ViewBag.errorMessage = "Tweet body can't be empty!";
             return View("Newsfeed", currentUserTweets);
-        }
-
-        public ActionResult LogOut()
-        {
-            HttpContext.Session["CurrentUser"] = null;
-            return RedirectToAction("Index", "Home");
         }
     }
 }

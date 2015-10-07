@@ -9,11 +9,16 @@
     <script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>
 </head>
 <body>
+    <h3>Header Menu:</h3>
     <ul>
         <li>@Html.ActionLink("MyPage", "Info", "People", new { id = ((Models.UserViewModel)HttpContext.Current.Session["CurrentUser"]).Id }, null)</li>
         <li>@Html.ActionLink("All Users", "All", "People")</li>
         <li>@Html.ActionLink("Newsfeed", "Newsfeed", "Tweet")</li>
     </ul>
+
+    @Html.Partial("~/Views/Shared/CurrentUserAndLogOut.cshtml", (HttpContext.Current.Session["CurrentUser"] as Models.UserViewModel) )
+    <hr />
+
     @RenderBody()
 </body>
 </html>

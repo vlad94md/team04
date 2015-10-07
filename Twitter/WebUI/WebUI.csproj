@@ -142,10 +142,11 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Tweet\AddNewTweet.cshtml" />
+    <Content Include="Views\Tweet\Add.cshtml" />
     <Content Include="Views\People\All.cshtml" />
     <Content Include="Views\People\Info.cshtml" />
     <Content Include="Views\People\UserInfo.cshtml" />
+    <Content Include="Views\User\RegisterSuccess.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -183,7 +184,7 @@
     <Content Include="Views\Tweet\Newsfeed.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Tweet\CurrentUserString.cshtml" />
+    <Content Include="Views\Shared\CurrentUserAndLogOut.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

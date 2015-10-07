@@ -12,13 +12,9 @@
     <title>Newsfeed</title>
 </head>
 <body>
-    <div>
-        <h2>Newsfeed</h2>
-    </div>
-    @Html.Partial("AddNewTweet", new Models.TweetModel())
+    <h2>Newsfeed</h2>
 
-    @Html.Partial("CurrentUserString", (HttpContext.Current.Session["CurrentUser"] as Models.UserViewModel) )
-    <button type="button" value="logout" onclick="location.href='@Url.Action("LogOut", "Tweet")'">Log out!</button>
+    @{ Html.RenderPartial("Add", new Models.TweetModel()); }
    
     <h3>Tweets:</h3>
     <div id="tweets">
@@ -29,7 +25,6 @@
             <br />
         }
     </div>
-
 
 @*    <script>
         $(document).ready(function () {
