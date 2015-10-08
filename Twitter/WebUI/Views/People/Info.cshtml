@@ -26,8 +26,8 @@
             @item.DateAdded <br />
             if (ViewBag.currentUserPage == true)
             {
-                <button type="button" value="logout" onclick="location.href='@Url.Action("Edit", "Tweet")'">Edit</button>
-                <button type="button" value="logout" onclick="location.href='@Url.Action("Delete", "Tweet")'">Delete</button>
+                <button type="button" value="logout" onclick="location.href='@Url.Action("Edit", "Tweet", new { Id = item.Id })'">Edit</button>
+                <button type="button" value="logout" onclick="location.href='@Url.Action("Delete", "Tweet", new { Id = item.Id })'">Delete</button>
             }
             <br />
         }

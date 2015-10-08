@@ -7,8 +7,8 @@ using DAL.Entities;
 
 namespace DAL
 {
-    public class FollowsDao : BaseDao<Follow>
-    {
+    //public class FollowsDao : IBaseDao<Follow>
+    //{
         
-    }
+    //}
 }

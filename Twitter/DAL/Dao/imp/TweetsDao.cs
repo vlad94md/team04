@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Entities;
+using System.Data;
 
 namespace DAL
 {
@@ -46,7 +47,22 @@ namespace DAL
             bool result = false;
             using (context = new TwitterEntities())
             {
+                tweet.User = userDao.GetById(tweet.User_Id);
+                context.Tweets.Attach(tweet);  // maybe not need
                 context.Tweets.Remove(tweet);
+                result = context.SaveChanges() > 0;
+            }
+            return result;
+        }
+
+        public bool Update(Tweet tweet)
+        {
+            bool result = false;
+            using (context = new TwitterEntities())
+            {
+                tweet.User = userDao.GetById(tweet.User_Id);
+                context.Tweets.Attach(tweet);
+                context.Entry(tweet).State = EntityState.Modified;
                 result = context.SaveChanges() > 0;
             }
             return result;

@@ -10,6 +10,8 @@ namespace Services
     public interface ITweetService
     {
         bool Add(TweetModel tweet);
+        bool Update(TweetViewModel tweet);
+        bool Delete(TweetViewModel tweet);
         List<TweetViewModel> GetListById(int userId);
     }
 }

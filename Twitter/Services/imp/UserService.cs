@@ -49,11 +49,6 @@ namespace Services
             return null;
         }
 
-        //public int GetIdByUsername(string username)
-        //{
-        //    return userContext.GetByUsername(username).Id;
-        //}
-
         public UserViewModel GetById(int id)
         {
             User currUser = userContext.GetById(id);

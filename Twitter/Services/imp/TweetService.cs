@@ -42,5 +42,15 @@ namespace Services
             return result;
         }
 
+        public bool Update(TweetViewModel tweet)
+        {
+            return tweetContext.Update(TweetConverter.ConvertToDB(tweet));
+        }
+
+        public bool Delete(TweetViewModel tweet)
+        {
+            return tweetContext.Delete(TweetConverter.ConvertToDB(tweet));
+        }
+
     }
 }

@@ -2,10 +2,6 @@ C:\Users\Vlad\Documents\Visual Studio 2012\Projects\Twitter\Models\bin\Debug\Mod
 C:\Users\Vlad\Documents\Visual Studio 2012\Projects\Twitter\Models\bin\Debug\Models.pdb
 C:\Users\Vlad\Documents\Visual Studio 2012\Projects\Twitter\Models\obj\Debug\Models.dll
 C:\Users\Vlad\Documents\Visual Studio 2012\Projects\Twitter\Models\obj\Debug\Models.pdb
-D:\GIT\team04\Twitter\Models\bin\Debug\Models.dll
-D:\GIT\team04\Twitter\Models\bin\Debug\Models.pdb
-D:\GIT\team04\Twitter\Models\obj\Debug\Models.dll
-D:\GIT\team04\Twitter\Models\obj\Debug\Models.pdb
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Models\bin\Debug\Models.dll
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Models\bin\Debug\Models.pdb
 C:\Users\stibulschii\Documents\GitRepos\team04\Twitter\Models\obj\Debug\Models.dll
@@ -18,3 +14,7 @@ D:\GIT\team04\Backups\6.10.15\Twitter\Models\bin\Debug\Models.dll
 D:\GIT\team04\Backups\6.10.15\Twitter\Models\bin\Debug\Models.pdb
 D:\GIT\team04\Backups\6.10.15\Twitter\Models\obj\Debug\Models.dll
 D:\GIT\team04\Backups\6.10.15\Twitter\Models\obj\Debug\Models.pdb
+D:\GIT\team04\Twitter\Models\bin\Debug\Models.dll
+D:\GIT\team04\Twitter\Models\bin\Debug\Models.pdb
+D:\GIT\team04\Twitter\Models\obj\Debug\Models.dll
+D:\GIT\team04\Twitter\Models\obj\Debug\Models.pdb

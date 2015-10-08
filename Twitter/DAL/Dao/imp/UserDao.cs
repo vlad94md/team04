@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL.Entities;
+using System.Data;
 
 namespace DAL
 {
@@ -43,6 +44,18 @@ namespace DAL
             using (context = new TwitterEntities())
             {
                 context.Users.Remove(user);
+                result = context.SaveChanges() > 0;
+            }
+            return result;
+        }
+
+        public bool Update(User user)
+        {
+            bool result = false;
+            using (context = new TwitterEntities())
+            {
+                context.Users.Attach(user);
+                context.Entry(user).State = EntityState.Modified;
                 result = context.SaveChanges() > 0;
             }
             return result;

@@ -48,5 +48,26 @@ namespace WebUI.Controllers
             var currentUserTweets = tweetService.GetListById(currentUser.Id);
             return View("Newsfeed", currentUserTweets);
         }
+
+        public ActionResult Edit(TweetViewModel tweet) 
+        {
+            ///// tested and it works
+            tweetService.Update(tweet);
+            return View();  
+            
+            //RedirectToAction("Info", "People", new { id = ((Models.UserViewModel)HttpContext.Session["CurrentUser"]).Id });
+        }
+
+        public ActionResult Delete(TweetViewModel tweet) 
+        {
+            //var b = tweetService.GetListById(1);  // for test
+            //var tweet1 = b.First(x => x.Id == 1);
+
+            ///// tested and it works
+            tweetService.Delete(tweet);
+            return View();  
+
+            //RedirectToAction("Info", "People", new { id = ((Models.UserViewModel)HttpContext.Session["CurrentUser"]).Id });
+        }
     }
 }
