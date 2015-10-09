@@ -47,6 +47,16 @@ namespace Services
             return tweetContext.Update(TweetConverter.ConvertToDB(tweet));
         }
 
+        public bool Update(int id, string text)
+        {
+            return tweetContext.Save(id, text);
+        }
+
+        public bool Update(TweetModel tweet)  // prob dont need
+        {
+            return tweetContext.Update(TweetConverter.ConvertToDB(tweet));
+        }
+
         public bool Delete(TweetViewModel tweet)
         {
             return tweetContext.Delete(TweetConverter.ConvertToDB(tweet));

@@ -18,7 +18,7 @@ namespace Models
 
         public System.DateTime Date_time { get; set; }
 
-        //public virtual UserModel User { get; set; }
+        public virtual UserModel User { get; set; }
 
     }
 }

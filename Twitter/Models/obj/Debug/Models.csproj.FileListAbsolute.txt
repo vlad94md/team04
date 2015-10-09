@@ -18,3 +18,4 @@ D:\GIT\team04\Twitter\Models\bin\Debug\Models.dll
 D:\GIT\team04\Twitter\Models\bin\Debug\Models.pdb
 D:\GIT\team04\Twitter\Models\obj\Debug\Models.dll
 D:\GIT\team04\Twitter\Models\obj\Debug\Models.pdb
+D:\GIT\team04\Twitter\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

@@ -49,10 +49,9 @@ namespace WebUI.Controllers
             return View("Newsfeed", currentUserTweets);
         }
 
-        public ActionResult Edit(TweetViewModel tweet) 
+        public ActionResult Edit()  // should be as parameteres int id, string text
         {
-            ///// tested and it works
-            tweetService.Update(tweet);
+            tweetService.Update(2, "lol"); // works!
             return View();  
             
             //RedirectToAction("Info", "People", new { id = ((Models.UserViewModel)HttpContext.Session["CurrentUser"]).Id });

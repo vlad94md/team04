@@ -12,5 +12,6 @@ namespace DAL
         bool Add(T t);
         bool Delete(T t);
         bool Update(T t);
+        T GetById(int id);
     }
 }

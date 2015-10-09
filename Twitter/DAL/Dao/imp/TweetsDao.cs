@@ -67,5 +67,30 @@ namespace DAL
             }
             return result;
         }
+
+        public bool Save(int id, string text)
+        {
+            bool result = false;
+            using (context = new TwitterEntities())
+            {
+                var tweet = GetById(id);
+                tweet.Body = text;
+
+                context.Tweets.Attach(tweet);  // maybe not need
+                context.Entry(tweet).State = EntityState.Modified;
+                result = context.SaveChanges() > 0;
+            }
+            return result;
+        }
+
+        public Tweet GetById(int id)
+        {
+            //using (context = new TwitterEntities())
+            //{
+            //    return context.Tweets.FirstOrDefault(x => x.Id == id);
+            //}
+
+            return context.Tweets.FirstOrDefault(x => x.Id == id);
+        }
     }
 }
