@@ -49,24 +49,18 @@ namespace WebUI.Controllers
             return View("Newsfeed", currentUserTweets);
         }
 
-        public ActionResult Edit()  // should be as parameteres int id, string text
+        public ActionResult Edit(int id)  // should be as parameteres int id, string text
         {
-            tweetService.Update(2, "lol"); // works!
+            tweetService.Update(id, "lol2"); // works!
             return View();  
             
             //RedirectToAction("Info", "People", new { id = ((Models.UserViewModel)HttpContext.Session["CurrentUser"]).Id });
         }
 
-        public ActionResult Delete(TweetViewModel tweet) 
+        public ActionResult Delete(int id) 
         {
-            //var b = tweetService.GetListById(1);  // for test
-            //var tweet1 = b.First(x => x.Id == 1);
-
-            ///// tested and it works
-            tweetService.Delete(tweet);
+            tweetService.Delete(id);
             return View();  
-
-            //RedirectToAction("Info", "People", new { id = ((Models.UserViewModel)HttpContext.Session["CurrentUser"]).Id });
         }
     }
 }

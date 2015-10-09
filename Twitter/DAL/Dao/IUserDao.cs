@@ -10,6 +10,5 @@ namespace DAL
     public interface IUserDao : IBaseDao<User>
     {
         User GetByUsername(string username);
-        User GetById(int id);
     }
 }

@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\main.css" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.0.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.0.js" />
@@ -147,6 +148,7 @@
     <Content Include="Views\People\Info.cshtml" />
     <Content Include="Views\People\UserInfo.cshtml" />
     <Content Include="Views\User\RegisterSuccess.cshtml" />
+    <Content Include="Views\Shared\_StartLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -13,6 +13,7 @@ namespace Services
         bool Update(TweetViewModel tweet);
         bool Update(int id, string text);
         bool Delete(TweetViewModel tweet);
+        bool Delete(int id);
         List<TweetViewModel> GetListById(int userId);
     }
 }

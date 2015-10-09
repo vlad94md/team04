@@ -28,16 +28,13 @@ namespace Services
         public List<TweetViewModel> GetListById(int userId)
         {
             List<TweetViewModel> result = new List<TweetViewModel>();
-            var allTweets = tweetContext.GetList();
-            var currUser = userContext.GetById(userId);
+            var thisUserTweets = tweetContext.GetList().Where( x => x.User_Id == userId);
 
-            foreach (var item in allTweets)
+            foreach (var tweet in thisUserTweets)
             {
-                if (item.User_Id == currUser.Id)
-                {
-                    result.Add(TweetConverter.ConvertToViewModel(item));
-                }
+                result.Add(TweetConverter.ConvertToViewModel(tweet));
             }
+
             result = result.OrderByDescending(x => x.DateAdded).ToList();
             return result;
         }
@@ -52,12 +49,17 @@ namespace Services
             return tweetContext.Save(id, text);
         }
 
+        public bool Delete(int id)
+        {
+            return tweetContext.Delete(id);
+        }
+
         public bool Update(TweetModel tweet)  // prob dont need
         {
             return tweetContext.Update(TweetConverter.ConvertToDB(tweet));
         }
 
-        public bool Delete(TweetViewModel tweet)
+        public bool Delete(TweetViewModel tweet) // prob dont need
         {
             return tweetContext.Delete(TweetConverter.ConvertToDB(tweet));
         }

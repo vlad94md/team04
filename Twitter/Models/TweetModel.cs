@@ -13,7 +13,7 @@ namespace Models
         public int User_Id { get; set; }
 
         [Required(ErrorMessage = "Please enter tweet body!")]
-        [StringLength(250, ErrorMessage = "Tweet should contain maximum of 250 characters!")]
+        [StringLength(140, ErrorMessage = "Tweet should contain maximum of 140 characters!")]
         public string Body { get; set; }
 
         public System.DateTime Date_time { get; set; }

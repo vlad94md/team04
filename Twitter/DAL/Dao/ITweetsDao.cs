@@ -10,5 +10,6 @@ namespace DAL
     public interface ITweetsDao : IBaseDao<Tweet>
     {
         bool Save(int id, string text);
+        bool Delete(int id);
     }
 }

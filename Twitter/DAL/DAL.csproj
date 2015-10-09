@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dao\BaseDao.cs" />
     <Compile Include="Dao\IBaseDao.cs" />
     <Compile Include="Dao\IFollowsDao.cs" />
     <Compile Include="Dao\imp\FollowsDao.cs" />

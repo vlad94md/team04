@@ -59,9 +59,9 @@ namespace Services
         {
             List<UserViewModel> result = new List<UserViewModel>();
             var allUsers = userContext.GetList();
-            foreach (var item in allUsers)
+            foreach (var user in allUsers)
             {
-                result.Add(UserConverter.ConvertToViewModel(item));
+                result.Add(UserConverter.ConvertToViewModel(user));
             }
             return result;
         }

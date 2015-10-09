@@ -16,6 +16,7 @@ namespace DAL
         public TweetsDao(IUserDao userContext)
         {
             this.userDao = userContext;
+            //context = new TwitterEntities();
         }
 
         public ICollection<Tweet> GetList()
@@ -42,13 +43,25 @@ namespace DAL
             return result;
         }
 
-        public bool Delete(Tweet tweet)
+        public bool Delete(Tweet tweet) // maybe not need
         {
             bool result = false;
             using (context = new TwitterEntities())
             {
                 tweet.User = userDao.GetById(tweet.User_Id);
-                context.Tweets.Attach(tweet);  // maybe not need
+                context.Tweets.Attach(tweet);  
+                context.Tweets.Remove(tweet);
+                result = context.SaveChanges() > 0;
+            }
+            return result;
+        }
+
+        public bool Delete(int id)
+        {
+            bool result = false;
+            using (context = new TwitterEntities())
+            {
+                var tweet = GetById(id);
                 context.Tweets.Remove(tweet);
                 result = context.SaveChanges() > 0;
             }
@@ -76,7 +89,6 @@ namespace DAL
                 var tweet = GetById(id);
                 tweet.Body = text;
 
-                context.Tweets.Attach(tweet);  // maybe not need
                 context.Entry(tweet).State = EntityState.Modified;
                 result = context.SaveChanges() > 0;
             }
@@ -85,11 +97,6 @@ namespace DAL
 
         public Tweet GetById(int id)
         {
-            //using (context = new TwitterEntities())
-            //{
-            //    return context.Tweets.FirstOrDefault(x => x.Id == id);
-            //}
-
             return context.Tweets.FirstOrDefault(x => x.Id == id);
         }
     }
