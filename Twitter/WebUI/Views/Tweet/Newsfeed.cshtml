@@ -15,32 +15,25 @@
     <h2>Newsfeed</h2>
 
     @{ Html.RenderPartial("Add", new Models.TweetModel()); }
-   
-    <h3>Tweets:</h3>
-    <div id="tweets">
+    <span class="badge">Tweets: @Model.Count</span>
+
+    <div id="tweets" style="width: 50%; margin: 0 auto;">
+        <h3>Tweets:</h3>
         @foreach (var item in Model)
         {
-            @item.Body <br />
-            @item.DateAdded <br />
-            <br />
+        
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h7 class="panel-title">@item.DateAdded </h7>
+                </div>
+                <div class="panel-body">
+                   <h5> @item.Body</h5>
+                    <br />
+                    <br />
+                </div>
+            </div>
+            
         }
     </div>
-
-@*    <script>
-        $(document).ready(function () {
-            $(".tweet").click(function () {
-                $.ajax({
-                    url: '/Tweet/Newsfeed/',
-                    type: "POST",
-                    data: {
-                        Body: $('#Body').val()
-                    },
-                    success: function (data) {
-                        $('#tweets').html(data);
-                    }
-                })
-            });
-        });
-    </script>*@
 </body>
 </html>
