@@ -12,8 +12,8 @@ namespace Models
 
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Please enter your username")]
-        public string Username { get; set; }
+        [Required(ErrorMessage = "Please enter your email")]
+        public string Email { get; set; }
 
         [Required(ErrorMessage = "Please enter your password")]
         public string Passwrd

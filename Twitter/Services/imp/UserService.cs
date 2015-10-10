@@ -40,7 +40,7 @@ namespace Services
 
         public UserViewModel IsUsernamePassCorrect(LogInUserViewModel model)
         {
-            var curUser = userContext.GetList().FirstOrDefault(x => x.Username == model.Username);
+            var curUser = userContext.GetList().FirstOrDefault(x => x.Email == model.Email);
             if (curUser != null)
             {
                 if (curUser.Passwrd == model.Passwrd)

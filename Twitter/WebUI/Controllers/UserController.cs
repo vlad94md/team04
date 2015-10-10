@@ -70,7 +70,7 @@ namespace WebUI.Controllers
                 }
                 else
                 {
-                    ViewBag.errorMessage = "Username or Password is incorrect!";
+                    ViewBag.errorMessage = "Email or Password is incorrect!";
                     return View();
                 }
             }

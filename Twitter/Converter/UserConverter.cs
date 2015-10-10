@@ -27,7 +27,7 @@ namespace Converter
             var currentUser = new User
             {
                 Id = user.Id,
-                Username = user.Username,
+                Email = user.Email,
                 Passwrd = user.Passwrd
             };
 

@@ -1,6 +1,8 @@
-﻿@{
-    Layout = null;
+﻿@model Models.LogInUserViewModel
+@{
+    Layout = "~/Views/Shared/_StartLayout.cshtml"; ;
 }
+
 
 <!DOCTYPE html>
 
@@ -10,8 +12,8 @@
     <title>RegisterSuccess</title>
 </head>
 <body>
-    <div>
-        You have been successfully registered! Now you can sign in.
+    <div class="container">
+        <h2>You have been successfully registered! Now you can sign in.</h2>
         <button type="button" value="LogIn" onclick="location.href='@Url.Action("LogIn", "User")'">Sign In!</button>
     </div>
 </body>
