@@ -11,13 +11,30 @@
     <title>Index</title>
 </head>
 <body>
-    <center>
-        <h1>Welcome to Twitter! :)</h1>
-
-        <button type="button" value="LogIn" onclick="location.href='@Url.Action("LogIn", "User")'">Sign In!</button>
-        <br />
-        <br />
-        <button type="button" value="Register" onclick="location.href='@Url.Action("SignUp", "User")'">Register!</button>
-    </center>
+    <div id="startPage" style="padding: 10%; width: 70%; margin: 0 auto">
+        <div class="panel panel-default">
+            <center>
+            <div class="panel-body">
+                    <h1>Welcome to Twitter! :)</h1>
+                    <form class="form-horizontal">
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="button" class="btn btn-default" value="LogIn" style="width: 200px; margin: 5px"
+                             onclick="location.href='@Url.Action("LogIn", "User")'">
+                                    Sign In</button>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="button" class="btn btn-default" value="Register" style="width: 200px; margin: 5px"
+                             onclick="location.href='@Url.Action("SignUp", "User")'">
+                                    Register</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+            </center>
+        </div>
+    </div>
 </body>
 </html>

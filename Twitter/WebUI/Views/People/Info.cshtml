@@ -3,7 +3,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 <!DOCTYPE html>
 
 <html>
@@ -12,36 +11,44 @@
     <title>Info</title>
 </head>
 <body>
-    <h3>User information:</h3>
-    @Html.Partial("UserInfo", (Models.UserViewModel)ViewBag.UserInfo)
-    <br />
+    <div id="all-users" style="width: 90%; margin: 0 auto;">
+        <h3>User information:</h3>
+        @Html.Partial("UserInfo", (Models.UserViewModel)ViewBag.UserInfo)
+        <br />
+        <span class="badge">Tweets: @Model.Count</span>
+        <span class="badge">Following: 0</span>
+        <span class="badge">Followers: 0</span>
+        <hr />
+        <h3>User tweets:</h3>
 
-    <hr />
-    <h3>User tweets:</h3>
+        <div id="tweets" style="width: 50%; margin: 0 auto;">
+            @foreach (var item in Model)
+            {
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h7 class="panel-title">@item.DateAdded </h7>
+                    </div>
+                    <div class="panel-body">
+                        <h5>@item.Body</h5>
+                        <br />
+                        <br />
+                        @if (ViewBag.currentUserPage == true)
+                        {
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="button" value="logout" class="btn btn-default" onclick="location.href='@Url.Action("Edit", "Tweet", new { Id = item.Id })'">Edit</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" value="logout" class="btn btn-default" onclick="location.href='@Url.Action("Delete", "Tweet", new { Id = item.Id })'">Delete</button>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
 
-    <div id="tweets" style="width: 50%; margin: 0 auto;">
-        @foreach (var item in Model)
-        {
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h7 class="panel-title">@item.DateAdded </h7>
-                </div>
-                <div class="panel-body">
-                    <h5>@item.Body</h5>
-                    <br />
-                    <br />
-                    @if (ViewBag.currentUserPage == true)
-                    {
-                        <div style="width:30%; margin: 0 auto;">
-                            <button type="button" value="logout" class="btn btn-default" onclick="location.href='@Url.Action("Edit", "Tweet", new { Id = item.Id })'">Edit</button>
-                            <button type="button" value="logout" class="btn btn-default"  onclick="location.href='@Url.Action("Delete", "Tweet", new { Id = item.Id })'">Delete</button>
-                        </div>
-                    }
-                </div>
-            </div>
-            
-            <br />
-        }
+                <br />
+            }
+        </div>
     </div>
 </body>
 </html>

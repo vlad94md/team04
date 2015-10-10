@@ -12,27 +12,26 @@
     <title>Newsfeed</title>
 </head>
 <body>
-    <h2>Newsfeed</h2>
-
-    @{ Html.RenderPartial("Add", new Models.TweetModel()); }
-    <span class="badge">Tweets: @Model.Count</span>
 
     <div id="tweets" style="width: 50%; margin: 0 auto;">
+        <h2>What's new?</h2>
+        @{ Html.RenderPartial("Add", new Models.TweetModel()); }
+
         <h3>Tweets:</h3>
         @foreach (var item in Model)
         {
-        
+
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h7 class="panel-title">@item.DateAdded </h7>
                 </div>
                 <div class="panel-body">
-                   <h5> @item.Body</h5>
+                    <h5>@item.Body</h5>
                     <br />
                     <br />
                 </div>
             </div>
-            
+
         }
     </div>
 </body>

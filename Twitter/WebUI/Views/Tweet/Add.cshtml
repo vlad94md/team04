@@ -2,8 +2,7 @@
 
 @using (Html.BeginForm("Add", "Tweet", new { @class="form-horizontal"}))
 {
-    <p>What's new?</p>
-    @Html.TextAreaFor(model => model.Body, 5, 60, new { @class="control-label", @placeholder = "Say something.." })
+    @Html.TextAreaFor(model => model.Body, 5, 68, new { @class = "control-label", @placeholder = "Say something..", @resize = "none" })
     <input type="submit" class="btn btn-default" value="Tweet!" />
     @Html.ValidationSummary()
 }
