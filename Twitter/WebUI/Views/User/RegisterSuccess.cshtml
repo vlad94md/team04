@@ -3,7 +3,6 @@
     Layout = "~/Views/Shared/_StartLayout.cshtml"; ;
 }
 
-
 <!DOCTYPE html>
 
 <html>
@@ -12,9 +11,20 @@
     <title>RegisterSuccess</title>
 </head>
 <body>
-    <div class="container">
-        <h2>You have been successfully registered! Now you can sign in.</h2>
-        <button type="button" value="LogIn" onclick="location.href='@Url.Action("LogIn", "User")'">Sign In!</button>
+    <div id="startPage" style="padding: 10%; width: 80%; margin: 0 auto">
+        <div class="panel panel-default">
+            <center>
+            <div class="panel-body">
+
+          <h2 class="text-success">You have been successfully registered!</h2>
+                <span class="glyphicon glyphicon-ok" style="font-size: 30px;"></span>
+              <h4> Now you can sign in</h4>
+
+        <button type="button" class="btn btn-default" value="LogIn"
+            onclick="location.href='@Url.Action("LogIn", "User")'" style="margin: 5px">Sign In!</button>
+            </div>
+            </center>
+        </div>
     </div>
 </body>
 </html>

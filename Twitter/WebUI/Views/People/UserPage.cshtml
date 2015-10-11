@@ -1,0 +1,106 @@
+﻿@model List<Models.TweetViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>UsersPage</title>
+    <script>
+        $(document).ready(function () {
+            $('.tweetform').hide();
+            $('.SaveCancel').hide();
+
+            $('.tweet-button-change').click(function (e) {
+                var id = this.id;
+                id = id.substr(2);
+                var clickedButton = $(e.target);
+                var parentBlock = clickedButton.parents('#tweet-container-' + id);
+                parentBlock.find('.tweet-text-' + id).hide();
+                parentBlock.find('.tweetform').show();
+                parentBlock.find('.EditDelete').hide();
+                parentBlock.find('.SaveCancel').show();
+
+            });
+            $('.CancelEdit').click(function (e) {
+                var id = this.id;
+                id = id.substr(2);
+                var clickedButton = $(e.target);
+                var parentBlock = clickedButton.parents('#tweet-container-' + id);
+                parentBlock.find('.tweet-text-' + id).show();
+                parentBlock.find('.tweetform').hide();
+                parentBlock.find('.EditDelete').show();
+                parentBlock.find('.SaveCancel').hide();
+            });
+            $('.buttonSave').click(function (e) {
+                var id = this.id;
+                id = id.substr(2);
+                var clickedButton = $(e.target);
+                var parentBlock = clickedButton.parents('#tweet-container-' + id);
+                var tex = $('.tweetbd' + id).val();
+
+                alert('buton clicked. butons id' + id);
+
+                $.get("@Url.Action("Edit", "Tweet")", { 'id': id, 'text': tex }, function (data) { });
+
+                parentBlock.find('.tweetform').hide();
+                parentBlock.find('.SaveCancel').hide();
+                parentBlock.find('.EditDelete').show();
+                $('.tweet-text-' + id).replaceWith(tex);
+
+            });
+
+            $('.Deletebutton').click(function (e) {
+                var id = this.id;
+                id = id.substr(2);
+
+                $.get("@Url.Action("Delete", "Tweet")", { 'id': id }, function () { });
+
+                $('#tweet-container-' + id).hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="this-user-page">
+        <h3>User information:</h3>
+        @Html.Partial("UserInfo", (Models.UserViewModel)ViewBag.UserInfo)
+        <br />
+        <span class="badge">Tweets: @Model.Count</span>
+        <span class="badge">Following: 0</span>
+        <span class="badge">Followers: 0</span>
+        <hr />
+
+        <div id="tweets" style="width: 50%; margin: 0 auto;">
+            @foreach (var item in Model)
+            {
+                <div class="panel panel-primary" id="tweet-container-@item.Id">
+                    <div class="panel-heading">
+                        <h7 class="panel-heading">@item.DateAdded</h7>
+                        <br />
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="tweetform">
+                            <div class="tweetform-@item.Id">
+                                <h5>@Html.TextAreaFor(x => item.Body, new { @class = "tweetbd" + item.Id, @cols="50" })</h5>
+                            </div>
+                        </div>
+                        <div class="tweet-text-@item.Id">
+                            <h5 style="word-wrap: break-word;">@item.Body</h5>
+                        </div>
+
+                        <div class="SaveCancel row" style="width: 35%; margin: 0 auto;">
+                            <button type="button" id="s-@item.Id" class="buttonSave btn btn-default col-md-6">Save</button>
+                            <button type="button" id="c-@item.Id" class="CancelEdit btn btn-default col-md-6">Cancel</button>
+                        </div>
+                        <div class="EditDelete row" style="margin: 0 auto;">
+                            <div class="tweet-button-change col-md-6" id="e-@item.Id"></div>
+                            <div class="Deletebutton col-md-6" id="d-@item.Id"></div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</body>

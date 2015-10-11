@@ -33,13 +33,26 @@ namespace WebUI.Controllers
             var tweets = tweetService.GetListById(thisUser.Id);
             ViewBag.UserInfo = thisUser;
 
-            var currentAuthorized = (UserViewModel)HttpContext.Session["CurrentUser"];
-            if (currentAuthorized.Id == id)
-            {
-                ViewBag.currentUserPage = true;
-            }
+            //var currentAuthorized = (UserViewModel)HttpContext.Session["CurrentUser"];
+            //if (currentAuthorized.Id == id)
+            //{
+            //    ViewBag.currentUserPage = true;
+            //}
             return View(tweets);
         }
 
+        public ActionResult UserPage(int id)
+        {
+            UserViewModel thisUser = userService.GetById(id);
+            var tweets = tweetService.GetListById(thisUser.Id);
+            ViewBag.UserInfo = thisUser;
+
+            //var currentAuthorized = (UserViewModel)HttpContext.Session["CurrentUser"];
+            //if (currentAuthorized.Id == id)
+            //{
+            //    ViewBag.currentUserPage = true;
+            //}
+            return View(tweets);
+        }
     }
 }

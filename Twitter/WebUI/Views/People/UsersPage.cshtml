@@ -1,0 +1,77 @@
+﻿@model List<Models.TweetViewModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>UsersPage</title>
+    <script>
+        $(document).ready(function () {
+            $('.tweetform').hide();
+            $('.SaveCancel').hide();
+
+            $('.tweet-button-change').click(function (e) {
+                var id = this.id;
+                id = id.substr(2);
+                var clickedButton = $(e.target);
+                var parentBlock = clickedButton.parents('.tweet-container');
+                parentBlock.find('.tweet-text-'+id).hide();
+                parentBlock.find('.tweetform').show();
+                parentBlock.find('.EditDelete').hide();
+                parentBlock.find('.SaveCancel').show();
+
+            });
+            $('.CancelEdit').click(function (e) {
+                var id = this.id;
+                id = id.substr(2);
+                var clickedButton = $(e.target);
+                var parentBlock = clickedButton.parents('.tweet-container');
+                parentBlock.find('.tweet-text-'+id).show();
+                parentBlock.find('.tweetform').hide();
+                parentBlock.find('.EditDelete').show();
+                parentBlock.find('.SaveCancel').hide();
+            });
+            $('.buttonSave').click(function (e) {
+                var id = this.id;
+                id = id.substr(2);
+                var clickedButton = $(e.target);
+                var parentBlock = clickedButton.parents('.tweet-container');
+                var tex = $('.tweet_' + id).val();
+                
+                alert('buton clicked. butons id' + id);
+
+                $.get("@Url.Action("Edit","People")", { 'id': id, 'text': tex }, function (data) { });
+
+                $('.tweet-text-' + id).replaceWith(tex);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>User information:</h3>
+    @Html.Partial("UserInfo", (Models.UserViewModel)ViewBag.UserInfo)
+    <hr />
+
+    @foreach (var item in Model)
+    {
+        <div class="tweet-container">
+           <div class="tweetform">
+            <div class="tweetform-@item.Id">@Html.TextAreaFor(x => item.Body, new { @class="tweet_"+@item.Id});</div>
+           </div>
+            <div class="tweet-text-@item.Id">@item.Body</div>
+            <br />
+            @item.DateAdded <br />
+            <div class="EditDelete">
+                <button type="button" id="e-@item.Id" value="logout" class="tweet-button-change">Edit</button>
+                <button type="button" id="d-@item.Id" value="logout">Delete</button>
+            </div>
+            <div class="SaveCancel">
+                <button type="button" id="s-@item.Id" class="buttonSave">Save</button>
+                <button type="button" id="c-@item.Id" class="CancelEdit">Cancel</button>
+            </div>
+            <br />
+        </div>
+    }
+
+</body>

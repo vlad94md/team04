@@ -11,7 +11,7 @@
     <title>Info</title>
 </head>
 <body>
-    <div id="all-users" style="width: 90%; margin: 0 auto;">
+    <div id="user-info">
         <h3>User information:</h3>
         @Html.Partial("UserInfo", (Models.UserViewModel)ViewBag.UserInfo)
         <br />
@@ -19,6 +19,7 @@
         <span class="badge">Following: 0</span>
         <span class="badge">Followers: 0</span>
         <hr />
+
         <h3>User tweets:</h3>
 
         <div id="tweets" style="width: 50%; margin: 0 auto;">
@@ -29,7 +30,7 @@
                         <h7 class="panel-title">@item.DateAdded </h7>
                     </div>
                     <div class="panel-body">
-                        <h5>@item.Body</h5>
+                        <h5 style="word-wrap: break-word;">@item.Body</h5>
                         <br />
                         <br />
                         @if (ViewBag.currentUserPage == true)

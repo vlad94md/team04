@@ -50,3 +50,16 @@ D:\GIT\team04\Twitter\Services\bin\Debug\Models.pdb
 D:\GIT\team04\Twitter\Services\bin\Debug\EntityFramework.xml
 D:\GIT\team04\Twitter\Services\obj\Debug\BL.dll
 D:\GIT\team04\Twitter\Services\obj\Debug\BL.pdb
+C:\Users\user\Desktop\Twitter\Services\bin\Debug\BL.dll
+C:\Users\user\Desktop\Twitter\Services\bin\Debug\BL.pdb
+C:\Users\user\Desktop\Twitter\Services\bin\Debug\Converter.dll
+C:\Users\user\Desktop\Twitter\Services\bin\Debug\DAL.dll
+C:\Users\user\Desktop\Twitter\Services\bin\Debug\Models.dll
+C:\Users\user\Desktop\Twitter\Services\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\Twitter\Services\bin\Debug\Converter.pdb
+C:\Users\user\Desktop\Twitter\Services\bin\Debug\DAL.pdb
+C:\Users\user\Desktop\Twitter\Services\bin\Debug\Models.pdb
+C:\Users\user\Desktop\Twitter\Services\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\Twitter\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Twitter\Services\obj\Debug\BL.dll
+C:\Users\user\Desktop\Twitter\Services\obj\Debug\BL.pdb

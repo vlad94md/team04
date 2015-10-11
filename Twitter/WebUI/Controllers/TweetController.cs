@@ -31,6 +31,7 @@ namespace WebUI.Controllers
         public ActionResult Add(TweetModel tweet)
         {
             var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            var currentUserTweets = tweetService.GetListById(currentUser.Id);
 
             if (ModelState.IsValid)
             {
@@ -42,18 +43,17 @@ namespace WebUI.Controllers
                 };
 
                 tweetService.Add(newTweet);
-                return RedirectToAction("Newsfeed", "Tweet");
-            }
+                currentUserTweets = tweetService.GetListById(currentUser.Id);
 
-            var currentUserTweets = tweetService.GetListById(currentUser.Id);
-            return View("Newsfeed", currentUserTweets);
+                return PartialView("TweetPartial", currentUserTweets);
+            }
+            return PartialView("TweetPartial", currentUserTweets);
         }
 
-        public ActionResult Edit(int id)  // should be as parameteres int id, string text
+        public ActionResult Edit(int id, string text) 
         {
-            tweetService.Update(id, "lol2"); // works!
-            return View();  
-            
+            tweetService.Update(id, text); // works!
+            return View();           
             //RedirectToAction("Info", "People", new { id = ((Models.UserViewModel)HttpContext.Session["CurrentUser"]).Id });
         }
 
@@ -61,6 +61,14 @@ namespace WebUI.Controllers
         {
             tweetService.Delete(id);
             return View();  
+        }
+
+        public int GetTweets()
+        {
+            var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            var currentUserTweets = tweetService.GetListById(currentUser.Id);
+
+            return currentUserTweets.Count;
         }
     }
 }
