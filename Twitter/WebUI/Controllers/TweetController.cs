@@ -47,6 +47,7 @@ namespace WebUI.Controllers
 
                 return PartialView("TweetPartial", currentUserTweets);
             }
+            ViewBag.errorMessage = "Tweet body can't be empty and maximum 140 characters!";
             return PartialView("TweetPartial", currentUserTweets);
         }
 
