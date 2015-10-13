@@ -63,3 +63,7 @@ C:\Users\user\Desktop\Twitter\Services\bin\Debug\EntityFramework.xml
 C:\Users\user\Desktop\Twitter\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
 C:\Users\user\Desktop\Twitter\Services\obj\Debug\BL.dll
 C:\Users\user\Desktop\Twitter\Services\obj\Debug\BL.pdb
+D:\GIT\team04\Twitter\Services\bin\Debug\Logger.dll
+D:\GIT\team04\Twitter\Services\bin\Debug\log4net.dll
+D:\GIT\team04\Twitter\Services\bin\Debug\Logger.pdb
+D:\GIT\team04\Twitter\Services\bin\Debug\log4net.xml

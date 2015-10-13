@@ -5,22 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Entities;
 using System.Data;
+using StaticLogger;
 
 namespace DAL
 {
     public class UserDao : IUserDao
     {
-        TwitterEntities context;
+        //TwitterEntities context;
 
         public UserDao()
         {
-            //twitterDB = new TwitterEntities();
+            //context = new TwitterEntities();
         }
 
         public ICollection<User> GetList()
         {
             ICollection<User> result;
-            using (context = new TwitterEntities())
+            using (var context = new TwitterEntities())
             {
                 result = context.Users.ToList(); 
             }
@@ -30,10 +31,13 @@ namespace DAL
         public bool Add(User user)
         {
             bool result = false;
-            using (context = new TwitterEntities())
+            using (var context = new TwitterEntities())
             {
-                context.Users.Add(user);
+            //context.Users.Add(user);
+                context.Users.Attach(user);
+                context.Entry(user).State = EntityState.Added;
                 result = context.SaveChanges() > 0;
+                Logger.Log.Debug("new user ID:" + user.Id + " username:" + user.Username + " was added successfully");
             }
             return result;
         }
@@ -41,10 +45,13 @@ namespace DAL
         public bool Delete(User user)
         {
             bool result = false;
-            using (context = new TwitterEntities())
+            using (var context = new TwitterEntities())
             {
-                context.Users.Remove(user);
+                //context.Users.Remove(user);
+                context.Users.Attach(user);
+                context.Entry(user).State = EntityState.Deleted;
                 result = context.SaveChanges() > 0;
+                Logger.Log.Debug("new user ID:" + user.Id + " username:" + user.Username + " was deleted successfully");
             }
             return result;
         }
@@ -52,7 +59,7 @@ namespace DAL
         public bool Update(User user)
         {
             bool result = false;
-            using (context = new TwitterEntities())
+            using (var context = new TwitterEntities())
             {
                 context.Users.Attach(user);
                 context.Entry(user).State = EntityState.Modified;
@@ -64,7 +71,7 @@ namespace DAL
         public User GetByUsername(string username)
         {
             User result = null;
-            using (context = new TwitterEntities())
+            using (var context = new TwitterEntities())
             {
                 result = context.Users.FirstOrDefault(x => x.Username == username);
             }
@@ -74,7 +81,7 @@ namespace DAL
         public User GetById(int id)
         {
             User result = null;
-            using (context = new TwitterEntities())
+            using (var context = new TwitterEntities())
             {
                 result = context.Users.FirstOrDefault(x => x.Id == id);
             }

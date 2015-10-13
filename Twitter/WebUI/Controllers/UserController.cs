@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using Models;
 using Services;
+using WebUI.App_Start;
+using StaticLogger;
 
 namespace WebUI.Controllers
 {
@@ -31,6 +33,7 @@ namespace WebUI.Controllers
                 if (GetErrors(newUser) == null)
                 {
                     userService.AddNewUser(newUser);
+                    Logger.Log.Debug("new user " + newUser.Username + " " + newUser.Email + " has registered");
                     return RedirectToAction("RegisterSuccess", "User");
                 }
                 ViewBag.errorMessage = GetErrors(newUser);
@@ -66,6 +69,7 @@ namespace WebUI.Controllers
                 if (acceptedUser != null)
                 {
                     HttpContext.Session["CurrentUser"] = acceptedUser;
+                    Logger.Log.Debug("user ID:" + acceptedUser.Id + " username:" + acceptedUser.Username + " logged in");
                     return RedirectToAction("Newsfeed", "Tweet");
                 }
                 else
@@ -79,7 +83,10 @@ namespace WebUI.Controllers
 
         public ActionResult LogOut()
         {
+            var leftUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            Logger.Log.Debug("user ID:" + leftUser.Id + " username:" + leftUser.Username + " logged out");
             HttpContext.Session["CurrentUser"] = null;
+
             return RedirectToAction("Index", "Home");
         }
     }

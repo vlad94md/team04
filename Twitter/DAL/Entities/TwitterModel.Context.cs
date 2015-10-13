@@ -18,6 +18,7 @@ namespace DAL.Entities
         public TwitterEntities()
             : base("name=TwitterEntities")
         {
+            this.Configuration.ProxyCreationEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

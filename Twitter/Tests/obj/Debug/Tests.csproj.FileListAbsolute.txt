@@ -1,0 +1,14 @@
+D:\GIT\team04\Twitter\Tests\bin\Debug\Tests.dll
+D:\GIT\team04\Twitter\Tests\bin\Debug\Tests.pdb
+D:\GIT\team04\Twitter\Tests\bin\Debug\DAL.dll
+D:\GIT\team04\Twitter\Tests\bin\Debug\EntityFramework.dll
+D:\GIT\team04\Twitter\Tests\bin\Debug\DAL.pdb
+D:\GIT\team04\Twitter\Tests\bin\Debug\EntityFramework.xml
+D:\GIT\team04\Twitter\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+D:\GIT\team04\Twitter\Tests\obj\Debug\Tests.dll
+D:\GIT\team04\Twitter\Tests\obj\Debug\Tests.pdb
+D:\GIT\team04\Twitter\Tests\bin\Debug\Tests.dll.config
+D:\GIT\team04\Twitter\Tests\bin\Debug\Logger.dll
+D:\GIT\team04\Twitter\Tests\bin\Debug\log4net.dll
+D:\GIT\team04\Twitter\Tests\bin\Debug\Logger.pdb
+D:\GIT\team04\Twitter\Tests\bin\Debug\log4net.xml

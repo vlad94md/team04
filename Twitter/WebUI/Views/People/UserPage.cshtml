@@ -47,14 +47,16 @@
                 parentBlock.find('.SaveCancel').hide();
                 parentBlock.find('.EditDelete').show();
                 $('.tweet-text-' + id).replaceWith(tex);
-
             });
-
             $('.Deletebutton').click(function (e) {
                 var id = this.id;
                 id = id.substr(2);
 
-                $.get("@Url.Action("Delete", "Tweet")", { 'id': id }, function () { });
+                $.get("@Url.Action("Delete", "Tweet")", { 'id': id }, function () { }).complete(function () {
+                    $.get("@Url.Action("GetTweets", "Tweet")", function (data) {
+                        $('#tweet-badge').html(data);
+                    });
+                });
 
                 $('#tweet-container-' + id).hide();
             });
@@ -66,7 +68,7 @@
         <h3>User information:</h3>
         @Html.Partial("UserInfo", (Models.UserViewModel)ViewBag.UserInfo)
         <br />
-        <span class="badge">Tweets: @Model.Count</span>
+        <span class="badge">Tweets: <span id="tweet-badge">@Model.Count</span></span>
         <span class="badge">Following: 0</span>
         <span class="badge">Followers: 0</span>
         <hr />
@@ -83,7 +85,7 @@
                     <div class="panel-body">
                         <div class="tweetform">
                             <div class="tweetform-@item.Id">
-                                <h5>@Html.TextAreaFor(x => item.Body, new { @class = "tweetbd" + item.Id, @cols="50" })</h5>
+                                <h5>@Html.TextAreaFor(x => item.Body, new { @class = "tweetbd" + item.Id, @cols = "50" })</h5>
                             </div>
                         </div>
                         <div class="tweet-text-@item.Id">

@@ -8,6 +8,7 @@ using System.Web.Routing;
 using WebUI.App_Start;
 using DAL.Entities;
 using Models;
+using StaticLogger;
 
 namespace WebUI
 {
@@ -23,6 +24,7 @@ namespace WebUI
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             DependencyConfig.Config();
+            Logger.InitLogger();
         }
 
 

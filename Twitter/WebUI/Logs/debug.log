@@ -1,0 +1,9 @@
+2015-10-13 13:18:44,679 [92] DEBUG StaticLogger.Logger - user ID:2 2 logged in
+2015-10-13 13:18:46,985 [80] DEBUG StaticLogger.Logger - user ID:2 2 logged out
+2015-10-13 13:20:02,547 [80] DEBUG StaticLogger.Logger - user ID:1 username:1 logged in
+2015-10-13 13:20:05,003 [92] DEBUG StaticLogger.Logger - user ID:1 username:1 logged out
+2015-10-13 13:21:18,060 [80] DEBUG StaticLogger.Logger - user ID:1 username:1 logged in
+2015-10-13 13:21:20,916 [92] DEBUG StaticLogger.Logger - user ID:1 username:1 logged out
+2015-10-13 13:21:30,921 [80] DEBUG StaticLogger.Logger - new user ID:72 username:newuser1 was added successfully
+2015-10-13 13:21:30,921 [80] DEBUG StaticLogger.Logger - new user username:newuser1 newuser1@mail.ru has registered
+2015-10-13 13:22:56,613 [80] DEBUG StaticLogger.Logger - user ID:1 username:1 logged in
