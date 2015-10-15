@@ -41,7 +41,7 @@
     </style>
 </head>
 
-<body style="background-color: #E4F1FE;">   @*663399*@
+<body style="background-color: #E4F1FE;"> 
     <div class="container">
         <!-- Nabrar -->
         <nav class="navbar navbar-inverse">
@@ -53,14 +53,14 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">EnTwit</a>
+                    <a class="navbar-brand" href="@Url.Action("Newsfeed", "Tweet")"><i><b>Twitter</b></i></a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="@Url.Action("Newsfeed", "Tweet")">Home <span class="sr-only">(current)</span></a></li>
                         <li><a href="@Url.Action("All", "People")">People</a></li>
                         <li><a href="@Url.Action("UserPage", "People", new { id = ((Models.UserViewModel)HttpContext.Current.Session["CurrentUser"]).Id }, null)">My Page</a></li>
-                        <li><a href="#" class="btn btn-success" role="button" data-toggle="modal" data-target="#myModal">Tweet!</a></li>
+                        <li><a href="#" class="btn btn-default" role="button" data-toggle="modal" data-target="#myModal">Tweet!</a></li>
                     </ul>
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">

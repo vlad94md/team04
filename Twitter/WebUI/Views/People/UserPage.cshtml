@@ -39,8 +39,6 @@
                 var parentBlock = clickedButton.parents('#tweet-container-' + id);
                 var tex = $('.tweetbd' + id).val();
 
-                alert('buton clicked. butons id' + id);
-
                 $.get("@Url.Action("Edit", "Tweet")", { 'id': id, 'text': tex }, function (data) { });
 
                 parentBlock.find('.tweetform').hide();

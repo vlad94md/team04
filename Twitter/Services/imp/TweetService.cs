@@ -53,16 +53,5 @@ namespace Services
         {
             return tweetContext.Delete(id);
         }
-
-        public bool Update(TweetModel tweet)  // prob dont need
-        {
-            return tweetContext.Update(TweetConverter.ConvertToDB(tweet));
-        }
-
-        public bool Delete(TweetViewModel tweet) // prob dont need
-        {
-            return tweetContext.Delete(TweetConverter.ConvertToDB(tweet));
-        }
-
     }
 }

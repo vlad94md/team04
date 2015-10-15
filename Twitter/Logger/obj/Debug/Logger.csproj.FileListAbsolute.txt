@@ -1,7 +1,7 @@
 D:\GIT\team04\Twitter\Logger\bin\Debug\Logger.dll
 D:\GIT\team04\Twitter\Logger\bin\Debug\Logger.pdb
+D:\GIT\team04\Twitter\Logger\bin\Debug\log4net.dll
+D:\GIT\team04\Twitter\Logger\bin\Debug\log4net.xml
 D:\GIT\team04\Twitter\Logger\obj\Debug\Logger.dll
 D:\GIT\team04\Twitter\Logger\obj\Debug\Logger.pdb
 D:\GIT\team04\Twitter\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
-D:\GIT\team04\Twitter\Logger\bin\Debug\log4net.dll
-D:\GIT\team04\Twitter\Logger\bin\Debug\log4net.xml

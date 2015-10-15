@@ -55,7 +55,6 @@ namespace WebUI.Controllers
         {
             tweetService.Update(id, text); // works!
             return View();           
-            //RedirectToAction("Info", "People", new { id = ((Models.UserViewModel)HttpContext.Session["CurrentUser"]).Id });
         }
 
         public ActionResult Delete(int id) 

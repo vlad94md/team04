@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DAL.Entities;
 using System.Data;
+using StaticLogger;
 
 namespace DAL
 {
@@ -16,7 +17,6 @@ namespace DAL
         public TweetsDao(IUserDao userContext)
         {
             this.userDao = userContext;
-            //context = new TwitterEntities();
         }
 
         public ICollection<Tweet> GetList()
@@ -39,17 +39,18 @@ namespace DAL
                 context.Tweets.Add(tweet);
 
                 result = context.SaveChanges() > 0;
+                Logger.Log.Debug("user ID:" + tweet.User_Id + " username:" + userDao.GetById(tweet.User_Id).Username + " added a new tweet ID:" + tweet.Id);
             }
             return result;
         }
 
-        public bool Delete(Tweet tweet) // maybe not need
+        public bool Delete(Tweet tweet)
         {
             bool result = false;
             using (context = new TwitterEntities())
             {
                 tweet.User = userDao.GetById(tweet.User_Id);
-                context.Tweets.Attach(tweet);  
+                context.Tweets.Attach(tweet);
                 context.Tweets.Remove(tweet);
                 result = context.SaveChanges() > 0;
             }
@@ -64,6 +65,7 @@ namespace DAL
                 var tweet = GetById(id);
                 context.Tweets.Remove(tweet);
                 result = context.SaveChanges() > 0;
+                Logger.Log.Debug("user ID:" + tweet.User_Id + " username:" + userDao.GetById(tweet.User_Id).Username + " deleted a tweet ID:" + tweet.Id);
             }
             return result;
         }
@@ -91,6 +93,7 @@ namespace DAL
 
                 context.Entry(tweet).State = EntityState.Modified;
                 result = context.SaveChanges() > 0;
+                Logger.Log.Debug("user ID:" + tweet.User_Id + " username:" + userDao.GetById(tweet.User_Id).Username + " edited a tweet ID:" + tweet.Id);
             }
             return result;
         }

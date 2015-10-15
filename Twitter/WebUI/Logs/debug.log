@@ -7,3 +7,50 @@
 2015-10-13 13:21:30,921 [80] DEBUG StaticLogger.Logger - new user ID:72 username:newuser1 was added successfully
 2015-10-13 13:21:30,921 [80] DEBUG StaticLogger.Logger - new user username:newuser1 newuser1@mail.ru has registered
 2015-10-13 13:22:56,613 [80] DEBUG StaticLogger.Logger - user ID:1 username:1 logged in
+2015-10-15 10:33:09,422 [8] DEBUG StaticLogger.Logger - user ID:1 username:1 logged in
+2015-10-15 15:24:44,247 [10] DEBUG StaticLogger.Logger - user ID:1 username:1 logged in
+2015-10-15 15:24:50,153 [10] DEBUG StaticLogger.Logger - new user ID:1 username:1just added a new tweet.
+2015-10-15 15:24:58,107 [10] DEBUG StaticLogger.Logger - new user ID:1 username:1just edited a tweet.
+2015-10-15 15:24:59,357 [12] DEBUG StaticLogger.Logger - new user ID:1 username:1just deleted a tweet.
+2015-10-15 15:25:01,440 [10] DEBUG StaticLogger.Logger - new user ID:1 username:1just deleted a tweet.
+2015-10-15 15:25:02,346 [12] DEBUG StaticLogger.Logger - user ID:1 username:1 logged out
+2015-10-15 15:28:15,683 [12] DEBUG StaticLogger.Logger - new user ID:100 username:a1 was added successfully
+2015-10-15 15:28:15,698 [12] DEBUG StaticLogger.Logger - new user a1 a1@mail.ru has registered
+2015-10-15 15:28:22,120 [12] DEBUG StaticLogger.Logger - user ID:100 username:a1 logged in
+2015-10-15 15:28:25,417 [12] DEBUG StaticLogger.Logger - user ID:100 username:a1 added a new tweet.
+2015-10-15 15:28:27,277 [12] DEBUG StaticLogger.Logger - user ID:100 username:a1 added a new tweet.
+2015-10-15 15:28:38,137 [12] DEBUG StaticLogger.Logger - user ID:100 username:a1 edited a tweet.
+2015-10-15 15:28:38,840 [6] DEBUG StaticLogger.Logger - user ID:100 username:a1 deleted a tweet.
+2015-10-15 15:28:39,325 [5] DEBUG StaticLogger.Logger - user ID:100 username:a1 deleted a tweet.
+2015-10-15 15:28:40,215 [16] DEBUG StaticLogger.Logger - user ID:100 username:a1 logged out
+2015-10-15 15:37:27,993 [20] DEBUG StaticLogger.Logger - user ID:1 username:1 logged in
+2015-10-15 15:37:30,775 [20] DEBUG StaticLogger.Logger - user ID:1 username:1 added a new tweet ID:69
+2015-10-15 16:18:03,589 [46] DEBUG StaticLogger.Logger - user ID:1 username:1 logged in
+2015-10-15 16:19:54,351 [51] DEBUG StaticLogger.Logger - user ID:1 username:1 added a new tweet ID:70
+2015-10-15 16:25:33,260 [9] DEBUG StaticLogger.Logger - new user ID:1 username:vladg was added successfully
+2015-10-15 16:25:33,266 [9] DEBUG StaticLogger.Logger - new user vladg vladg@gmail.com has registered
+2015-10-15 16:25:40,025 [5] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-15 16:26:03,613 [11] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:1
+2015-10-15 16:26:07,968 [9] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:2
+2015-10-15 16:26:21,469 [9] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:3
+2015-10-15 16:27:34,908 [5] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:4
+2015-10-15 16:28:27,284 [9] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged out
+2015-10-15 16:29:24,944 [9] DEBUG StaticLogger.Logger - new user ID:2 username:serghei was added successfully
+2015-10-15 16:29:24,944 [9] DEBUG StaticLogger.Logger - new user serghei serghei@gmail.com has registered
+2015-10-15 16:29:31,436 [9] DEBUG StaticLogger.Logger - user ID:2 username:serghei logged in
+2015-10-15 16:29:57,989 [9] DEBUG StaticLogger.Logger - user ID:2 username:serghei added a new tweet ID:5
+2015-10-15 16:30:07,458 [9] DEBUG StaticLogger.Logger - user ID:2 username:serghei added a new tweet ID:6
+2015-10-15 16:30:10,346 [12] DEBUG StaticLogger.Logger - user ID:2 username:serghei added a new tweet ID:7
+2015-10-15 16:30:53,125 [9] DEBUG StaticLogger.Logger - user ID:2 username:serghei edited a tweet ID:7
+2015-10-15 16:32:39,665 [6] DEBUG StaticLogger.Logger - user ID:2 username:serghei edited a tweet ID:7
+2015-10-15 16:33:17,389 [9] DEBUG StaticLogger.Logger - user ID:2 username:serghei logged out
+2015-10-15 16:35:14,307 [9] DEBUG StaticLogger.Logger - new user ID:3 username:joker was added successfully
+2015-10-15 16:35:14,307 [9] DEBUG StaticLogger.Logger - new user joker vpicireanu@endava.net has registered
+2015-10-15 16:35:21,711 [9] DEBUG StaticLogger.Logger - user ID:3 username:joker logged in
+2015-10-15 16:35:33,613 [9] DEBUG StaticLogger.Logger - user ID:3 username:joker added a new tweet ID:8
+2015-10-15 16:35:44,511 [9] DEBUG StaticLogger.Logger - user ID:3 username:joker added a new tweet ID:9
+2015-10-15 16:36:01,233 [15] DEBUG StaticLogger.Logger - user ID:3 username:joker added a new tweet ID:10
+2015-10-15 16:36:02,352 [9] DEBUG StaticLogger.Logger - user ID:3 username:joker added a new tweet ID:11
+2015-10-15 16:36:07,597 [9] DEBUG StaticLogger.Logger - user ID:3 username:joker added a new tweet ID:12
+2015-10-15 16:36:21,258 [9] DEBUG StaticLogger.Logger - user ID:3 username:joker added a new tweet ID:13
+2015-10-15 16:39:37,741 [18] DEBUG StaticLogger.Logger - user ID:3 username:joker logged out
