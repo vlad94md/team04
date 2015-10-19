@@ -10,5 +10,8 @@ namespace DAL
     public interface IUserDao : IBaseDao<User>
     {
         User GetByUsername(string username);
+         bool Update(User user);
+         bool Delete(User user);
+         bool Add(User user);
     }
 }

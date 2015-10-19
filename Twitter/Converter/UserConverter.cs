@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Models;
 using DAL.Entities;
+using Models.ViewModels;
 
 namespace Converter
 {
@@ -45,6 +46,37 @@ namespace Converter
             };
 
             return userViewModel;
+        }
+
+        public static FollowViewModel ConvertToFollow(Follow fol)
+        {
+            var followViewModel = new FollowViewModel
+            {
+                PubId = fol.Publisher_Id,
+                SubId = fol.Subscriber_Id
+            };
+
+            return followViewModel;
+        }   
+
+        public static List<UserViewModel> ConvertViewModelList(IEnumerable<User> users)
+        {
+            List<UserViewModel> result = new List<UserViewModel>();
+            foreach (var item in users)
+            {
+                result.Add(ConvertToViewModel(item));
+            }
+            return result;
+        }
+
+        public static List<FollowViewModel> ConvertFollowModel(ICollection<Follow> follows)
+        {
+            List<FollowViewModel> result = new List<FollowViewModel>();
+            foreach (var item in follows)
+            {
+                result.Add(ConvertToFollow(item));
+            }
+            return result;
         }
     }
 }

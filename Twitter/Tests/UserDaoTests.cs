@@ -8,48 +8,45 @@ namespace Tests
     [TestClass]
     public class UserDaoTests
     {
-        //MethodName_StateUnderTest_ExpectedBehavior convention
         UserDao userDao;
+        User testUser;
 
         [TestInitialize]
         public void Initialize()
         {
             userDao = new UserDao();
+            testUser = new User()
+            {
+                FullName = "Vlad Guleaev",
+                Email = "vlad@gmail.com",
+                Passwrd = "123",
+                Username = "testUser"
+            };
         }
 
         [TestMethod]
         public void Add_NewUser_True()
         {
-            //arrange
-
             //act
-            User newuser = new User()
-            {
-                FullName = "Vlad Guleaev",
-                Email = "vladg@gmail.com",
-                Passwrd = "123",
-                Username = "testUser"
-            };
-
-            bool actual = userDao.Add(newuser);
+            bool actual = userDao.Add(testUser);
 
             //assert
             Assert.AreEqual(true, actual);
 
             //delete
-            userDao.Delete(newuser);
+            userDao.Delete(testUser);
         }
 
         [TestMethod]
         public void IsNull_UserIsNull_False()
         {
             //arrange
+            User Expected = new User();
 
             //act
-            User Expected = new User();
             Expected = null;
-
             var Actual = userDao.Add(Expected);
+
             //assert
             Assert.IsFalse(Actual);
         }
@@ -58,59 +55,55 @@ namespace Tests
         public void Delete_UserIsDeleted_True()
         {
             //act
-            User Expected = new User()
-            {
-                FullName = "Vlad Guleaev",
-                Email = "vladg@gmail.com",
-                Passwrd = "123",
-                Username = "testUser"
-            };
+            userDao.Add(testUser);
+            var Actual = userDao.Delete(testUser);
 
-            userDao.Add(Expected);
-
-
-            var Actual = userDao.Delete(Expected);
-
+            //assert
             Assert.IsTrue(Actual);
+        }
+
+        [TestMethod]
+        public void Edit_UserIsEdited_True()
+        {
+            //act
+            userDao.Add(testUser);
+            testUser.Email = "new@mail.com";
+
+            var Actual = userDao.Update(testUser);
+
+            //assert
+            Assert.IsTrue(Actual);
+
+            //delete
+            userDao.Delete(testUser);
         }
 
         [TestMethod]
         public void GetByUserName_returnUser_User()
         {
-            User Expected = new User()
-            {
-                FullName = "Vlad Guleaev",
-                Email = "vladg@gmail.com",
-                Passwrd = "123",
-                Username = "testUser"
-            };
-            userDao.Add(Expected);
+            //act
+            userDao.Add(testUser);
+            var Actual = userDao.GetByUsername(testUser.Username);
 
-            var Actual = userDao.GetByUsername(Expected.Username);
-
-            userDao.Delete(Expected);
             //assert
             Assert.IsNotNull(Actual);
+
+            //delete
+            userDao.Delete(testUser);
         }
 
         [TestMethod]
         public void GetById_returnUser_User()
         {
-            User newuser = new User()
-            {
-                FullName = "Vlad Guleaev",
-                Email = "vladg@gmail.com",
-                Passwrd = "123",
-                Username = "testUser"
-            };
+            //act
+            userDao.Add(testUser);
+            var Actual = userDao.GetById(testUser.Id);
 
-            userDao.Add(newuser);
-
-            var Actual = userDao.GetById(newuser.Id);
-
-            userDao.Delete(newuser);
-
+            //assert
             Assert.IsNotNull(Actual);
+
+            //delete
+            userDao.Delete(testUser);
         }
 
     }

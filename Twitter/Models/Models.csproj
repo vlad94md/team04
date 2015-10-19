@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewModels\AllViewModel.cs" />
+    <Compile Include="ViewModels\FollowViewModel.cs" />
     <Compile Include="ViewModels\LogInUserViewModel.cs" />
     <Compile Include="PasswordEncryption.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

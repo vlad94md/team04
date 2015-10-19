@@ -9,5 +9,7 @@ namespace DAL
 {
     public interface IFollowsDao : IBaseDao<Follow>
     {
+        bool Add(int id, int id2);
+        ICollection<User> GetUserFollows(int currentUserId);
     }
 }

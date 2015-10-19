@@ -9,6 +9,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Info</title>
+    
 </head>
 <body>
     <div id="user-info">
@@ -18,8 +19,8 @@
         <span class="badge">Tweets: @Model.Count</span>
         <span class="badge">Following: 0</span>
         <span class="badge">Followers: 0</span>
+        <span id="action-follow" class="btn">Follow this user!</span>
         <hr />
-
         <h3>User tweets:</h3>
 
         <div id="tweets" style="width: 50%; margin: 0 auto;">
@@ -33,17 +34,6 @@
                         <h5 style="word-wrap: break-word;">@item.Body</h5>
                         <br />
                         <br />
-                        @if (ViewBag.currentUserPage == true)
-                        {
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <button type="button" value="logout" class="btn btn-default" onclick="location.href='@Url.Action("Edit", "Tweet", new { Id = item.Id })'">Edit</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button type="button" value="logout" class="btn btn-default" onclick="location.href='@Url.Action("Delete", "Tweet", new { Id = item.Id })'">Delete</button>
-                                </div>
-                            </div>
-                        }
                     </div>
                 </div>
 
@@ -51,5 +41,6 @@
             }
         </div>
     </div>
+    
 </body>
 </html>
