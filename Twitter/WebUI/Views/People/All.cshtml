@@ -14,7 +14,6 @@
     @*<script src="@Url.Content("~/Content/JavaScripts.js")"></script>*@
     <script>
         $(document).ready(function () {
-            //$('.unfoll').hide();
 
             $('.foll').click(function (e) {
                 var clickedButton = $(e.target);
@@ -23,7 +22,7 @@
 
                 $.get('/People/Follow', { 'publisherId': tweetId, 'subsriberId': 0 });
                 $(this).hide();
-                $(parentBlock).find('.unfoll').css('background', '#E74C3C');
+                $(parentBlock).find('.unfoll').css('background', '#ff6a00');
                 $(parentBlock).find('.unfoll').show();
             });
 
@@ -32,31 +31,17 @@
                 var parentBlock = clickedButton.parents('.users-table');
                 var tweetId = $(this).parents('.users-table').attr('id');
 
+                $.get('/People/Unfollow', { 'id': tweetId });
                 $(parentBlock).find('.foll').show();
                 $(this).hide();
-                $.get('/People/Unfollow', { 'id': tweetId });
+
             });
 
-            //$('.foll').click(function (e) {
-            //    var clickedButton = $(e.target);
-            //    var parentBlock = clickedButton.parents('.users-table');
-            //    var tweetId = $(this).parents('.users-table').attr('id');
-               
-            //    if ($(parentBlock).find('.foll').text() == 'Follow') {
-            //        $.get('/People/Follow', { 'publisherId': tweetId, 'subsriberId': 0 }, function () {
-            //            $(parentBlock).find('.foll').text('Unfollow');
-            //            $(parentBlock).find('.foll').css('background', '#E74C3C');
-            //        });
-            //        }
-            //    else {
-            //        $.get('/People/Unfollow', { 'id': tweetId }, function () {
-            //            $(parentBlock).find('.foll').text('Follow');
-            //            $(parentBlock).find('.foll').css('background', '#3498db');
-            //        });
-                        
-            //        }
-      
-            //});
+            $('.unfoll').hover(function () {
+                $(this).css("background-color", '#E74C3C');
+            }, function () {
+                $(this).css("background-color", '#ff6a00');
+            });
 
         });
     </script>
@@ -96,12 +81,14 @@
                             }
                             @if (currentFollowId != null)
                             {
-                                <span class="btn unfoll" onClick="window.location.href=window.location.href">Unfollow</span>
+                                <span class="btn unfoll" style="display:block; width: 100%;" >Unfollow</span> 
+                                <span class="btn foll" style="display:none; width: 100%;">Follow</span>
                             
                             }
                             else
                             {
-                                <span class="btn foll" onClick="window.location.href=window.location.href">Follow</span>
+                                <span class="btn unfoll" style="display:none; width: 100%;">Unfollow</span> 
+                                <span class="btn foll" style="display:block; width: 100%;">Follow</span>
                             }
                             @*<span class="btn foll">follow</span>
                              <span class="btn foll">unfollow</span>*@

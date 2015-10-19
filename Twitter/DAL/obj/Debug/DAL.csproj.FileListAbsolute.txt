@@ -88,3 +88,8 @@ C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\DAL\b
 C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\DAL\obj\Debug\DAL.dll
 C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\DAL\obj\Debug\DAL.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\log4net.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\Logger.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\Logger.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\log4net.xml
+E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

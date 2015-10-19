@@ -30,3 +30,10 @@ C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\Logge
 C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\Logger\bin\Debug\log4net.xml
 C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\Logger\obj\Debug\Logger.dll
 C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\Logger\obj\Debug\Logger.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\bin\Debug\Logger.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\bin\Debug\Logger.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\bin\Debug\log4net.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\bin\Debug\log4net.xml
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\obj\Debug\Logger.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\obj\Debug\Logger.pdb

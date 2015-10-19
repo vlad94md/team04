@@ -324,3 +324,32 @@
 2015-10-19 18:22:01,775 [24] DEBUG StaticLogger.Logger - user ID:5 username:vasya added a new tweet ID:74
 2015-10-19 18:22:02,351 [12] DEBUG StaticLogger.Logger - user ID:5 username:vasya added a new tweet ID:75
 2015-10-19 18:23:19,681 [9] DEBUG StaticLogger.Logger - user ID:5 username:vasya logged in
+2015-10-19 21:39:49,659 [8] DEBUG StaticLogger.Logger - user ID:4 username:1 logged in
+2015-10-19 21:39:59,791 [8] DEBUG StaticLogger.Logger - user ID:4 username:1 added a new tweet ID:22
+2015-10-19 21:40:02,540 [7] DEBUG StaticLogger.Logger - user ID:4 username:1 added a new tweet ID:23
+2015-10-19 21:40:04,099 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 added a new tweet ID:24
+2015-10-19 21:40:05,654 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 added a new tweet ID:25
+2015-10-19 21:40:28,230 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 deleted a tweet ID:25
+2015-10-19 21:40:28,687 [8] DEBUG StaticLogger.Logger - user ID:4 username:1 deleted a tweet ID:24
+2015-10-19 21:40:29,280 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 deleted a tweet ID:23
+2015-10-19 21:40:29,741 [10] DEBUG StaticLogger.Logger - user ID:4 username:1 deleted a tweet ID:22
+2015-10-19 21:40:30,897 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:21
+2015-10-19 21:40:33,369 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:21
+2015-10-19 21:40:45,465 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 logged out
+2015-10-19 21:44:38,065 [7] DEBUG StaticLogger.Logger - user ID:4 username:1 logged in
+2015-10-19 22:03:22,227 [22] DEBUG StaticLogger.Logger - user ID:4 username:1 logged in
+2015-10-19 22:20:46,290 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 logged in
+2015-10-19 22:40:43,931 [35] DEBUG StaticLogger.Logger - user ID:4 username:1 logged in
+2015-10-19 22:43:28,781 [27] DEBUG StaticLogger.Logger - user ID:4 username:1 deleted a tweet ID:21
+2015-10-19 22:50:58,933 [32] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:20
+2015-10-19 22:51:02,153 [32] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:20
+2015-10-19 22:51:04,166 [13] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:20
+2015-10-19 22:51:06,881 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:20
+2015-10-19 22:51:07,403 [32] DEBUG StaticLogger.Logger - user ID:4 username:1 deleted a tweet ID:20
+2015-10-19 22:51:09,007 [32] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:18
+2015-10-19 22:51:11,432 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:12
+2015-10-19 22:51:13,156 [19] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:9
+2015-10-19 22:51:14,737 [13] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:12
+2015-10-19 22:51:16,386 [32] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:17
+2015-10-19 22:51:17,724 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 deleted a tweet ID:17
+2015-10-19 22:51:18,180 [32] DEBUG StaticLogger.Logger - user ID:4 username:1 deleted a tweet ID:18

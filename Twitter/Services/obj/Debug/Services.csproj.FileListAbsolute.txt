@@ -135,3 +135,7 @@ C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\Servi
 C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\Services\bin\Debug\EntityFramework.xml
 C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\Services\bin\Debug\Logger.pdb
 C:\Users\stibulschii\Desktop\New folder\team04-master - копия\Twitter\Services\bin\Debug\log4net.xml
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Services\bin\Debug\Logger.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Services\bin\Debug\log4net.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Services\bin\Debug\Logger.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\Services\bin\Debug\log4net.xml

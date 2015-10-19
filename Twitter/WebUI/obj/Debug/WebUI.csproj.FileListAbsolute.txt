@@ -455,3 +455,7 @@ C:\Users\vguleaev\Desktop\New folder\team04-master - копия\Twitter\WebUI\bi
 C:\Users\vguleaev\Desktop\New folder\team04-master - копия\Twitter\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
 C:\Users\vguleaev\Desktop\New folder\team04-master - копия\Twitter\WebUI\obj\Debug\WebUI.dll
 C:\Users\vguleaev\Desktop\New folder\team04-master - копия\Twitter\WebUI\obj\Debug\WebUI.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\log4net.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Logger.dll
+E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Logger.pdb
+E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\log4net.xml
