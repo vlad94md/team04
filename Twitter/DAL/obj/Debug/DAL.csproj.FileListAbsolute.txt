@@ -93,3 +93,39 @@ E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\Logger.dll
 E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\Logger.pdb
 E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\bin\Debug\log4net.xml
 E:\IT\Endava\Twitter\GIT\team04\Twitter\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\bin\Debug\DAL.dll.config
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\bin\Debug\DAL.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\bin\Debug\DAL.pdb
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\bin\Debug\EntityFramework.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\bin\Debug\log4net.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\bin\Debug\Logger.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\bin\Debug\Logger.pdb
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\bin\Debug\EntityFramework.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\bin\Debug\log4net.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\obj\Debug\DAL.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\DAL\obj\Debug\DAL.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\bin\Debug\DAL.dll.config
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\bin\Debug\DAL.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\bin\Debug\DAL.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\bin\Debug\EntityFramework.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\bin\Debug\log4net.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\bin\Debug\Logger.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\bin\Debug\Logger.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\bin\Debug\EntityFramework.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\bin\Debug\log4net.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\obj\Debug\DAL.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\DAL\obj\Debug\DAL.pdb
+C:\Users\vguleaev\Desktop\Twitter\DAL\bin\Debug\DAL.dll.config
+C:\Users\vguleaev\Desktop\Twitter\DAL\bin\Debug\DAL.dll
+C:\Users\vguleaev\Desktop\Twitter\DAL\bin\Debug\DAL.pdb
+C:\Users\vguleaev\Desktop\Twitter\DAL\bin\Debug\EntityFramework.dll
+C:\Users\vguleaev\Desktop\Twitter\DAL\bin\Debug\log4net.dll
+C:\Users\vguleaev\Desktop\Twitter\DAL\bin\Debug\Logger.dll
+C:\Users\vguleaev\Desktop\Twitter\DAL\bin\Debug\Logger.pdb
+C:\Users\vguleaev\Desktop\Twitter\DAL\bin\Debug\EntityFramework.xml
+C:\Users\vguleaev\Desktop\Twitter\DAL\bin\Debug\log4net.xml
+C:\Users\vguleaev\Desktop\Twitter\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\vguleaev\Desktop\Twitter\DAL\obj\Debug\DAL.dll
+C:\Users\vguleaev\Desktop\Twitter\DAL\obj\Debug\DAL.pdb

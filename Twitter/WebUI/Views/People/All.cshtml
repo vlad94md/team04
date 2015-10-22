@@ -11,40 +11,6 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>All</title>
-    @*<script src="@Url.Content("~/Content/JavaScripts.js")"></script>*@
-    <script>
-        $(document).ready(function () {
-
-            $('.foll').click(function (e) {
-                var clickedButton = $(e.target);
-                var parentBlock = clickedButton.parents('.users-table');
-                var tweetId = $(this).parents('.users-table').attr('id');
-
-                $.get('/People/Follow', { 'publisherId': tweetId, 'subsriberId': 0 });
-                $(this).hide();
-                $(parentBlock).find('.unfoll').css('background', '#ff6a00');
-                $(parentBlock).find('.unfoll').show();
-            });
-
-            $('.unfoll').click(function (e) {
-                var clickedButton = $(e.target);
-                var parentBlock = clickedButton.parents('.users-table');
-                var tweetId = $(this).parents('.users-table').attr('id');
-
-                $.get('/People/Unfollow', { 'id': tweetId });
-                $(parentBlock).find('.foll').show();
-                $(this).hide();
-
-            });
-
-            $('.unfoll').hover(function () {
-                $(this).css("background-color", '#E74C3C');
-            }, function () {
-                $(this).css("background-color", '#ff6a00');
-            });
-
-        });
-    </script>
 </head>
 <body>
     <div id="all-users">
@@ -63,7 +29,6 @@
 
                 @foreach (var user in Model.Users)
                 {
-
                     <tr class="users-table" id="@user.Id">
                         <td>@(Model.Users.IndexOf(user) + 1)</td>
                         <td>
@@ -83,18 +48,15 @@
                             {
                                 <span class="btn unfoll" style="display:block; width: 100%;" >Unfollow</span> 
                                 <span class="btn foll" style="display:none; width: 100%;">Follow</span>
-                            
                             }
                             else
                             {
                                 <span class="btn unfoll" style="display:none; width: 100%;">Unfollow</span> 
                                 <span class="btn foll" style="display:block; width: 100%;">Follow</span>
                             }
-                            @*<span class="btn foll">follow</span>
-                             <span class="btn foll">unfollow</span>*@
+
                         </td>
                     </tr>
-
                 }
             </tbody>
         </table>

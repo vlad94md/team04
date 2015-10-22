@@ -1,6 +1,8 @@
 ﻿@model Models.TweetModel
 <script>
     $(document).ready(function () {
+        
+
         $("#tweetbutton").click(function () {
             $.ajax({
                 url: '/Tweet/Add/',
@@ -13,9 +15,9 @@
 
                 }
             }).complete(function () {
-                $.get('/Tweet/GetTweets', function (data) {
-                    $('.twc').html(data);
-                });
+                var Tweets = +($('#tweets-counter').text()) + 1;
+                $('#tweets-counter').text(Tweets);
+
                 $('.control-label').val('');
             })
         });

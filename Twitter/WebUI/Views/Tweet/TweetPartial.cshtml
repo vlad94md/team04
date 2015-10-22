@@ -2,16 +2,33 @@
 
 <h4 class="text-danger">@ViewBag.errorMessage</h4>
 
+@{
+    int curUserId = (HttpContext.Current.Session["CurrentUser"] as Models.UserViewModel).Id;
+}
+
 @foreach (var item in Model)
 {
 
     <div class="panel panel-primary">
-        <div class="panel-heading">
-            <h7 class="panel-title">@item.DateAdded </h7>
+        <div class="panel-heading" style="text-align:center">
+            <h7 class="panel-title" >
+                @{
+                if (item.AuthorId != curUserId)
+                {
+                    @Html.ActionLink(@item.Author, "Info", "People", new { Id = @item.AuthorId }, null);
+                }
+                else
+                {
+                    @Html.ActionLink(@item.Author, "UserPage", "People");
+                }
+                }
+            </h7>
         </div>
         <div class="panel-body">
             <h5 style="word-wrap: break-word;">@item.Body</h5>
             <br />
+            <hr style="margin-top:0px; margin-bottom: 0px;"/>
+            @item.DateAdded
             <br />
         </div>
     </div>

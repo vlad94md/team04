@@ -1,5 +1,10 @@
-﻿@model List<Models.TweetViewModel>
+﻿@model Models.ViewModels.BadgeModel
+
+
 @{
+   
+    var currentUserId = ((Models.UserViewModel)HttpContext.Current.Session["CurrentUser"]).Id;
+    var userId = @ViewBag.UserInfo.Id;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -9,34 +14,58 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Info</title>
-    
+
 </head>
 <body>
     <div id="user-info">
         <h3>User information:</h3>
         @Html.Partial("UserInfo", (Models.UserViewModel)ViewBag.UserInfo)
         <br />
-        <span class="badge">Tweets: @Model.Count</span>
-        <span class="badge">Following: 0</span>
-        <span class="badge">Followers: 0</span>
-        <span id="action-follow" class="btn">Follow this user!</span>
+
+        <span class="badge">Tweets: @Model.Tweets.Count</span>
+        <span class="badge">Following: @Model.CurrentUserFollows.Where(follows => follows.SubId == userId).Count()</span>
+        <span class="badge">Followers:<span id="followers">@Model.CurrentUserFollows.Where(follows => follows.PubId == userId).Count()</span></span>
+        <div class="papa-container" id="@userId">
+
+
+            @for (var i = 0; i < Model.Users.Count;i++)
+            {
+                var x = Model.CurrentUserFollows.FirstOrDefault(f => f.PubId == userId && f.SubId == currentUserId);
+
+                if (x != null)
+                {
+                    <span class="btn btn action-unfollow" style="display:block;">Unfollow this user!</span>
+                    <span class="btn action-follow" style="display:none;">Follow this user!</span>
+                    break;
+                }
+                else
+                {
+                    <span class="btn btn action-unfollow" style="display:none;">Unfollow this user!</span>
+                    <span class="btn action-follow" style="display:block;">Follow this user!</span>
+                    break;
+                }
+            }
+           
+
+         </div>
         <hr />
         <h3>User tweets:</h3>
 
         <div id="tweets" style="width: 50%; margin: 0 auto;">
-            @foreach (var item in Model)
+            @foreach (var item in Model.Tweets)
             {
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h7 class="panel-title">@item.DateAdded </h7>
+                <div class="panel panel-primary" >
+                    <div class="panel-heading" style="text-align:center">
+                        <h7 class="panel-title">@ViewBag.UserInfo.FullName </h7>
                     </div>
                     <div class="panel-body">
                         <h5 style="word-wrap: break-word;">@item.Body</h5>
                         <br />
+                        <hr style="margin-top:0px; margin-bottom: 0px;"/>
+                        @item.DateAdded
                         <br />
                     </div>
                 </div>
-
                 <br />
             }
         </div>

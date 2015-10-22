@@ -6,6 +6,7 @@
         var tweetId = $(this).parents('.parent-tweet-container').attr('id');
         var currentText = $(parentBlock).find('.tweet-text').text();
 
+        $(parentBlock).find('.date-on-userpage').css('display','none');
         $(parentBlock).find('textarea').show().val(currentText).focus();
         $(parentBlock).find('.tweet-text').hide();
         $(parentBlock).find('.buttons-edit-delete').hide();
@@ -17,6 +18,7 @@
         var parentBlock = clickedButton.parents('.parent-tweet-container');
         var tweetId = $(this).parents('.parent-tweet-container').attr('id');
                 
+        $(parentBlock).find('.date-on-userpage').css('display', 'block');
         parentBlock.find('.tweet-text').show();
         $(parentBlock).find('textarea').hide();
         parentBlock.find('.buttons-edit-delete').show();
@@ -30,6 +32,7 @@
 
         $.get('/Tweet/Edit', { 'id': tweetId, 'text': currentText }, function (data) { });
 
+        $(parentBlock).find('.date-on-userpage').css('display', 'block');
         $(parentBlock).find('textarea').hide();
         $(parentBlock).find('.tweet-text').text(currentText).show();
         $(parentBlock).find('.buttons-save-cancel').hide();
@@ -39,9 +42,8 @@
         var tweetId = $(this).parents('.parent-tweet-container').attr('id');
 
         $.get('/Tweet/Delete', { 'id': tweetId }, function () { }).complete(function () {
-            $.get('/Tweet/GetTweets', function (data) {
-                $('#tweet-badge').html(data);
-            });
+            var decreaseTweets = +($('#tweet-badge').text()) - 1;
+            $('#tweet-badge').text(decreaseTweets);
         });
 
         $('#' + tweetId).remove();
@@ -65,35 +67,113 @@
         return false;
     });
 
-    //$('.foll').on('click',function (e) {
-    //    var clickedButton = $(e.target);
-    //    var parentBlock = clickedButton.parents('.users-table');
-    //    var Id = $(this).parents('.users-table').attr('id');
-    //    if ($(parentBlock).find('.foll').text() == 'Follow') {
-    //        $(parentBlock).find('.foll').text('Unfollow');
-    //        $(parentBlock).find('.foll').css('background', '#F5AB35');
-    //        $(parentBlock).find('.foll').css('color', '#000');
-    //    }
-    //    else {
-    //        $(parentBlock).find('.foll').text('Follow');
-    //        $(parentBlock).find('.foll').css('background', '#3498db');
-    //        $(parentBlock).find('.foll').css('color', '#fff');
-    //    }
-    //});
 
-    $('#action-follow').on('click',function () {
-        if($('#action-follow').text() == 'Follow this user!')
-        {
-                $('#action-follow').text('Unfollow this user');
-                $('#action-follow').css('background', '#F5AB35');
-                $('#action-follow').css('color', '#000');
+    $('.action-follow').click(function (e) {
+        var clickedButton = $(e.target);
+        var parentBlock = clickedButton.parents('.papa-container');
+        var id = $(this).parents('.papa-container').attr('id');
+        var increaseFollowers = +($('#followers').text()) + 1;
+
+        $.get('/People/Follow', { 'publisherId': id, 'subsriberId': 0 }).complete(function () {
             
-        }
-        else {
-                $('#action-follow').text('Follow this user!');
-                $('#action-follow').css('background', '#3498db');
-                $('#action-follow').css('color', '#fff');
-        }
+            $('#followers').text(increaseFollowers);
+        });
+
+        $(parentBlock).find('.action-unfollow').show();
+        $(this).hide();
+    });
+
+
+    $('.action-unfollow').click(function (e) {
+        var clickedButton = $(e.target);
+        var parentBlock = clickedButton.parents('.papa-container');
+        var id = $(this).parents('.papa-container').attr('id');
+        var decreaseFollowers = +($('#followers').text()) - 1;
+
+        $.get('/People/Unfollow', { 'id': id }).complete(function () {
+            $('#followers').text(decreaseFollowers);
+        });
+
+            $(parentBlock).find('.action-follow').show();
+            $(this).hide();
+    });
+
+
+
+
+
+    $('.foll').click(function (e) {
+        var clickedButton = $(e.target);
+        var parentBlock = clickedButton.parents('.users-table');
+        var tweetId = $(this).parents('.users-table').attr('id');
+
+        $.get('/People/Follow', { 'publisherId': tweetId, 'subsriberId': 0 });
+        $(this).hide();
+        $(parentBlock).find('.unfoll').css('background', '#ff6a00');
+        $(parentBlock).find('.unfoll').show();
+    });
+
+    $('.unfoll').click(function (e) {
+        var clickedButton = $(e.target);
+        var parentBlock = clickedButton.parents('.users-table');
+        var tweetId = $(this).parents('.users-table').attr('id');
+
+        $.get('/People/Unfollow', { 'id': tweetId });
+        $(parentBlock).find('.foll').show();
+        $(this).hide();
 
     });
+
+    $('.unfoll').hover(function () {
+        $(this).css("background-color", '#E74C3C');
+    }, function () {
+        $(this).css("background-color", '#ff6a00');
+    });
+
+    $('.tweet-any-time').click(function () {
+
+        $.ajax({
+            url: '/Tweet/Add/',
+            type: "POST",
+            data: {
+                Body: $('#tweet-any-time-text').val()
+            },
+            success: function (data) {
+                $('.form-horizontal').html(data);
+            }
+        }).complete(function () {
+            var Tweets = +($('#tweets-counter').text()) + 1;
+            $('#tweets-counter').text(Tweets);
+
+            $('#tweet-any-time-text').val('');
+        });
+    });
+
+    //$('#rr').click(function () {
+    //    console.log('tweet any time clicked');
+    //    //$.get('/Tweet/Add', { Body: $('#tweet-any-time-text').val() }, function (data) {
+    //    //    $('.form-horizontal').html(data);
+    //    //    $('.tweet-text').html(data);
+    //    //});
+    //});
+
+//    $("#tweetbutton").click(function () {
+//        $.ajax({
+//            url: '/Tweet/Add/',
+//            type: "POST",
+//            data: {
+//                Body: $('#Body').val()
+//            },
+//            success: function (data) {
+//                $('.form-horizontal').html(data);
+
+//            }
+//        }).complete(function () {
+//            var Tweets = +($('#tweets-counter').text()) + 1;
+//            $('#tweets-counter').text(Tweets);
+
+//            $('.control-label').val('');
+//        })
+//    });
+//});
 });

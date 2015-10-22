@@ -353,3 +353,318 @@
 2015-10-19 22:51:16,386 [32] DEBUG StaticLogger.Logger - user ID:4 username:1 edited a tweet ID:17
 2015-10-19 22:51:17,724 [6] DEBUG StaticLogger.Logger - user ID:4 username:1 deleted a tweet ID:17
 2015-10-19 22:51:18,180 [32] DEBUG StaticLogger.Logger - user ID:4 username:1 deleted a tweet ID:18
+2015-10-20 10:31:21,062 [9] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged in
+2015-10-20 10:40:36,936 [16] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:373
+2015-10-20 10:40:37,355 [16] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:372
+2015-10-20 10:40:39,474 [15] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:371
+2015-10-20 11:06:12,126 [43] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 11:07:31,179 [36] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 11:43:54,907 [19] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 11:50:09,501 [13] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 11:52:52,042 [14] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 11:54:48,260 [13] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 11:56:27,569 [14] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 11:57:09,923 [14] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 12:07:17,741 [14] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 12:26:14,880 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci edited a tweet ID:378
+2015-10-20 12:26:19,232 [41] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci deleted a tweet ID:378
+2015-10-20 12:27:05,238 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci added a new tweet ID:389
+2015-10-20 12:27:16,206 [41] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci edited a tweet ID:389
+2015-10-20 12:28:41,725 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci edited a tweet ID:389
+2015-10-20 12:28:45,463 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci edited a tweet ID:389
+2015-10-20 12:28:47,694 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci edited a tweet ID:389
+2015-10-20 12:28:53,174 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci added a new tweet ID:390
+2015-10-20 12:29:07,814 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci edited a tweet ID:390
+2015-10-20 12:29:08,645 [32] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci deleted a tweet ID:390
+2015-10-20 12:29:10,467 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci deleted a tweet ID:389
+2015-10-20 12:29:28,165 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci added a new tweet ID:391
+2015-10-20 12:30:20,448 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci edited a tweet ID:391
+2015-10-20 12:40:53,557 [42] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 12:54:21,247 [37] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 13:03:51,308 [16] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 13:04:09,888 [8] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 13:25:08,925 [8] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 13:38:57,924 [9] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 13:47:59,022 [14] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged out
+2015-10-20 13:48:03,915 [14] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged in
+2015-10-20 13:49:47,924 [14] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged out
+2015-10-20 13:49:51,120 [14] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 14:03:14,942 [25] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 14:06:18,620 [25] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci added a new tweet ID:392
+2015-10-20 14:06:31,247 [36] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci deleted a tweet ID:392
+2015-10-20 14:25:58,767 [9] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 14:29:12,244 [7] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged in
+2015-10-20 14:30:30,093 [10] DEBUG StaticLogger.Logger - user ID:13 username:Jora added a new tweet ID:393
+2015-10-20 14:30:30,918 [6] DEBUG StaticLogger.Logger - user ID:13 username:Jora added a new tweet ID:394
+2015-10-20 14:30:31,652 [10] DEBUG StaticLogger.Logger - user ID:13 username:Jora added a new tweet ID:395
+2015-10-20 14:30:33,246 [10] DEBUG StaticLogger.Logger - user ID:13 username:Jora added a new tweet ID:396
+2015-10-20 14:30:33,933 [10] DEBUG StaticLogger.Logger - user ID:13 username:Jora added a new tweet ID:397
+2015-10-20 14:30:34,699 [5] DEBUG StaticLogger.Logger - user ID:13 username:Jora added a new tweet ID:398
+2015-10-20 14:30:35,496 [6] DEBUG StaticLogger.Logger - user ID:13 username:Jora added a new tweet ID:399
+2015-10-20 14:30:36,260 [10] DEBUG StaticLogger.Logger - user ID:13 username:Jora added a new tweet ID:400
+2015-10-20 14:30:42,044 [6] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:400
+2015-10-20 14:30:42,512 [17] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:399
+2015-10-20 14:30:42,919 [17] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:398
+2015-10-20 14:30:43,450 [5] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:397
+2015-10-20 14:30:44,325 [10] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:396
+2015-10-20 14:30:44,684 [10] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:395
+2015-10-20 14:30:44,981 [10] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:394
+2015-10-20 14:30:45,295 [5] DEBUG StaticLogger.Logger - user ID:13 username:Jora deleted a tweet ID:393
+2015-10-20 14:32:21,798 [6] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged out
+2015-10-20 14:32:24,641 [17] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged in
+2015-10-20 14:32:46,542 [17] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged out
+2015-10-20 14:32:50,535 [19] DEBUG StaticLogger.Logger - user ID:9 username:6 logged in
+2015-10-20 14:32:54,135 [17] DEBUG StaticLogger.Logger - user ID:9 username:6 logged out
+2015-10-20 14:32:56,541 [23] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 14:33:00,728 [6] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged out
+2015-10-20 14:33:04,192 [27] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged in
+2015-10-20 14:34:00,107 [27] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged out
+2015-10-20 14:34:02,417 [21] DEBUG StaticLogger.Logger - user ID:9 username:6 logged in
+2015-10-20 14:34:05,386 [27] DEBUG StaticLogger.Logger - user ID:9 username:6 logged out
+2015-10-20 14:34:07,751 [17] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 14:34:10,093 [21] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged out
+2015-10-20 14:34:12,452 [27] DEBUG StaticLogger.Logger - user ID:9 username:6 logged in
+2015-10-20 14:37:59,835 [21] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged in
+2015-10-20 14:41:45,999 [29] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged out
+2015-10-20 14:42:40,000 [43] DEBUG StaticLogger.Logger - new user ID:36 username:Mr.Putin was added successfully
+2015-10-20 14:42:40,000 [43] DEBUG StaticLogger.Logger - new user Mr.Putin putin@gmail.com has registered
+2015-10-20 14:42:52,865 [36] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged in
+2015-10-20 14:43:00,008 [46] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged out
+2015-10-20 14:43:02,664 [36] DEBUG StaticLogger.Logger - user ID:9 username:6 logged in
+2015-10-20 14:43:06,696 [46] DEBUG StaticLogger.Logger - user ID:9 username:6 logged out
+2015-10-20 14:43:09,181 [43] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-20 14:43:11,935 [46] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged out
+2015-10-20 14:43:15,292 [36] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged in
+2015-10-20 14:43:18,156 [43] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged out
+2015-10-20 14:43:32,233 [43] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged in
+2015-10-20 14:44:16,563 [43] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged out
+2015-10-20 14:44:19,516 [43] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged in
+2015-10-20 14:46:08,709 [43] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged in
+2015-10-20 14:46:17,461 [41] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged out
+2015-10-20 14:46:20,371 [44] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged in
+2015-10-20 18:49:16,387 [12] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 18:52:18,720 [16] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 18:53:38,279 [22] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 18:58:37,999 [12] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 19:20:58,409 [52] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 20:03:58,753 [19] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 20:07:48,569 [20] DEBUG StaticLogger.Logger - user ID:10 username:321 logged in
+2015-10-20 20:08:30,898 [51] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 20:11:01,738 [20] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 20:51:55,309 [26] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged out
+2015-10-20 20:54:22,264 [8] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 20:55:47,868 [11] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 21:08:17,638 [57] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-20 21:13:32,345 [42] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged out
+2015-10-20 21:13:36,713 [43] DEBUG StaticLogger.Logger - user ID:43 username:44 logged in
+2015-10-20 21:14:13,484 [42] DEBUG StaticLogger.Logger - user ID:43 username:44 logged out
+2015-10-20 21:14:17,119 [42] DEBUG StaticLogger.Logger - user ID:10 username:321 logged in
+2015-10-20 21:14:57,801 [44] DEBUG StaticLogger.Logger - user ID:10 username:321 logged out
+2015-10-20 21:15:00,525 [51] DEBUG StaticLogger.Logger - user ID:43 username:44 logged in
+2015-10-20 21:15:23,264 [44] DEBUG StaticLogger.Logger - user ID:43 username:44 logged out
+2015-10-20 21:15:26,317 [44] DEBUG StaticLogger.Logger - user ID:10 username:321 logged in
+2015-10-20 21:50:24,196 [75] DEBUG StaticLogger.Logger - user ID:10 username:321 added a new tweet ID:2196
+2015-10-20 21:50:36,147 [75] DEBUG StaticLogger.Logger - user ID:10 username:321 logged out
+2015-10-20 21:50:39,191 [61] DEBUG StaticLogger.Logger - user ID:43 username:44 logged in
+2015-10-20 21:50:44,666 [69] DEBUG StaticLogger.Logger - user ID:43 username:44 logged out
+2015-10-20 21:50:47,611 [69] DEBUG StaticLogger.Logger - user ID:10 username:321 logged in
+2015-10-20 21:50:57,819 [75] DEBUG StaticLogger.Logger - user ID:10 username:321 logged out
+2015-10-20 22:35:04,454 [45] DEBUG StaticLogger.Logger - user ID:42 username:kkk logged in
+2015-10-21 10:25:53,159 [10] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged in
+2015-10-21 10:26:37,269 [10] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:401
+2015-10-21 10:31:59,140 [6] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:402
+2015-10-21 10:32:06,843 [6] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:403
+2015-10-21 10:32:09,484 [19] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:404
+2015-10-21 10:32:26,971 [22] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:404
+2015-10-21 10:32:28,534 [22] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:403
+2015-10-21 10:32:29,034 [22] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:402
+2015-10-21 10:32:29,393 [19] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:401
+2015-10-21 10:32:32,112 [20] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:405
+2015-10-21 10:32:34,487 [19] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:406
+2015-10-21 10:32:36,128 [6] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:407
+2015-10-21 10:32:37,971 [22] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:408
+2015-10-21 10:34:04,251 [20] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:408
+2015-10-21 10:34:04,533 [27] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:407
+2015-10-21 10:34:04,861 [27] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:406
+2015-10-21 10:34:05,142 [20] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:405
+2015-10-21 10:34:08,642 [27] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:409
+2015-10-21 10:34:11,970 [27] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:410
+2015-10-21 10:35:53,129 [25] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:410
+2015-10-21 10:35:53,519 [22] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:409
+2015-10-21 10:38:05,875 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:411
+2015-10-21 10:38:08,593 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:412
+2015-10-21 10:38:11,517 [22] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:413
+2015-10-21 10:40:09,134 [32] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:414
+2015-10-21 10:40:13,431 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:415
+2015-10-21 10:40:15,322 [26] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:416
+2015-10-21 10:40:16,666 [30] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:417
+2015-10-21 10:40:18,494 [30] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:418
+2015-10-21 10:40:21,965 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:419
+2015-10-21 10:40:36,037 [26] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:419
+2015-10-21 10:40:38,005 [27] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:418
+2015-10-21 10:40:38,552 [30] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:417
+2015-10-21 10:40:39,020 [27] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:416
+2015-10-21 10:40:39,505 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:415
+2015-10-21 10:40:39,895 [26] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:414
+2015-10-21 10:40:40,333 [32] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:413
+2015-10-21 10:40:40,723 [30] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:412
+2015-10-21 10:40:41,098 [32] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:411
+2015-10-21 10:40:44,051 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:420
+2015-10-21 10:40:47,255 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:421
+2015-10-21 10:42:33,392 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:422
+2015-10-21 10:42:38,002 [30] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:423
+2015-10-21 10:42:40,253 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:424
+2015-10-21 10:42:42,487 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:425
+2015-10-21 10:42:57,784 [30] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:426
+2015-10-21 10:42:58,800 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:427
+2015-10-21 10:42:59,705 [30] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:428
+2015-10-21 10:43:02,299 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:428
+2015-10-21 10:43:02,658 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:427
+2015-10-21 10:43:02,955 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:426
+2015-10-21 10:43:03,299 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:425
+2015-10-21 10:43:03,627 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:424
+2015-10-21 10:43:03,924 [27] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:423
+2015-10-21 10:43:04,221 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:422
+2015-10-21 10:43:04,533 [27] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:421
+2015-10-21 10:43:04,768 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:420
+2015-10-21 10:44:21,873 [27] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:429
+2015-10-21 10:44:23,030 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:430
+2015-10-21 10:44:24,701 [30] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:431
+2015-10-21 10:44:40,870 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:432
+2015-10-21 10:44:43,495 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:432
+2015-10-21 10:44:43,886 [30] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:431
+2015-10-21 10:44:44,167 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:430
+2015-10-21 10:44:44,479 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:429
+2015-10-21 10:45:36,515 [27] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:433
+2015-10-21 10:45:37,656 [30] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:434
+2015-10-21 10:45:38,484 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:435
+2015-10-21 10:45:39,251 [16] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:436
+2015-10-21 10:49:48,206 [6] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:436
+2015-10-21 10:49:49,003 [41] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:435
+2015-10-21 10:49:49,440 [6] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:434
+2015-10-21 10:49:50,112 [41] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:433
+2015-10-21 10:49:52,738 [6] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:437
+2015-10-21 10:49:54,051 [39] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:438
+2015-10-21 10:49:54,895 [36] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:439
+2015-10-21 10:49:58,660 [36] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged out
+2015-10-21 10:50:01,707 [6] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged in
+2015-10-21 10:50:08,489 [16] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:439
+2015-10-21 10:50:08,864 [36] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:438
+2015-10-21 10:50:09,255 [41] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:437
+2015-10-21 10:53:17,967 [15] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged in
+2015-10-21 10:53:22,618 [6] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci deleted a tweet ID:391
+2015-10-21 10:53:26,056 [15] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci added a new tweet ID:440
+2015-10-21 10:53:46,947 [6] DEBUG StaticLogger.Logger - user ID:12 username:Petrucci logged out
+2015-10-21 12:36:12,198 [9] DEBUG StaticLogger.Logger - user ID:13 username:Jora logged in
+2015-10-21 12:59:43,229 [23] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged in
+2015-10-21 13:18:58,658 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:441
+2015-10-21 13:19:03,128 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:442
+2015-10-21 13:19:06,638 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:442
+2015-10-21 13:19:06,998 [16] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:441
+2015-10-21 13:20:18,214 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:443
+2015-10-21 13:20:29,012 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:444
+2015-10-21 13:20:36,758 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:445
+2015-10-21 13:20:42,022 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:444
+2015-10-21 13:20:45,190 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:445
+2015-10-21 13:20:45,533 [10] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:443
+2015-10-21 13:21:43,232 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:446
+2015-10-21 13:21:46,545 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:447
+2015-10-21 13:21:51,299 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:448
+2015-10-21 13:22:01,607 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:448
+2015-10-21 13:22:02,107 [10] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:447
+2015-10-21 13:22:02,448 [9] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:446
+2015-10-21 13:23:51,514 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:449
+2015-10-21 13:24:01,701 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:450
+2015-10-21 13:25:19,037 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:451
+2015-10-21 13:25:21,620 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:452
+2015-10-21 13:25:26,387 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:453
+2015-10-21 13:25:32,499 [31] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:454
+2015-10-21 13:27:58,792 [37] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:454
+2015-10-21 13:27:59,134 [35] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:453
+2015-10-21 13:27:59,820 [34] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:452
+2015-10-21 13:28:00,150 [35] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:451
+2015-10-21 13:28:00,565 [37] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:450
+2015-10-21 13:28:00,845 [34] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:449
+2015-10-21 13:28:55,532 [34] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:455
+2015-10-21 13:28:59,562 [37] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:456
+2015-10-21 13:29:07,116 [36] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:457
+2015-10-21 13:29:16,411 [36] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:458
+2015-10-21 13:29:27,757 [35] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:459
+2015-10-21 13:30:24,134 [40] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:460
+2015-10-21 13:30:32,725 [35] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:461
+2015-10-21 13:30:44,813 [40] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:461
+2015-10-21 13:30:45,231 [36] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:460
+2015-10-21 13:30:45,535 [35] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:459
+2015-10-21 13:30:45,692 [40] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:458
+2015-10-21 13:30:46,056 [35] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:457
+2015-10-21 13:30:46,214 [34] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:456
+2015-10-21 13:30:46,515 [40] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin deleted a tweet ID:455
+2015-10-21 13:34:17,078 [34] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:462
+2015-10-21 13:37:11,272 [33] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin added a new tweet ID:463
+2015-10-21 13:49:54,523 [44] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged in
+2015-10-21 13:58:40,873 [18] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin edited a tweet ID:463
+2015-10-21 14:06:10,163 [48] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged in
+2015-10-21 15:56:35,015 [8] DEBUG StaticLogger.Logger - user ID:36 username:Mr.Putin logged in
+2015-10-22 10:40:10,123 [8] DEBUG StaticLogger.Logger - user ID:5 username:vasya logged in
+2015-10-22 10:41:32,286 [7] DEBUG StaticLogger.Logger - user ID:5 username:vasya logged out
+2015-10-22 10:41:41,599 [7] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 10:42:59,224 [7] DEBUG StaticLogger.Logger - user ID:1 username:vladg edited a tweet ID:4
+2015-10-22 10:43:15,649 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:4
+2015-10-22 10:43:26,332 [7] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:3
+2015-10-22 10:43:28,295 [7] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:2
+2015-10-22 10:43:35,551 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:76
+2015-10-22 10:43:36,410 [7] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:77
+2015-10-22 10:50:06,434 [16] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:78
+2015-10-22 10:50:22,616 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:79
+2015-10-22 11:09:57,277 [14] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 11:14:02,076 [14] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 11:16:47,392 [31] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 11:24:42,695 [21] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 11:25:39,537 [24] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged out
+2015-10-22 11:25:47,498 [21] DEBUG StaticLogger.Logger - user ID:9 username:colomina logged in
+2015-10-22 11:25:50,602 [21] DEBUG StaticLogger.Logger - user ID:9 username:colomina added a new tweet ID:80
+2015-10-22 11:26:26,873 [21] DEBUG StaticLogger.Logger - user ID:9 username:colomina added a new tweet ID:81
+2015-10-22 11:26:46,014 [21] DEBUG StaticLogger.Logger - user ID:9 username:colomina added a new tweet ID:82
+2015-10-22 11:27:27,060 [17] DEBUG StaticLogger.Logger - user ID:9 username:colomina added a new tweet ID:83
+2015-10-22 11:27:45,613 [13] DEBUG StaticLogger.Logger - user ID:9 username:colomina logged out
+2015-10-22 11:27:59,627 [24] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 11:31:17,124 [13] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:84
+2015-10-22 11:33:08,859 [20] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:85
+2015-10-22 11:33:15,043 [32] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:86
+2015-10-22 11:33:22,984 [6] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:87
+2015-10-22 11:33:25,273 [13] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:88
+2015-10-22 11:33:53,704 [33] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:89
+2015-10-22 11:34:21,028 [10] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:89
+2015-10-22 11:34:21,386 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:88
+2015-10-22 11:34:21,714 [21] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:87
+2015-10-22 11:34:22,200 [26] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:86
+2015-10-22 11:34:22,578 [23] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:85
+2015-10-22 11:34:22,931 [7] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:84
+2015-10-22 11:34:23,288 [32] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:79
+2015-10-22 11:34:23,642 [20] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:78
+2015-10-22 11:39:34,006 [13] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 11:41:00,875 [9] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:90
+2015-10-22 11:49:54,215 [33] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 11:49:57,985 [33] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:91
+2015-10-22 11:50:05,750 [33] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:92
+2015-10-22 11:50:35,051 [7] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:92
+2015-10-22 11:50:35,477 [22] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:91
+2015-10-22 11:50:35,800 [7] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:90
+2015-10-22 11:51:13,593 [33] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:93
+2015-10-22 11:51:21,016 [33] DEBUG StaticLogger.Logger - user ID:1 username:vladg edited a tweet ID:93
+2015-10-22 11:59:13,717 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 12:02:42,000 [9] DEBUG StaticLogger.Logger - user ID:5 username:vasya deleted a tweet ID:17
+2015-10-22 12:03:22,569 [13] DEBUG StaticLogger.Logger - user ID:9 username:colomina deleted a tweet ID:36
+2015-10-22 12:04:44,431 [13] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 12:05:00,570 [15] DEBUG StaticLogger.Logger - user ID:1 username:vladg edited a tweet ID:93
+2015-10-22 12:06:32,561 [12] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 12:07:07,209 [12] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:93
+2015-10-22 12:11:28,258 [5] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 12:12:11,814 [5] DEBUG StaticLogger.Logger - user ID:1 username:vladg edited a tweet ID:77
+2015-10-22 12:12:56,124 [5] DEBUG StaticLogger.Logger - user ID:1 username:vladg edited a tweet ID:77
+2015-10-22 12:14:26,178 [19] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:94
+2015-10-22 12:15:07,380 [19] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:77
+2015-10-22 12:26:16,620 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 12:30:17,313 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 12:36:25,572 [12] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged out
+2015-10-22 13:25:39,501 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in

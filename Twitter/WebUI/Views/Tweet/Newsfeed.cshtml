@@ -1,6 +1,7 @@
 ﻿@model List<Models.TweetViewModel>
 
 @{
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,10 +13,10 @@
     <title>Newsfeed</title>
 </head>
 <body>
-    <div id="tweets" style="width: 50%; margin: 0 auto;">
+    <div id="newsfeed-tweets" style="width: 50%; margin: 0 auto;">
         <h2>What's new?</h2>
         @{ Html.RenderPartial("Add", new Models.TweetModel()); }
-        <span class="badge">Tweets: <span class="twc">@Model.Count</span></span>
+        <span class="badge">Tweets: <span id="tweets-counter">@Model.Count</span></span>
 
         <h3>Tweets:</h3>
         <div class="form-horizontal">

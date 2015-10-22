@@ -12,19 +12,34 @@ namespace WebUI.Controllers
     {
         private ITweetService tweetService;
         private IUserService userService;
+        private IFollowService followService;
 
-        public TweetController(ITweetService _tweetService, IUserService _userService)
+        public TweetController(ITweetService _tweetService, IUserService _userService, IFollowService _followService)
         {
             this.tweetService = _tweetService;
             this.userService = _userService;
+            this.followService = _followService;
         }
 
         [HttpGet]
         public ActionResult Newsfeed()
         {
             var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
-            var tweets = tweetService.GetListById(currentUser.Id);
-            return View(tweets);
+
+            var followingUsers = followService.GetFollows(currentUser.Id);
+
+            List<TweetViewModel> allFollowingUsersTweets = new List<TweetViewModel>();
+
+            allFollowingUsersTweets.AddRange(tweetService.GetListById(currentUser.Id));
+
+            foreach (var user in followingUsers)
+	        {
+                allFollowingUsersTweets.AddRange(tweetService.GetListById(user.Id));
+	        }
+
+            allFollowingUsersTweets = allFollowingUsersTweets.OrderByDescending(x => x.DateAdded).ToList();
+
+            return View(allFollowingUsersTweets);
         }
 
         [HttpPost]
@@ -53,7 +68,7 @@ namespace WebUI.Controllers
 
         public ActionResult Edit(int id, string text) 
         {
-            tweetService.Update(id, text); // works!
+            tweetService.Update(id, text);
             return View();           
         }
 
@@ -61,14 +76,6 @@ namespace WebUI.Controllers
         {
             tweetService.Delete(id);
             return View();  
-        }
-
-        public int GetTweets()
-        {
-            var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
-            var currentUserTweets = tweetService.GetListById(currentUser.Id);
-
-            return currentUserTweets.Count;
         }
     }
 }

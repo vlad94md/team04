@@ -44,7 +44,8 @@ namespace Converter
                 Id = tweet.Id, 
                 User_Id = tweet.User_Id,
                 Body = tweet.Body,
-                DateAdded = tweet.Date_time
+                DateAdded = tweet.Date_time,
+                AuthorId = tweet.User_Id
             };
 
             return newTweet;

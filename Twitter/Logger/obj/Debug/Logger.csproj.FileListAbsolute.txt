@@ -37,3 +37,22 @@ E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\bin\Debug\log4net.xml
 E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
 E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\obj\Debug\Logger.dll
 E:\IT\Endava\Twitter\GIT\team04\Twitter\Logger\obj\Debug\Logger.pdb
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\Logger\bin\Debug\Logger.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\Logger\bin\Debug\Logger.pdb
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\Logger\bin\Debug\log4net.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\Logger\bin\Debug\log4net.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\Logger\obj\Debug\Logger.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\Logger\obj\Debug\Logger.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\Logger\bin\Debug\Logger.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\Logger\bin\Debug\Logger.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\Logger\bin\Debug\log4net.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\Logger\bin\Debug\log4net.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\Logger\obj\Debug\Logger.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\Logger\obj\Debug\Logger.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache
+C:\Users\vguleaev\Desktop\Twitter\Logger\bin\Debug\Logger.dll
+C:\Users\vguleaev\Desktop\Twitter\Logger\bin\Debug\Logger.pdb
+C:\Users\vguleaev\Desktop\Twitter\Logger\bin\Debug\log4net.dll
+C:\Users\vguleaev\Desktop\Twitter\Logger\bin\Debug\log4net.xml
+C:\Users\vguleaev\Desktop\Twitter\Logger\obj\Debug\Logger.dll
+C:\Users\vguleaev\Desktop\Twitter\Logger\obj\Debug\Logger.pdb

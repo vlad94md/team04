@@ -77,8 +77,7 @@ namespace DAL
             using (var context = new TwitterEntities())
             {
                 var follow = GetById(id);
-                //follow.User = user.GetById(id);
-                //follow.User1 = user.GetById(follow.Subscriber_Id);
+
                 context.Follows.Attach(follow);
                 context.Follows.Remove(follow);
                 result = context.SaveChanges() > 0;

@@ -459,3 +459,180 @@ E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\log4net.dll
 E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Logger.dll
 E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\Logger.pdb
 E:\IT\Endava\Twitter\GIT\team04\Twitter\WebUI\bin\log4net.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\WebUI.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\WebUI.pdb
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Autofac.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Autofac.Integration.Mvc.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\BL.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\DAL.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\log4net.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Logger.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Models.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Newtonsoft.Json.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Net.Http.Formatting.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.Helpers.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.Http.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.Http.WebHost.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.Mvc.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.Razor.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.WebPages.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\EntityFramework.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Converter.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\DAL.pdb
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Logger.pdb
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Models.pdb
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\BL.pdb
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Autofac.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Autofac.Integration.Mvc.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\log4net.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Newtonsoft.Json.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Net.Http.Formatting.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.Helpers.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.Http.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.Http.WebHost.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.Mvc.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.Razor.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.WebPages.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\EntityFramework.xml
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\bin\Converter.pdb
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\obj\Debug\WebUI.dll
+C:\Users\stibulschii\Desktop\New folder\20oct\Twitter\WebUI\obj\Debug\WebUI.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\WebUI.dll.config
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\WebUI.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\WebUI.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Autofac.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Autofac.Integration.Mvc.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\BL.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\DAL.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\log4net.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Logger.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Models.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Newtonsoft.Json.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Net.Http.Formatting.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.Helpers.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.Http.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.Http.WebHost.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.Mvc.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.Razor.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.WebPages.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\EntityFramework.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Converter.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\DAL.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Logger.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Models.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\BL.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Autofac.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Autofac.Integration.Mvc.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\log4net.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Newtonsoft.Json.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Net.Http.Formatting.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.Helpers.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.Http.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.Http.WebHost.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.Mvc.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.Razor.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.WebPages.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\EntityFramework.xml
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\bin\Converter.pdb
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\obj\Debug\WebUI.dll
+C:\Users\user\Desktop\MainWork\20oct\Twitter\WebUI\obj\Debug\WebUI.pdb
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\WebUI.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\WebUI.pdb
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Autofac.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Autofac.Integration.Mvc.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\BL.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\DAL.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\log4net.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Logger.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Models.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Newtonsoft.Json.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Net.Http.Formatting.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.Helpers.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.Http.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.Http.WebHost.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.Mvc.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.Razor.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.WebPages.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\EntityFramework.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Converter.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\DAL.pdb
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Logger.pdb
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Models.pdb
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\BL.pdb
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Autofac.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Autofac.Integration.Mvc.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\log4net.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Newtonsoft.Json.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Net.Http.Formatting.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.Helpers.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.Http.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.Http.WebHost.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.Mvc.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.Razor.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.WebPages.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\EntityFramework.xml
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\bin\Converter.pdb
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\obj\Debug\WebUI.dll
+C:\Users\stibulschii\Desktop\New folder\21oct\Twitter\WebUI\obj\Debug\WebUI.pdb
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\WebUI.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\WebUI.pdb
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Autofac.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Autofac.Integration.Mvc.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\BL.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\DAL.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\log4net.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Logger.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Models.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Newtonsoft.Json.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Net.Http.Formatting.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.Helpers.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.Http.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.Http.WebHost.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.Mvc.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.Razor.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.WebPages.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\EntityFramework.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Converter.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\DAL.pdb
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Logger.pdb
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Models.pdb
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\BL.pdb
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Autofac.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Autofac.Integration.Mvc.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\log4net.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Newtonsoft.Json.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Net.Http.Formatting.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.Helpers.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.Http.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.Http.WebHost.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.Mvc.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.Razor.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.WebPages.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\EntityFramework.xml
+C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Converter.pdb
+C:\Users\vguleaev\Desktop\Twitter\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
+C:\Users\vguleaev\Desktop\Twitter\WebUI\obj\Debug\WebUI.dll
+C:\Users\vguleaev\Desktop\Twitter\WebUI\obj\Debug\WebUI.pdb

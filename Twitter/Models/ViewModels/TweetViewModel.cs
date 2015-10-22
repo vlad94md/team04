@@ -13,5 +13,7 @@ namespace Models
         public int User_Id { get; set; } 
         public string Body { get; set; }
         public DateTime DateAdded { get; set; }
+        public string Author { get; set; }
+        public int AuthorId { get; set; }
     }
 }
