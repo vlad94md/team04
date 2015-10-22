@@ -36,7 +36,7 @@ namespace WebUI.Controllers
             return View(allModel);
         }
 
-        public ActionResult Info(int id)
+        public ActionResult Info(int id, int page = 1)
         {
             var badgeModel = new BadgeModel();
             var allUsers = userService.GetAll();
@@ -54,12 +54,19 @@ namespace WebUI.Controllers
             var tweets = tweetService.GetListById(thisUser.Id);
             ViewBag.UserInfo = thisUser;
             //3.
-            badgeModel.Tweets = tweets;
+            badgeModel.TweetsCount = tweets.Count;
+
+            int pageSize = 10; // количество объектов на страницу
+            int totalItems = tweets.Count;
+            badgeModel.Tweets = tweets.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = totalItems };
+            badgeModel.PageInfo = pageInfo;
 
             return View(badgeModel);
         }
 
-        public ActionResult UserPage()
+        public ActionResult UserPage(int page = 1)
         {
             var badgeModel = new BadgeModel();
             var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
@@ -67,8 +74,15 @@ namespace WebUI.Controllers
             badgeModel.CurrentUserFollows = followService.GetList();
             
             var tweets = tweetService.GetListById(thisUser.Id);
-            badgeModel.Tweets = tweets;
+            badgeModel.TweetsCount = tweets.Count;
             ViewBag.UserInfo = thisUser;
+
+            int pageSize = 10;  ///REPEATEABLE CODE
+            int totalItems = tweets.Count;
+            badgeModel.Tweets = tweets.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = totalItems };
+            badgeModel.PageInfo = pageInfo;
 
             return View(badgeModel);
         }
@@ -87,7 +101,5 @@ namespace WebUI.Controllers
             followService.UnFollow(id);
             return View();
         }
-
-
     }
 }

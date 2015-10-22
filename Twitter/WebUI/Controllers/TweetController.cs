@@ -1,4 +1,5 @@
 ﻿using Models;
+using Models.ViewModels;
 using Services;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace WebUI.Controllers
         }
 
         [HttpGet]
-        public ActionResult Newsfeed()
+        public ActionResult Newsfeed(int page = 1)
         {
             var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
 
@@ -36,10 +37,17 @@ namespace WebUI.Controllers
 	        {
                 allFollowingUsersTweets.AddRange(tweetService.GetListById(user.Id));
 	        }
-
             allFollowingUsersTweets = allFollowingUsersTweets.OrderByDescending(x => x.DateAdded).ToList();
+            int tweetCount = allFollowingUsersTweets.Count;
 
-            return View(allFollowingUsersTweets);
+            int pageSize = 10; // количество объектов на страницу
+            int totalItems = allFollowingUsersTweets.Count;
+            allFollowingUsersTweets = allFollowingUsersTweets.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = totalItems };
+            NewsfeedViewModel newfsfeedModel = new NewsfeedViewModel { PageInfo = pageInfo, Tweets = allFollowingUsersTweets, TweetsCount = tweetCount };
+
+            return View(newfsfeedModel);
         }
 
         [HttpPost]

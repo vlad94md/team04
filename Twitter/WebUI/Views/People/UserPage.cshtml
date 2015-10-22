@@ -1,5 +1,5 @@
 ﻿@model Models.ViewModels.BadgeModel
-
+@using WebUI.Helpers
 @{
     var currentUserId = ((Models.UserViewModel)HttpContext.Current.Session["CurrentUser"]).Id;
     var userId = @ViewBag.UserInfo.Id;
@@ -14,7 +14,7 @@
         <h3>User information:</h3>
         @Html.Partial("UserInfo", (Models.UserViewModel)ViewBag.UserInfo)
         <br />
-        <span class="badge">Tweets: <span id="tweet-badge">@Model.Tweets.Count</span></span>
+        <span class="badge">Tweets: <span id="tweet-badge">@Model.TweetsCount</span></span>
         <span class="badge">Following: @Model.CurrentUserFollows.Where(h => h.SubId == currentUserId).Count()</span>
         <span class="badge">Followers: @Model.CurrentUserFollows.Where(h => h.PubId == currentUserId).Count()</span>
         <hr />
@@ -47,5 +47,12 @@
                 </div>
             }
         </div>
+
+        @if ( Model.TweetsCount > Model.PageInfo.PageSize )
+        {
+            <div class="btn-group">
+                @Html.PageLinks(Model.PageInfo, x => Url.Action("UserPage", new { page = x}))
+            </div>
+        }
     </div>
 </body>

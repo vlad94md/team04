@@ -42,7 +42,7 @@
                         </td>
                         <td width="12%">
                             @{
-                    var currentFollowId = Model.CurrentUserFollows.FirstOrDefault(h => h.SubId == currentUserId && h.PubId == user.Id); 
+                                var currentFollowId = Model.CurrentUserFollows.FirstOrDefault(h => h.SubId == currentUserId && h.PubId == user.Id); 
                             }
                             @if (currentFollowId != null)
                             {

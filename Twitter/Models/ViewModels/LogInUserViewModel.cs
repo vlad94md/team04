@@ -9,7 +9,6 @@ namespace Models
 {
     public class LogInUserViewModel
     {
-
         public int Id { get; set; }
 
         [Required(ErrorMessage = "Please enter your email")]

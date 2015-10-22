@@ -668,3 +668,63 @@
 2015-10-22 12:30:17,313 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
 2015-10-22 12:36:25,572 [12] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged out
 2015-10-22 13:25:39,501 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 13:56:25,254 [9] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 15:04:55,677 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 15:16:19,732 [11] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 15:36:46,946 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 15:53:05,805 [6] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 15:54:44,937 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 15:55:47,318 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 15:56:02,833 [5] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:94
+2015-10-22 15:56:03,186 [9] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:76
+2015-10-22 16:00:51,575 [10] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:95
+2015-10-22 16:01:02,005 [18] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:95
+2015-10-22 16:08:07,150 [15] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 16:09:17,050 [22] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 16:10:30,595 [34] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 16:19:27,677 [25] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 16:20:30,435 [12] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:96
+2015-10-22 16:20:31,165 [14] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:97
+2015-10-22 16:20:32,974 [25] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:98
+2015-10-22 16:20:33,779 [16] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:99
+2015-10-22 16:20:38,140 [14] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:100
+2015-10-22 16:22:59,574 [25] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:101
+2015-10-22 16:23:00,426 [17] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:102
+2015-10-22 16:23:00,923 [15] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:103
+2015-10-22 16:23:01,467 [5] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:104
+2015-10-22 16:23:06,229 [16] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:105
+2015-10-22 16:23:07,513 [16] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:106
+2015-10-22 16:23:18,567 [5] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:107
+2015-10-22 16:23:20,466 [16] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:108
+2015-10-22 16:23:29,430 [16] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:109
+2015-10-22 16:23:34,001 [16] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:110
+2015-10-22 16:30:00,419 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 16:30:46,332 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:111
+2015-10-22 16:31:09,501 [27] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:112
+2015-10-22 16:31:10,747 [27] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:113
+2015-10-22 16:31:11,651 [14] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:114
+2015-10-22 16:31:12,456 [27] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:115
+2015-10-22 16:31:19,557 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:115
+2015-10-22 16:31:19,746 [27] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:114
+2015-10-22 16:31:19,907 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:113
+2015-10-22 16:31:20,040 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:112
+2015-10-22 16:31:20,186 [27] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:111
+2015-10-22 16:31:20,339 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:110
+2015-10-22 16:31:20,497 [27] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:109
+2015-10-22 16:31:20,650 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:108
+2015-10-22 16:31:28,021 [21] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:107
+2015-10-22 16:31:28,298 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:106
+2015-10-22 16:31:28,451 [27] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:105
+2015-10-22 16:31:28,620 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:104
+2015-10-22 16:31:28,789 [27] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:103
+2015-10-22 16:31:28,961 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:102
+2015-10-22 16:31:30,558 [21] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:101
+2015-10-22 16:31:31,501 [14] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:100
+2015-10-22 16:35:35,108 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-22 16:36:46,355 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:116
+2015-10-22 16:37:15,769 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:117
+2015-10-22 16:37:16,942 [24] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:118
+2015-10-22 16:37:17,646 [28] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:119
+2015-10-22 16:37:18,897 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:120
+2015-10-22 16:37:24,030 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:121
+2015-10-22 16:39:13,770 [30] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in

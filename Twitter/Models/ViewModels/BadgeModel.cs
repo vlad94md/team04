@@ -11,5 +11,7 @@ namespace Models.ViewModels
         public List<UserViewModel> Users { get; set; }
         public List<FollowViewModel> CurrentUserFollows { get; set; }
         public List<TweetViewModel> Tweets { get; set; }
+        public int TweetsCount { get; set; }
+        public PageInfo PageInfo { get; set; }
     }
 }

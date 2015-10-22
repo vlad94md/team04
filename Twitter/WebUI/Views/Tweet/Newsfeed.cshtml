@@ -1,5 +1,5 @@
-﻿@model List<Models.TweetViewModel>
-
+﻿@model Models.ViewModels.NewsfeedViewModel
+@using WebUI.Helpers
 @{
 
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -16,12 +16,19 @@
     <div id="newsfeed-tweets" style="width: 50%; margin: 0 auto;">
         <h2>What's new?</h2>
         @{ Html.RenderPartial("Add", new Models.TweetModel()); }
-        <span class="badge">Tweets: <span id="tweets-counter">@Model.Count</span></span>
+        <span class="badge">Tweets: <span id="tweets-counter">@Model.TweetsCount</span></span>
 
         <h3>Tweets:</h3>
         <div class="form-horizontal">
-            <h5>@Html.Partial("TweetPartial", Model)</h5>
+            <h5>@Html.Partial("TweetPartial", Model.Tweets)</h5>
         </div>
+
+        @if ( Model.TweetsCount > Model.PageInfo.PageSize )
+        {
+            <div class="btn-group">
+                @Html.PageLinks(Model.PageInfo, x => Url.Action("Newsfeed", new { page = x}))
+            </div>
+        }
     </div>
 </body>
 </html>
