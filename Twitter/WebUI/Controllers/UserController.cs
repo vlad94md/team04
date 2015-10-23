@@ -96,5 +96,15 @@ namespace WebUI.Controllers
             followService.UnFollow(id);
             return View();
         }
+
+        public ActionResult Edit(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
