@@ -39,8 +39,8 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="FullName" Type="varchar" Nullable="false" MaxLength="60" />
-    <Property Name="Username" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="First_name" Type="varchar" Nullable="false" MaxLength="60" />
+    <Property Name="Last_name" Type="varchar" Nullable="false" MaxLength="60" />
     <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
     <Property Name="Passwrd" Type="varchar" Nullable="false" MaxLength="60" />
   </EntityType>

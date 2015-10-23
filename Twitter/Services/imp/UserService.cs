@@ -24,13 +24,6 @@ namespace Services
             return userContext.Add(UserConverter.ConvertToDB(user));
         }
 
-        public bool IsUsernameUnique(string username)
-        {
-            var allUsers = userContext.GetList();
-
-            return !allUsers.Any(x => x.Username == username);
-        }
-
         public bool IsEmailUnique(string email)
         {
             var allUsers = userContext.GetList();
@@ -38,7 +31,7 @@ namespace Services
             return !allUsers.Any(x => x.Email == email);
         }
 
-        public UserViewModel IsUsernamePassCorrect(LogInUserViewModel model)
+        public UserViewModel IsEmailAndPassCorrect(LogInUserViewModel model)
         {
             var curUser = userContext.GetList().FirstOrDefault(x => x.Email == model.Email);
             if (curUser != null)

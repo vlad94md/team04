@@ -17,10 +17,10 @@ namespace Tests
             userDao = new UserDao();
             testUser = new User()
             {
-                FullName = "Vlad Guleaev",
+                First_name = "Vlad Guleaev",
                 Email = "vlad@gmail.com",
                 Passwrd = "123",
-                Username = "testUser"
+                Last_name = "testUser"
             };
         }
 
@@ -73,20 +73,6 @@ namespace Tests
 
             //assert
             Assert.IsTrue(Actual);
-
-            //delete
-            userDao.Delete(testUser);
-        }
-
-        [TestMethod]
-        public void GetByUserName_returnUser_User()
-        {
-            //act
-            userDao.Add(testUser);
-            var Actual = userDao.GetByUsername(testUser.Username);
-
-            //assert
-            Assert.IsNotNull(Actual);
 
             //delete
             userDao.Delete(testUser);

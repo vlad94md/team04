@@ -15,8 +15,8 @@ namespace Converter
         public static User ConvertToDB(UserModel user)
         {
             var newUser = new User { 
-                FullName = user.FullName, 
-                Username = user.Username, 
+                First_name = user.First_name, 
+                Last_name = user.Last_name, 
                 Email = user.Email, 
                 Passwrd = user.Passwrd 
             };
@@ -41,8 +41,8 @@ namespace Converter
             var userViewModel = new UserViewModel
             {
                  Id = user.Id,
-                 FullName = user.FullName,
-                 Username = user.Username,
+                 First_name = user.First_name,
+                 Last_name = user.Last_name,
                  Email = user.Email
             };
 

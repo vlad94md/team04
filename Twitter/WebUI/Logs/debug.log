@@ -823,3 +823,54 @@
 2015-10-23 17:35:26,489 [20] DEBUG StaticLogger.Logger - user ID:1 username:vladg added a new tweet ID:171
 2015-10-23 17:35:30,020 [15] DEBUG StaticLogger.Logger - user ID:1 username:vladg deleted a tweet ID:171
 2015-10-23 17:35:31,589 [20] DEBUG StaticLogger.Logger - user ID:1 username:vladg edited a tweet ID:169
+2015-10-23 17:43:57,081 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-23 17:53:50,429 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-23 17:58:04,089 [8] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-23 18:00:23,318 [14] DEBUG StaticLogger.Logger - user ID:1 username:vladg logged in
+2015-10-23 18:08:14,486 [22] DEBUG StaticLogger.Logger - user ID:1 Vladislav Guleaev vladg logged in
+2015-10-23 18:19:00,581 [8] DEBUG StaticLogger.Logger - user ID:1 Vladislav  Guleaev logged in
+2015-10-23 18:22:29,567 [8] DEBUG StaticLogger.Logger - user ID:1 Vladislav  Guleaev logged in
+2015-10-23 18:24:25,120 [17] DEBUG StaticLogger.Logger - user ID:1 Vladislav  Guleaev logged out
+2015-10-23 18:25:31,654 [12] DEBUG StaticLogger.Logger - user ID:1 Vladislav  Guleaev logged in
+2015-10-23 18:26:36,879 [12] DEBUG StaticLogger.Logger - user ID:1 Vladislav  Guleaev logged in
+2015-10-23 18:29:38,561 [13] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com logged in
+2015-10-23 18:30:44,510 [13] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:170
+2015-10-23 18:30:44,926 [14] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:169
+2015-10-23 18:30:45,137 [10] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:168
+2015-10-23 18:30:45,309 [11] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:167
+2015-10-23 18:30:45,460 [10] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:166
+2015-10-23 18:30:45,719 [14] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:165
+2015-10-23 18:30:45,804 [13] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:164
+2015-10-23 18:30:45,943 [14] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:163
+2015-10-23 18:30:46,155 [11] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:162
+2015-10-23 18:30:46,486 [14] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:161
+2015-10-23 18:30:46,736 [13] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:159
+2015-10-23 18:30:46,872 [14] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:158
+2015-10-23 18:30:47,045 [11] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:157
+2015-10-23 18:30:47,235 [14] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:156
+2015-10-23 18:30:47,426 [11] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:155
+2015-10-23 18:30:47,595 [14] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:160
+2015-10-23 18:30:47,771 [11] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:153
+2015-10-23 18:30:47,971 [14] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:152
+2015-10-23 18:30:48,140 [11] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:154
+2015-10-23 18:30:48,321 [13] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:150
+2015-10-23 18:30:48,595 [14] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:149
+2015-10-23 18:30:48,728 [15] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:151
+2015-10-23 18:30:49,420 [13] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:148
+2015-10-23 18:30:50,016 [15] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com deleted a tweet ID:147
+2015-10-23 18:31:12,841 [13] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com edited a tweet ID:146
+2015-10-23 18:31:30,516 [10] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com added a new tweet ID:172
+2015-10-23 18:31:37,529 [13] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com added a new tweet ID:173
+2015-10-23 18:31:48,179 [15] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com added a new tweet ID:174
+2015-10-23 18:34:19,003 [10] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com logged out
+2015-10-23 18:34:31,852 [10] DEBUG StaticLogger.Logger - new user ID:75 1@mail.ru was added successfully
+2015-10-23 18:34:31,852 [10] DEBUG StaticLogger.Logger - new user 1@mail.ru has registered
+2015-10-23 18:53:20,621 [29] DEBUG StaticLogger.Logger - new user ID:76 333333333@mail.ru was added successfully
+2015-10-23 18:53:20,628 [29] DEBUG StaticLogger.Logger - new user 333333333@mail.ru has registered
+2015-10-23 18:53:33,391 [8] DEBUG StaticLogger.Logger - new user ID:77 442@gmail.ro was added successfully
+2015-10-23 18:53:33,391 [8] DEBUG StaticLogger.Logger - new user 442@gmail.ro has registered
+2015-10-23 18:54:07,692 [8] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com logged in
+2015-10-23 19:00:56,442 [24] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com logged in
+2015-10-23 19:01:15,523 [30] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com logged out
+2015-10-23 19:03:19,544 [24] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com logged in
+2015-10-23 19:03:27,321 [24] DEBUG StaticLogger.Logger - user ID:1 vladg@gmail.com logged out

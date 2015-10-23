@@ -44,8 +44,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="FullName" Type="varchar" Nullable="false" MaxLength="60" />
-          <Property Name="Username" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="First_name" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="Last_name" Type="varchar" Nullable="false" MaxLength="60" />
           <Property Name="Email" Type="varchar" Nullable="false" MaxLength="100" />
           <Property Name="Passwrd" Type="varchar" Nullable="false" MaxLength="60" />
         </EntityType>
@@ -132,8 +132,8 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="FullName" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
-          <Property Name="Username" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="First_name" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="Last_name" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
           <Property Name="Email" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
           <Property Name="Passwrd" Type="String" Nullable="false" MaxLength="60" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="Follows" Relationship="TwitterModel.FK__Follows__Publish__173876EA" FromRole="Users" ToRole="Follows" />
@@ -205,8 +205,8 @@
             <EntityTypeMapping TypeName="TwitterModel.User">
               <MappingFragment StoreEntitySet="Users">
                 <ScalarProperty Name="Id" ColumnName="Id" />
-                <ScalarProperty Name="FullName" ColumnName="FullName" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="First_name" ColumnName="First_name" />
+                <ScalarProperty Name="Last_name" ColumnName="Last_name" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="Passwrd" ColumnName="Passwrd" />
               </MappingFragment>

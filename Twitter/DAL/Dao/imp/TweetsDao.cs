@@ -39,7 +39,7 @@ namespace DAL
                 context.Tweets.Add(tweet);
 
                 result = context.SaveChanges() > 0;
-                Logger.Log.Debug("user ID:" + tweet.User_Id + " username:" + userDao.GetById(tweet.User_Id).Username + " added a new tweet ID:" + tweet.Id);
+                Logger.Log.Debug("user ID:" + tweet.User_Id + " " + userDao.GetById(tweet.User_Id).Email + " added a new tweet ID:" + tweet.Id);
             }
             return result;
         }
@@ -65,7 +65,7 @@ namespace DAL
                 var tweet = GetById(id);
                 context.Tweets.Remove(tweet);
                 result = context.SaveChanges() > 0;
-                Logger.Log.Debug("user ID:" + tweet.User_Id + " username:" + userDao.GetById(tweet.User_Id).Username + " deleted a tweet ID:" + tweet.Id);
+                Logger.Log.Debug("user ID:" + tweet.User_Id + " " + userDao.GetById(tweet.User_Id).Email + " deleted a tweet ID:" + tweet.Id);
             }
             return result;
         }
@@ -93,7 +93,7 @@ namespace DAL
 
                 context.Entry(tweet).State = EntityState.Modified;
                 result = context.SaveChanges() > 0;
-                Logger.Log.Debug("user ID:" + tweet.User_Id + " username:" + userDao.GetById(tweet.User_Id).Username + " edited a tweet ID:" + tweet.Id);
+                Logger.Log.Debug("user ID:" + tweet.User_Id + " " + userDao.GetById(tweet.User_Id).Email + " edited a tweet ID:" + tweet.Id);
             }
             return result;
         }

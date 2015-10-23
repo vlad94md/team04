@@ -24,8 +24,8 @@
       <EntityTypeMapping TypeName="TwitterModel.User">
         <MappingFragment StoreEntitySet="Users">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="FullName" ColumnName="FullName" />
-          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="First_name" ColumnName="First_name" />
+          <ScalarProperty Name="Last_name" ColumnName="Last_name" />
           <ScalarProperty Name="Email" ColumnName="Email" />
           <ScalarProperty Name="Passwrd" ColumnName="Passwrd" />
         </MappingFragment>

@@ -31,7 +31,7 @@ namespace DAL
                 context.Users.Attach(user);
                 context.Entry(user).State = EntityState.Added;
                 result = context.SaveChanges() > 0;
-                Logger.Log.Debug("new user ID:" + user.Id + " username:" + user.Username + " was added successfully");
+                Logger.Log.Debug("new user ID:" + user.Id + " " + user.Email + " was added successfully");
             }
             return result;
         }
@@ -44,7 +44,7 @@ namespace DAL
                 context.Users.Attach(user);
                 context.Entry(user).State = EntityState.Deleted;
                 result = context.SaveChanges() > 0;
-                Logger.Log.Debug("new user ID:" + user.Id + " username:" + user.Username + " was deleted successfully");
+                Logger.Log.Debug("new user ID:" + user.Id + " " + user.Email + " was deleted successfully");
             }
             return result;
         }
@@ -62,16 +62,6 @@ namespace DAL
                 context.Users.Attach(user);
                 context.Entry(user).State = EntityState.Modified;
                 result = context.SaveChanges() > 0;
-            }
-            return result;
-        }
-
-        public User GetByUsername(string username)
-        {
-            User result = null;
-            using (var context = new TwitterEntities())
-            {
-                result = context.Users.FirstOrDefault(x => x.Username == username);
             }
             return result;
         }

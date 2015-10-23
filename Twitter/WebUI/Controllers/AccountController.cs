@@ -30,24 +30,15 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (GetErrors(newUser) == null)
+                if (userService.IsEmailUnique(newUser.Email))
                 {
                     userService.AddNewUser(newUser);
-                    Logger.Log.Debug("new user " + newUser.Username + " " + newUser.Email + " has registered");
+                    Logger.Log.Debug("new user " + newUser.Email + " has registered");
                     return RedirectToAction("RegisterSuccess", "Account");
                 }
-                ViewBag.errorMessage = GetErrors(newUser);
+                ViewBag.errorMessage = "Email is already in use!";
             }
             return View();
-        }
-
-        private string GetErrors(UserModel newUser)
-        {
-            if (!userService.IsUsernameUnique(newUser.Username))
-                return "Username is already in use!";
-            if (!userService.IsEmailUnique(newUser.Email))
-                return "Email is already in use!";
-            return null;
         }
 
         public ActionResult RegisterSuccess()
@@ -65,11 +56,11 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var acceptedUser = userService.IsUsernamePassCorrect(currentUser);
-                if (acceptedUser != null)
+                var enteredUser = userService.IsEmailAndPassCorrect(currentUser);
+                if (enteredUser != null)
                 {
-                    HttpContext.Session["CurrentUser"] = acceptedUser;
-                    Logger.Log.Debug("user ID:" + acceptedUser.Id + " username:" + acceptedUser.Username + " logged in");
+                    HttpContext.Session["CurrentUser"] = enteredUser;
+                    Logger.Log.Debug("user ID:" + enteredUser.Id + " " + enteredUser.Email + " logged in");
                     return RedirectToAction("Newsfeed", "Tweet");
                 }
                 else
@@ -84,7 +75,7 @@ namespace WebUI.Controllers
         public ActionResult LogOut()
         {
             var leftUser = (UserViewModel)HttpContext.Session["CurrentUser"];
-            Logger.Log.Debug("user ID:" + leftUser.Id + " username:" + leftUser.Username + " logged out");
+            Logger.Log.Debug("user ID:" + leftUser.Id + " " + leftUser.Email + " logged out");
             HttpContext.Session["CurrentUser"] = null;
 
             return RedirectToAction("Index", "Home");

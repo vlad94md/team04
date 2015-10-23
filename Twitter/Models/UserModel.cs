@@ -10,13 +10,13 @@ namespace Models
 {
     public class UserModel
     {
-        [Required(ErrorMessage = "Please enter your full name")]
-        [MaxLength(60, ErrorMessage = "Full name should contain maximum of 60 characters")]
-        public string FullName { get; set; }
+        [Required(ErrorMessage = "Please enter your First Name")]
+        [MaxLength(60, ErrorMessage = "First name should contain maximum of 60 characters")]
+        public string First_name { get; set; }
 
-        [Required(ErrorMessage = "Please enter your username")]
-        [MaxLength(60, ErrorMessage = "Username should contain maximum of 60 characters")]
-        public string Username { get; set; }
+        [Required(ErrorMessage = "Please enter your Last Name")]
+        [MaxLength(60, ErrorMessage = "Last Name should contain maximum of 60 characters")]
+        public string Last_name { get; set; }
 
         [Required(ErrorMessage = "Please enter your email address")]
         [RegularExpression(@".+\@.+\..+", ErrorMessage = "Please enter a valid email address")]

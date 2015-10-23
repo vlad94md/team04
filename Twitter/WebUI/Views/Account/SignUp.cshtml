@@ -19,15 +19,15 @@
                     <h2 class="text-center">Registration Form:</h2>
                     <form class="form-horizontal">
                         <div class="control-group">
-                            <label class="control-label" for="inputFullname">Full Name</label>
+                            <label class="control-label" for="inputFirstName">First Name</label>
                             <div class="controls">
-                                @Html.TextBoxFor(x => x.FullName, new { @id = "inputFullname", @class = "form-control", @placeholder = "Fullname" })
+                                @Html.TextBoxFor(x => x.First_name, new { @id = "inputFirstName", @class = "form-control", @placeholder = "First name" })
                             </div>
                         </div>
                         <div class="control-group">
-                            <label class="control-label" for="inputUsername">Username</label>
+                            <label class="control-label" for="inputLastName">Last Name</label>
                             <div class="controls">
-                                @Html.TextBoxFor(x => x.Username, new { @id = "inputUsername", @class = "form-control", @placeholder = "Username" })
+                                @Html.TextBoxFor(x => x.Last_name, new { @id = "inputLastName", @class = "form-control", @placeholder = "Last name" })
                             </div>
                         </div>
                         <div class="control-group">

@@ -20,8 +20,8 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Fullname</th>
-                    <th>Username</th>
+                    <th>First name</th>
+                    <th>Last name</th>
                     <th>E-mail</th>
                 </tr>
             </thead>
@@ -32,10 +32,10 @@
                     <tr class="users-table" id="@user.Id">
                         <td>@(Model.Users.IndexOf(user) + 1)</td>
                         <td>
-                            @Html.ActionLink(@user.FullName, "Info", "User", new { @user.Id }, null)
+                            @Html.ActionLink(@user.First_name, "Info", "User", new { @user.Id }, null)
                         </td>
                         <td>
-                            @user.Username
+                            @user.Last_name
                         </td>
                         <td>
                             @user.Email
