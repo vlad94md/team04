@@ -32,7 +32,7 @@
                     <tr class="users-table" id="@user.Id">
                         <td>@(Model.Users.IndexOf(user) + 1)</td>
                         <td>
-                            @Html.ActionLink(@user.FullName, "Info", "People", new { @user.Id }, null)
+                            @Html.ActionLink(@user.FullName, "Info", "User", new { @user.Id }, null)
                         </td>
                         <td>
                             @user.Username

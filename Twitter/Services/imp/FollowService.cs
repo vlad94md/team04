@@ -45,8 +45,7 @@ namespace Services
 
         public List<FollowViewModel> GetList()
         {
-            List<FollowViewModel> followlist = new List<FollowViewModel>();
-            followlist = UserConverter.ConvertFollowModel(context.GetList());
+            List<FollowViewModel> followlist = UserConverter.ConvertFollowModel(context.GetList());
             return followlist;
         }
 

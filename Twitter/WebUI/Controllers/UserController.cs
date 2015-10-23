@@ -1,93 +1,100 @@
-﻿using System;
+﻿using Models;
+using Models.ViewModels;
+using Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Models;
-using Services;
-using WebUI.App_Start;
-using StaticLogger;
 
 namespace WebUI.Controllers
 {
-    [AllowAnonymous]
     public class UserController : Controller
     {
+        private ITweetService tweetService;
         private IUserService userService;
+        private IFollowService followService;
 
-        public UserController(IUserService _userService)
+        public UserController(ITweetService _tweetService, IUserService _userService, IFollowService _followService)
         {
+            this.tweetService = _tweetService;
             this.userService = _userService;
+            this.followService = _followService;
         }
 
-        public ActionResult SignUp()
+        public ActionResult All()
         {
+            AllViewModel allModel = new AllViewModel();
+
+            var allUsers = userService.GetAll();
+            var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            allUsers.Remove(allUsers.Find(x => x.Id == currentUser.Id));
+
+            allModel.Users = allUsers;
+            allModel.CurrentUserFollows = followService.GetList();       
+
+            return View(allModel);
+        }
+
+        public ActionResult Info(int id, int page = 1)
+        {
+            var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+
+            if (id == currentUser.Id)
+                return RedirectToAction("UserPage");
+
+            var infoModel = new InfoViewModel();
+
+            infoModel.CurrentUserFollows = followService.GetList();
+            infoModel.Users = userService.GetAll();
+                
+            UserViewModel thisUser = userService.GetById(id);
+            var tweets = tweetService.GetListById(thisUser.Id);
+            ViewBag.UserInfo = thisUser;
+
+            infoModel.TweetsCount = tweets.Count;
+
+            int pageSize = 25; 
+            int totalItems = tweets.Count;
+            infoModel.Tweets = tweets.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            infoModel.PageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = totalItems };
+
+            return View(infoModel);
+        }
+
+        public ActionResult UserPage(int page = 1)
+        {
+            var infoModel = new InfoViewModel();
+            var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            infoModel.CurrentUserFollows = followService.GetList();
+
+            var tweets = tweetService.GetListById(currentUser.Id);
+            infoModel.TweetsCount = tweets.Count;
+            ViewBag.UserInfo = currentUser;
+
+            int pageSize = 25; 
+            int totalItems = tweets.Count;
+            infoModel.Tweets = tweets.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+
+            infoModel.PageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = totalItems };
+
+            return View(infoModel);
+        }
+
+        public ActionResult Follow(int publisherId, int subsriberId)
+        {
+            var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            subsriberId = currentUser.Id;
+            followService.Follow(publisherId, subsriberId);
+
             return View();
         }
 
-        [HttpPost]
-        public ActionResult SignUp(UserModel newUser)
+        public ActionResult Unfollow(int id)
         {
-            if (ModelState.IsValid)
-            {
-                if (GetErrors(newUser) == null)
-                {
-                    userService.AddNewUser(newUser);
-                    Logger.Log.Debug("new user " + newUser.Username + " " + newUser.Email + " has registered");
-                    return RedirectToAction("RegisterSuccess", "User");
-                }
-                ViewBag.errorMessage = GetErrors(newUser);
-            }
+            followService.UnFollow(id);
             return View();
-        }
-
-        private string GetErrors(UserModel newUser)
-        {
-            if (!userService.IsUsernameUnique(newUser.Username))
-                return "Username is already in use!";
-            if (!userService.IsEmailUnique(newUser.Email))
-                return "Email is already in use!";
-            return null;
-        }
-
-        public ActionResult RegisterSuccess()
-        {
-            return View();
-        }
-
-        public ActionResult LogIn()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult LogIn(LogInUserViewModel currentUser)
-        {
-            if (ModelState.IsValid)
-            {
-                var acceptedUser = userService.IsUsernamePassCorrect(currentUser);
-                if (acceptedUser != null)
-                {
-                    HttpContext.Session["CurrentUser"] = acceptedUser;
-                    Logger.Log.Debug("user ID:" + acceptedUser.Id + " username:" + acceptedUser.Username + " logged in");
-                    return RedirectToAction("Newsfeed", "Tweet");
-                }
-                else
-                {
-                    ViewBag.errorMessage = "Email or Password is incorrect!";
-                    return View();
-                }
-            }
-            return View();
-        }
-
-        public ActionResult LogOut()
-        {
-            var leftUser = (UserViewModel)HttpContext.Session["CurrentUser"];
-            Logger.Log.Debug("user ID:" + leftUser.Id + " username:" + leftUser.Username + " logged out");
-            HttpContext.Session["CurrentUser"] = null;
-
-            return RedirectToAction("Index", "Home");
         }
     }
 }

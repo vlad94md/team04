@@ -74,7 +74,7 @@
         var id = $(this).parents('.papa-container').attr('id');
         var increaseFollowers = +($('#followers').text()) + 1;
 
-        $.get('/People/Follow', { 'publisherId': id, 'subsriberId': 0 }).complete(function () {
+        $.get('/User/Follow', { 'publisherId': id, 'subsriberId': 0 }).complete(function () {
             
             $('#followers').text(increaseFollowers);
         });
@@ -90,7 +90,7 @@
         var id = $(this).parents('.papa-container').attr('id');
         var decreaseFollowers = +($('#followers').text()) - 1;
 
-        $.get('/People/Unfollow', { 'id': id }).complete(function () {
+        $.get('/User/Unfollow', { 'id': id }).complete(function () {
             $('#followers').text(decreaseFollowers);
         });
 
@@ -99,15 +99,12 @@
     });
 
 
-
-
-
     $('.foll').click(function (e) {
         var clickedButton = $(e.target);
         var parentBlock = clickedButton.parents('.users-table');
         var tweetId = $(this).parents('.users-table').attr('id');
 
-        $.get('/People/Follow', { 'publisherId': tweetId, 'subsriberId': 0 });
+        $.get('/User/Follow', { 'publisherId': tweetId, 'subsriberId': 0 });
         $(this).hide();
         $(parentBlock).find('.unfoll').css('background', '#ff6a00');
         $(parentBlock).find('.unfoll').show();
@@ -118,7 +115,7 @@
         var parentBlock = clickedButton.parents('.users-table');
         var tweetId = $(this).parents('.users-table').attr('id');
 
-        $.get('/People/Unfollow', { 'id': tweetId });
+        $.get('/User/Unfollow', { 'id': tweetId });
         $(parentBlock).find('.foll').show();
         $(this).hide();
 
@@ -127,7 +124,7 @@
     $('.unfoll').hover(function () {
         $(this).css("background-color", '#E74C3C');
     }, function () {
-        $(this).css("background-color", '#ff6a00');
+        $(this).css("background-color", '#FFA500');
     });
 
     $('.tweet-any-time').click(function () {
@@ -147,33 +144,7 @@
 
             $('#tweet-any-time-text').val('');
         });
+
+        $('#myModal').modal("hide");
     });
-
-    //$('#rr').click(function () {
-    //    console.log('tweet any time clicked');
-    //    //$.get('/Tweet/Add', { Body: $('#tweet-any-time-text').val() }, function (data) {
-    //    //    $('.form-horizontal').html(data);
-    //    //    $('.tweet-text').html(data);
-    //    //});
-    //});
-
-//    $("#tweetbutton").click(function () {
-//        $.ajax({
-//            url: '/Tweet/Add/',
-//            type: "POST",
-//            data: {
-//                Body: $('#Body').val()
-//            },
-//            success: function (data) {
-//                $('.form-horizontal').html(data);
-
-//            }
-//        }).complete(function () {
-//            var Tweets = +($('#tweets-counter').text()) + 1;
-//            $('#tweets-counter').text(Tweets);
-
-//            $('.control-label').val('');
-//        })
-//    });
-//});
 });

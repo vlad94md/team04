@@ -125,9 +125,9 @@
     <Compile Include="App_Start\DependencyConfig.cs" />
     <Compile Include="Attributes\TwitterAuthorize.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PeopleController.cs" />
-    <Compile Include="Controllers\TweetController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\TweetController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -157,14 +157,14 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Tweet\Add.cshtml" />
-    <Content Include="Views\People\All.cshtml" />
-    <Content Include="Views\People\Info.cshtml" />
-    <Content Include="Views\People\UserInfo.cshtml" />
-    <Content Include="Views\User\RegisterSuccess.cshtml" />
+    <Content Include="Views\User\All.cshtml" />
+    <Content Include="Views\User\Info.cshtml" />
+    <Content Include="Views\User\UserInfo.cshtml" />
+    <Content Include="Views\Account\RegisterSuccess.cshtml" />
     <Content Include="Views\Shared\_StartLayout.cshtml" />
     <Content Include="Views\Tweet\TweetPartial.cshtml" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
-    <Content Include="Views\People\UserPage.cshtml" />
+    <Content Include="Views\User\UserPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -197,10 +197,10 @@
     <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\User\SignUp.cshtml" />
+    <Content Include="Views\Account\SignUp.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\User\LogIn.cshtml" />
+    <Content Include="Views\Account\LogIn.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Tweet\Newsfeed.cshtml" />

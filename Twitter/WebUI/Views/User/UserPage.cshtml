@@ -1,4 +1,4 @@
-﻿@model Models.ViewModels.BadgeModel
+﻿@model Models.ViewModels.InfoViewModel
 @using WebUI.Helpers
 @{
     var currentUserId = ((Models.UserViewModel)HttpContext.Current.Session["CurrentUser"]).Id;
@@ -50,8 +50,10 @@
 
         @if ( Model.TweetsCount > Model.PageInfo.PageSize )
         {
-            <div class="btn-group">
-                @Html.PageLinks(Model.PageInfo, x => Url.Action("UserPage", new { page = x}))
+            <div class="text-center">
+                <div class="btn-group">
+                    @Html.PageLinks(Model.PageInfo, x => Url.Action("UserPage", new { page = x}))
+                </div>
             </div>
         }
     </div>

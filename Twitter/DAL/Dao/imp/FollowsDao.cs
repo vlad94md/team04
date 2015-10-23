@@ -42,15 +42,22 @@ namespace DAL
 
         public ICollection<User> GetUserFollows(int currentUserId)
         {
-            List<User> result = new List<User>();            
-            using (var context = new TwitterEntities())
+            List<User> result = new List<User>();
+            try
             {
-                var xd = context.Follows.Where(x => x.Subscriber_Id == currentUserId && x.Publisher_Id != null);
-
-                foreach (var item in xd)
+                using (var context = new TwitterEntities())
                 {
-                    result.Add(user.GetById(item.Publisher_Id));
+                    var xd = context.Follows.Where(x => x.Subscriber_Id == currentUserId && x.Publisher_Id != null);
+
+                    foreach (var item in xd)
+                    {
+                        result.Add(user.GetById(item.Publisher_Id));
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                throw e;
             }
             return result.ToList();
         }

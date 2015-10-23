@@ -22,7 +22,7 @@ namespace WebUI
             routes.MapRoute(
                     "Info", // Route name
                     "People/Info/{id}",  // URL with parameters
-                    new { controller = "People", action = "Info", id = UrlParameter.Optional }  // Parameter defaults
+                    new { controller = "User", action = "Info", id = UrlParameter.Optional }  // Parameter defaults
             );
         }
     }

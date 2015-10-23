@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.ViewModels
 {
-    public class BadgeModel
+    public class InfoViewModel
     {
         public List<UserViewModel> Users { get; set; }
         public List<FollowViewModel> CurrentUserFollows { get; set; }

@@ -97,7 +97,7 @@ body {
     position: absolute;
     right: 475px;
     top: 205px;
-    background: #ff6a00;
+    background: #FFA500;
     border-radius: 0px;
     font-family: Arial;
     color: #ffffff;
@@ -159,7 +159,7 @@ body {
     }
 
 .unfoll {
-    background: #ff6a00;
+    background: #FFA500;
     border-radius: 11px;
     font-family: Arial;
     color: #000;

@@ -31,23 +31,25 @@ namespace WebUI.Controllers
 
             List<TweetViewModel> allFollowingUsersTweets = new List<TweetViewModel>();
 
-            allFollowingUsersTweets.AddRange(tweetService.GetListById(currentUser.Id));
+            allFollowingUsersTweets.AddRange(tweetService.GetListById(currentUser.Id)); 
 
             foreach (var user in followingUsers)
 	        {
                 allFollowingUsersTweets.AddRange(tweetService.GetListById(user.Id));
 	        }
+
             allFollowingUsersTweets = allFollowingUsersTweets.OrderByDescending(x => x.DateAdded).ToList();
-            int tweetCount = allFollowingUsersTweets.Count;
 
-            int pageSize = 10; // количество объектов на страницу
-            int totalItems = allFollowingUsersTweets.Count;
-            allFollowingUsersTweets = allFollowingUsersTweets.Skip((page - 1) * pageSize).Take(pageSize).ToList();
+            var neewsfeedModel = CreateNeewsfeedModel(25, allFollowingUsersTweets.Count, page, allFollowingUsersTweets);
 
-            PageInfo pageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = totalItems };
-            NewsfeedViewModel newfsfeedModel = new NewsfeedViewModel { PageInfo = pageInfo, Tweets = allFollowingUsersTweets, TweetsCount = tweetCount };
+            return View(neewsfeedModel);
+        }
 
-            return View(newfsfeedModel);
+        private NewsfeedViewModel CreateNeewsfeedModel(int pageSize, int totalItems, int curPage, List<TweetViewModel> tweets)
+        {
+            var tweetsForCurrentPage = tweets.Skip((curPage - 1) * pageSize).Take(pageSize).ToList();
+            PageInfo pageInfo = new PageInfo { PageNumber = curPage, PageSize = pageSize, TotalItems = totalItems };
+            return new NewsfeedViewModel { PageInfo = pageInfo, Tweets = tweetsForCurrentPage, TweetsCount = totalItems };
         }
 
         [HttpPost]

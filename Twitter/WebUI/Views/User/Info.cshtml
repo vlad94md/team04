@@ -1,4 +1,4 @@
-﻿@model Models.ViewModels.BadgeModel
+﻿@model Models.ViewModels.InfoViewModel
 @using WebUI.Helpers
 @{
    
@@ -70,8 +70,10 @@
 
         @if ( Model.TweetsCount > Model.PageInfo.PageSize )
         {
-            <div class="btn-group">
-                @Html.PageLinks(Model.PageInfo, x => Url.Action("Info", new { page = x}))
+            <div class="text-center">
+                <div class="btn-group">
+                    @Html.PageLinks(Model.PageInfo, x => Url.Action("Info", new { page = x}))
+                </div>
             </div>
         }
     </div>

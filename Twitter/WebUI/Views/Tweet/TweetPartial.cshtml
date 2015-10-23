@@ -15,11 +15,11 @@
                 @{
                 if (item.AuthorId != curUserId)
                 {
-                    @Html.ActionLink(@item.Author, "Info", "People", new { Id = @item.AuthorId }, null);
+                    @Html.ActionLink(@item.Author, "Info", "User", new { Id = @item.AuthorId }, null);
                 }
                 else
                 {
-                    @Html.ActionLink(@item.Author, "UserPage", "People");
+                    @Html.ActionLink(@item.Author, "UserPage", "User");
                 }
                 }
             </h7>

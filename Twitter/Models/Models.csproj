@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="PageInfo.cs" />
     <Compile Include="ViewModels\AllViewModel.cs" />
-    <Compile Include="ViewModels\BadgeModel.cs" />
+    <Compile Include="ViewModels\InfoViewModel.cs" />
     <Compile Include="ViewModels\FollowViewModel.cs" />
     <Compile Include="ViewModels\LogInUserViewModel.cs" />
     <Compile Include="PasswordEncryption.cs" />

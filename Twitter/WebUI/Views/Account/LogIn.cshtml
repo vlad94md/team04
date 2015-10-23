@@ -1,6 +1,6 @@
-﻿@model Models.UserModel
+﻿@model Models.LogInUserViewModel
 @{
-    Layout = "~/Views/Shared/_StartLayout.cshtml";
+    Layout = "~/Views/Shared/_StartLayout.cshtml"; ;
 }
 
 <!DOCTYPE html>
@@ -8,28 +8,16 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Register</title>
+    <title>LogIn</title>
 </head>
 <body>
-    <div id="register-page" style="padding: 10%; width: 70%; margin: 0 auto">
+    <div id="login-page" style="padding: 10%; width: 70%; margin: 0 auto">
         <div class="panel panel-default">
-            @using (Html.BeginForm("SignUp", "User", new { @class = "form-horizontal" }))
+            @using (Html.BeginForm("LogIn", "Account", new { @class = "form-horizontal" }))
             {
                 <div class="panel-body" style="width: 65%; margin: 0 auto;">
-                    <h2 class="text-center">Registration Form:</h2>
+                    <h2 class="text-center">Sign In Form:</h2>
                     <form class="form-horizontal">
-                        <div class="control-group">
-                            <label class="control-label" for="inputFullname">Full Name</label>
-                            <div class="controls">
-                                @Html.TextBoxFor(x => x.FullName, new { @id = "inputFullname", @class = "form-control", @placeholder = "Fullname" })
-                            </div>
-                        </div>
-                        <div class="control-group">
-                            <label class="control-label" for="inputUsername">Username</label>
-                            <div class="controls">
-                                @Html.TextBoxFor(x => x.Username, new { @id = "inputUsername", @class = "form-control", @placeholder = "Username" })
-                            </div>
-                        </div>
                         <div class="control-group">
                             <label class="control-label" for="inputEmail">E-mail</label>
                             <div class="controls">
@@ -43,7 +31,7 @@
                             </div>
                         </div>
                         <div id="login-button" class="text-center">
-                            <input type="submit" value="Register!" class="btn btn-default" style="margin: 5px;" />
+                            <input type="submit" value="Log In!" class="btn btn-default" style="margin: 5px;" />
                         </div>
                         <h4 class="text-danger">@Html.ValidationSummary()</h4>
                     </form>
