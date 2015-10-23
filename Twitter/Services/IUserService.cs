@@ -11,9 +11,8 @@ namespace Services
     public interface IUserService
     {
         bool AddNewUser(UserModel user);
-        bool IsUsernameUnique(string username);
         bool IsEmailUnique(string email);
-        UserViewModel IsUsernamePassCorrect(LogInUserViewModel currentUser);
+        UserViewModel IsEmailAndPassCorrect(LogInUserViewModel currentUser);
         UserViewModel GetById(int id);
         List<UserViewModel> GetAll();
     }
