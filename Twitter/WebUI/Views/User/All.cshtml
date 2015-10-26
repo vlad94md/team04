@@ -15,8 +15,8 @@
 <body>
     <div id="all-users">
         <h2>All Users</h2>
-        <span class="badge">Total users: @Model.Users.Count</span>
-        <table class="table table-striped table-hover ">
+        <span class="badge">Total users: @Model.TotalUsers</span>
+        @*<table class="table table-striped table-hover ">
             <thead>
                 <tr>
                     <th>#</th>
@@ -35,16 +35,13 @@
                             @Html.ActionLink(@user.First_name, "Info", "User", new { @user.Id }, null)
                         </td>
                         <td>
-                            @user.Last_name
+                            @Html.ActionLink(@user.Last_name, "Info", "User", new { @user.Id }, null)
                         </td>
                         <td>
                             @user.Email
                         </td>
                         <td width="12%">
-                            @{
-                                var currentFollowId = Model.CurrentUserFollows.FirstOrDefault(h => h.SubId == currentUserId && h.PubId == user.Id); 
-                            }
-                            @if (currentFollowId != null)
+                            @if (user.IsFollowedByCurrent)
                             {
                                 <span class="btn unfoll" style="display:block; width: 100%;" >Unfollow</span> 
                                 <span class="btn foll" style="display:none; width: 100%;">Follow</span>
@@ -54,12 +51,12 @@
                                 <span class="btn unfoll" style="display:none; width: 100%;">Unfollow</span> 
                                 <span class="btn foll" style="display:block; width: 100%;">Follow</span>
                             }
-
                         </td>
                     </tr>
                 }
             </tbody>
-        </table>
+        </table>*@
+        @Html.Partial("AllPartial", @Model.Users)
     </div>
 </body>
 </html>

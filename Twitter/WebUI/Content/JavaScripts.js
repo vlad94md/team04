@@ -147,4 +147,34 @@
 
         $('#myModal').modal("hide");
     });
+
+    $('.view-button-edit').click(function (e) {
+        var clickedButton = $(e.target);
+        var parentBlock = clickedButton.parents('.view-edit-parent');
+        var Id = $(this).parents('.view-edit-parent').attr('id');
+        var fNameText = $(parentBlock).find('.first-name-edit').text();
+        var lNameText = $(parentBlock).find('.last-name-edit').text();
+        var emailText = $(parentBlock).find('.email-edit').text();
+
+        $(parentBlock).find('.save-cancel-buttons').show();
+        $(parentBlock).find('.first-name-text').show().val(fNameText).focus();
+        $(parentBlock).find('.last-name-text').show().val(lNameText);
+        $(parentBlock).find('.email-text').show().val(emailText);
+        $(parentBlock).find('.first-name-edit').hide();
+        $(parentBlock).find('.last-name-edit').hide();
+        $(parentBlock).find('.email-edit').hide();
+    });
+
+    $('.view-edit-cancel').click(function (e) {
+        var clickedButton = $(e.target);
+        var parentBlock = clickedButton.parents('.view-edit-parent');
+
+        $(parentBlock).find('.save-cancel-buttons').hide();
+        $(parentBlock).find('.first-name-text').hide();
+        $(parentBlock).find('.last-name-text').hide();
+        $(parentBlock).find('.email-text').show().hide();
+        $(parentBlock).find('.first-name-edit').show();
+        $(parentBlock).find('.last-name-edit').show();
+        $(parentBlock).find('.email-edit').show();
+    });
 });

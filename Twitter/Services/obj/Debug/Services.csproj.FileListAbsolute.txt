@@ -190,3 +190,5 @@ C:\Users\vguleaev\Desktop\Twitter\Services\bin\Debug\log4net.xml
 C:\Users\vguleaev\Desktop\Twitter\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
 C:\Users\vguleaev\Desktop\Twitter\Services\obj\Debug\BL.dll
 C:\Users\vguleaev\Desktop\Twitter\Services\obj\Debug\BL.pdb
+D:\GIT\team04\Twitter\Services\bin\Debug\PagedList.dll
+D:\GIT\team04\Twitter\Services\bin\Debug\PagedList.xml

@@ -129,3 +129,7 @@ C:\Users\vguleaev\Desktop\Twitter\DAL\bin\Debug\log4net.xml
 C:\Users\vguleaev\Desktop\Twitter\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\vguleaev\Desktop\Twitter\DAL\obj\Debug\DAL.dll
 C:\Users\vguleaev\Desktop\Twitter\DAL\obj\Debug\DAL.pdb
+D:\GIT\team04\Twitter\DAL\bin\Debug\PagedList.dll
+D:\GIT\team04\Twitter\DAL\bin\Debug\PagedList.Mvc.dll
+D:\GIT\team04\Twitter\DAL\bin\Debug\PagedList.xml
+D:\GIT\team04\Twitter\DAL\bin\Debug\PagedList.Mvc.xml

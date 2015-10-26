@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PagedList;
 
 namespace Models.ViewModels
 {
@@ -10,8 +11,8 @@ namespace Models.ViewModels
     {
         public List<UserViewModel> Users { get; set; }
         public List<FollowViewModel> CurrentUserFollows { get; set; }
-        public List<TweetViewModel> Tweets { get; set; }
+        public IPagedList<TweetViewModel> Tweets { get; set; }
+        public UserViewModel User { get; set; }
         public int TweetsCount { get; set; }
-        public PageInfo PageInfo { get; set; }
     }
 }

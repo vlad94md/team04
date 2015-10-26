@@ -55,3 +55,4 @@ C:\Users\vguleaev\Desktop\Twitter\Logger\bin\Debug\log4net.dll
 C:\Users\vguleaev\Desktop\Twitter\Logger\bin\Debug\log4net.xml
 C:\Users\vguleaev\Desktop\Twitter\Logger\obj\Debug\Logger.dll
 C:\Users\vguleaev\Desktop\Twitter\Logger\obj\Debug\Logger.pdb
+D:\GIT\team04\Twitter\Logger\obj\Debug\Logger.csprojResolveAssemblyReference.cache

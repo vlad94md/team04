@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 
 namespace WebUI.Controllers
 {
@@ -22,23 +23,26 @@ namespace WebUI.Controllers
             this.followService = _followService;
         }
 
-        public ActionResult All()
+        public ActionResult All(int? page = 1)
         {
             AllViewModel allModel = new AllViewModel();
-
-            var allUsers = userService.GetAll();
+            
             var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            var allUsers = userService.GetAll(currentUser.Id);
             allUsers.Remove(allUsers.Find(x => x.Id == currentUser.Id));
 
-            allModel.Users = allUsers;
-            allModel.CurrentUserFollows = followService.GetList();       
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            allModel.Users = allUsers.ToPagedList(pageNumber, pageSize);
+            allModel.TotalUsers = allUsers.Count;      
 
             return View(allModel);
         }
 
-        public ActionResult Info(int id, int page = 1)
+        public ActionResult Info(int id, int? page = 1)
         {
             var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            var curUser = userService.GetById(id);
 
             if (id == currentUser.Id)
                 return RedirectToAction("UserPage");
@@ -46,40 +50,64 @@ namespace WebUI.Controllers
             var infoModel = new InfoViewModel();
 
             infoModel.CurrentUserFollows = followService.GetList();
-            infoModel.Users = userService.GetAll();
+            infoModel.Users = userService.GetAll(currentUser.Id);
                 
             UserViewModel thisUser = userService.GetById(id);
             var tweets = tweetService.GetListById(thisUser.Id);
-            ViewBag.UserInfo = thisUser;
+            infoModel.User = curUser;
 
             infoModel.TweetsCount = tweets.Count;
 
-            int pageSize = 25; 
+            int pageSize = 25;
+            int pageNumber = (page ?? 1);
             int totalItems = tweets.Count;
-            infoModel.Tweets = tweets.Skip((page - 1) * pageSize).Take(pageSize).ToList();
-
-            infoModel.PageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = totalItems };
+            infoModel.Tweets = tweets.ToPagedList(pageNumber, pageSize);
 
             return View(infoModel);
         }
 
-        public ActionResult UserPage(int page = 1)
+        public ActionResult UserPage(int? page = 1)
         {
             var infoModel = new InfoViewModel();
             var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            var curUser = userService.GetById(currentUser.Id);
+
             infoModel.CurrentUserFollows = followService.GetList();
 
             var tweets = tweetService.GetListById(currentUser.Id);
             infoModel.TweetsCount = tweets.Count;
-            ViewBag.UserInfo = currentUser;
+            infoModel.User = curUser;
 
-            int pageSize = 25; 
+            int pageSize = 25;
+            int pageNumber = (page ?? 1);
             int totalItems = tweets.Count;
-            infoModel.Tweets = tweets.Skip((page - 1) * pageSize).Take(pageSize).ToList();
-
-            infoModel.PageInfo = new PageInfo { PageNumber = page, PageSize = pageSize, TotalItems = totalItems };
+            infoModel.Tweets = tweets.ToPagedList(pageNumber, pageSize);
 
             return View(infoModel);
+        }
+
+        public bool Edit(UserViewModel user)
+        {
+            if (ModelState.IsValid)
+            {
+                if (userService.IsEmailUnique(user.Email))
+                {
+                    userService.EditUser(user);
+                }
+                else { return false; }
+                return true;
+            }
+            return false;
+        }
+
+        public ActionResult UsersProfile()
+        {
+            var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+            var user = userService.GetById(currentUser.Id);
+
+            HttpContext.Session["CurrentUser"]  = user;
+
+            return View(user);
         }
 
         public ActionResult Follow(int publisherId, int subsriberId)
@@ -95,11 +123,6 @@ namespace WebUI.Controllers
         {
             followService.UnFollow(id);
             return View();
-        }
-
-        public ActionResult Edit(int id)
-        {
-            throw new NotImplementedException();
         }
 
         public ActionResult Delete(int id)

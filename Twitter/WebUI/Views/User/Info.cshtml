@@ -1,9 +1,8 @@
 ﻿@model Models.ViewModels.InfoViewModel
-@using WebUI.Helpers
 @{
    
     var currentUserId = ((Models.UserViewModel)HttpContext.Current.Session["CurrentUser"]).Id;
-    var userId = @ViewBag.UserInfo.Id;
+    var userId = @Model.User.Id;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -18,65 +17,31 @@
 <body>
     <div id="user-info">
         <h3>User information:</h3>
-        @Html.Partial("UserInfo", (Models.UserViewModel)ViewBag.UserInfo)
+        @Html.Partial("UserInfo", @Model.User)
         <br />
 
         <span class="badge">Tweets: @Model.TweetsCount</span>
         <span class="badge">Following: @Model.CurrentUserFollows.Where(follows => follows.SubId == userId).Count()</span>
         <span class="badge">Followers:<span id="followers">@Model.CurrentUserFollows.Where(follows => follows.PubId == userId).Count()</span></span>
+
         <div class="papa-container" id="@userId">
 
-            @for (var i = 0; i < Model.Users.Count;i++)
+            @if (Model.Users.FirstOrDefault(x => x.Id == @userId).IsFollowedByCurrent)
             {
-                var x = Model.CurrentUserFollows.FirstOrDefault(f => f.PubId == userId && f.SubId == currentUserId);
-
-                if (x != null)
-                {
-                    <span class="btn btn action-unfollow" style="display:block;">Unfollow this user!</span>
-                    <span class="btn action-follow" style="display:none;">Follow this user!</span>
-                    break;
-                }
-                else
-                {
-                    <span class="btn btn action-unfollow" style="display:none;">Unfollow this user!</span>
-                    <span class="btn action-follow" style="display:block;">Follow this user!</span>
-                    break;
-                }
+                <span class="btn btn action-unfollow" style="display: block;">Unfollow this user!</span>
+                <span class="btn action-follow" style="display: none;">Follow this user!</span>
+            }
+            else
+            {
+                <span class="btn btn action-unfollow" style="display: none;">Unfollow this user!</span>
+                <span class="btn action-follow" style="display: block;">Follow this user!</span>
             }
            
-         </div>
-        <hr />
-        <h3>User tweets:</h3>
-
-        <div id="tweets" style="width: 50%; margin: 0 auto;">
-            @foreach (var item in Model.Tweets)
-            {
-                <div class="panel panel-primary" >
-                    <div class="panel-heading" style="text-align:center">
-                        <h7 class="panel-title">@ViewBag.UserInfo.First_name  @ViewBag.UserInfo.Last_name</h7>
-                    </div>
-                    <div class="panel-body">
-                        <h5 style="word-wrap: break-word;">@item.Body</h5>
-                        <br />
-                        <hr style="margin-top:0px; margin-bottom: 0px;"/>
-                        @item.DateAdded
-                        <br />
-                    </div>
-                </div>
-                <br />
-            }
         </div>
+        <hr />
 
-
-        @if ( Model.TweetsCount > Model.PageInfo.PageSize )
-        {
-            <div class="text-center">
-                <div class="btn-group">
-                    @Html.PageLinks(Model.PageInfo, x => Url.Action("Info", new { page = x}))
-                </div>
-            </div>
-        }
+        <h3>User tweets:</h3>
+        @Html.Partial("InfoTweetsPartial", @Model.Tweets)
     </div>
-    
 </body>
 </html>

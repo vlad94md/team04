@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Models.ViewModels
 {
-    public class NewsfeedViewModel
-    {
-        public List<TweetViewModel> Tweets;
-        public PageInfo PageInfo { get; set; }
-        public int TweetsCount { get; set; }
-    }
+    //public class NewsfeedViewModel
+    //{
+    //    public List<TweetViewModel> Tweets;
+    //    public int TweetsCount { get; set; }
+    //}
 }

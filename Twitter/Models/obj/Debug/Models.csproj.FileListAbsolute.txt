@@ -51,3 +51,8 @@ C:\Users\vguleaev\Desktop\Twitter\Models\obj\Debug\Models.dll
 C:\Users\vguleaev\Desktop\Twitter\Models\obj\Debug\Models.pdb
 C:\Users\vguleaev\Desktop\Twitter\Models\bin\Debug\Models.dll
 C:\Users\vguleaev\Desktop\Twitter\Models\bin\Debug\Models.pdb
+D:\GIT\team04\Twitter\Models\bin\Debug\PagedList.dll
+D:\GIT\team04\Twitter\Models\bin\Debug\PagedList.Mvc.dll
+D:\GIT\team04\Twitter\Models\bin\Debug\PagedList.xml
+D:\GIT\team04\Twitter\Models\bin\Debug\PagedList.Mvc.xml
+D:\GIT\team04\Twitter\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

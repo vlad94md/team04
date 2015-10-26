@@ -636,3 +636,7 @@ C:\Users\vguleaev\Desktop\Twitter\WebUI\bin\Converter.pdb
 C:\Users\vguleaev\Desktop\Twitter\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
 C:\Users\vguleaev\Desktop\Twitter\WebUI\obj\Debug\WebUI.dll
 C:\Users\vguleaev\Desktop\Twitter\WebUI\obj\Debug\WebUI.pdb
+D:\GIT\team04\Twitter\WebUI\bin\PagedList.dll
+D:\GIT\team04\Twitter\WebUI\bin\PagedList.Mvc.dll
+D:\GIT\team04\Twitter\WebUI\bin\PagedList.xml
+D:\GIT\team04\Twitter\WebUI\bin\PagedList.Mvc.xml

@@ -177,3 +177,5 @@ C:\Users\vguleaev\Desktop\Twitter\Converter\bin\Debug\log4net.xml
 C:\Users\vguleaev\Desktop\Twitter\Converter\obj\Debug\Converter.csprojResolveAssemblyReference.cache
 C:\Users\vguleaev\Desktop\Twitter\Converter\obj\Debug\Converter.dll
 C:\Users\vguleaev\Desktop\Twitter\Converter\obj\Debug\Converter.pdb
+D:\GIT\team04\Twitter\Converter\bin\Debug\PagedList.dll
+D:\GIT\team04\Twitter\Converter\bin\Debug\PagedList.xml

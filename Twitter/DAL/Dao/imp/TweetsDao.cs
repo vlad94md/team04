@@ -29,6 +29,16 @@ namespace DAL
             return result;
         }
 
+        public ICollection<Tweet> GetTweetCount(int amount, int counter)
+        {
+            ICollection<Tweet> result;
+            using (var context = new TwitterEntities())
+            {
+                result = context.Tweets.Skip(counter * amount).Take(amount).ToList();
+            }
+            return result;
+        }
+
         public bool Add(Tweet tweet)
         {
             bool result = false;

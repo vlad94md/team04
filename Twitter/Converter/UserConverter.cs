@@ -68,5 +68,18 @@ namespace Converter
             }
             return result;
         }
+
+        public static User ConvertViewModelToDB(UserViewModel user)
+        {
+            var newUser = new User
+            {
+                First_name = user.First_name,
+                Last_name = user.Last_name,
+                Email = user.Email,
+                Id = user.Id,
+            };
+
+            return newUser;
+        }
     }
 }

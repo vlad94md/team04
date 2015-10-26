@@ -13,10 +13,12 @@ namespace Services
     public class UserService : IUserService
     {
         private IUserDao userContext;
+        private IFollowService followContext;
 
-        public UserService(IUserDao userContext)
+        public UserService(IUserDao userContext, IFollowService followContext)
         {
             this.userContext = userContext;
+            this.followContext = followContext;
         }
 
         public bool AddNewUser(UserModel user)
@@ -48,15 +50,22 @@ namespace Services
             return UserConverter.ConvertToViewModel(currUser);
         }
 
-        public List<UserViewModel> GetAll()
+        public List<UserViewModel> GetAll(int currentUserId)
         {
             List<UserViewModel> result = new List<UserViewModel>();
             var allUsers = userContext.GetList();
             foreach (var user in allUsers)
             {
-                result.Add(UserConverter.ConvertToViewModel(user));
+                UserViewModel convertedUser = UserConverter.ConvertToViewModel(user);
+                convertedUser.IsFollowedByCurrent = (followContext.GetList().Where(h => h.SubId == currentUserId && h.PubId == user.Id).ToList().Count > 0); //change
+                result.Add(convertedUser); 
             }
             return result;
+        }
+
+        public void EditUser(UserViewModel user)
+        {
+            userContext.Update(UserConverter.ConvertViewModelToDB(user));
         }
     }
 }

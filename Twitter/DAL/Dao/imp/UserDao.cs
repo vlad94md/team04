@@ -56,7 +56,9 @@ namespace DAL
 
         public bool Update(User user)
         {
+            var pass = GetById(user.Id).Passwrd;
             bool result = false;
+            user.Passwrd = pass;
             using (var context = new TwitterEntities())
             {
                 context.Users.Attach(user);

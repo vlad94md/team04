@@ -44,8 +44,8 @@
                         <button type="submit" class="btn btn-default">Go!</button>
                     </form>*@
                     <ul class="nav navbar-nav navbar-right">
-                        <li id="helloString"><a>Hello, @currentUser.First_name @currentUser.Last_name</a></li>
-                        <li><a href="@Url.Action("LogOut", "Account")" class="btn btn-primary logout" role="button" style="color:white;">LogOut</a></li>
+                         <li id="helloString"><a href="@Url.Action("UsersProfile", "User")">Hello, @currentUser.First_name @currentUser.Last_name</a></li>
+                         <li><a href="@Url.Action("LogOut", "Account")" class="btn btn-primary logout" role="button" style="color:white;">LogOut</a></li>
                     </ul>
                 </div>
             </div>
