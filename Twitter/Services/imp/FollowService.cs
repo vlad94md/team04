@@ -1,12 +1,10 @@
-﻿using DAL;
+﻿using Converter;
+using DAL;
+using Models;
+using Models.ViewModels;
+using StaticLogger;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Models.ViewModels;
-using Models;
-using Converter;
 
 namespace Services
 {
@@ -19,20 +17,32 @@ namespace Services
             this.context = _context;
         }
 
-        public bool Follow(int id, int id2)
+        public bool Follow(int publisherId, int subscriberId)
         {
-            if (context.Add(id, id2))
-                return true;
-            else
-                return false;
+            bool result = false;
+            try
+            {
+                result = context.Add(publisherId, subscriberId);
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e.Message);
+            }
+            return result;
         }
 
         public bool UnFollow(int id)
         {
-            if (context.Delete(id))
-                return true;
-            else
-                return false;
+            bool result = false;
+            try
+            {
+                result = context.Delete(id);
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e.Message);
+            }
+            return result;
         }
 
         public List<UserViewModel> GetFollows(int id)
@@ -45,10 +55,16 @@ namespace Services
 
         public List<FollowViewModel> GetList()
         {
-            List<FollowViewModel> followlist = UserConverter.ConvertFollowModel(context.GetList());
+            List<FollowViewModel> followlist = new List<FollowViewModel>();
+            try
+            {
+                followlist = UserConverter.ConvertFollowModel(context.GetList());
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e.Message);
+            }       
             return followlist;
         }
-
-        
     }
 }

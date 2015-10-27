@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using StaticLogger;
 
 namespace WebUI.Controllers
 {
@@ -34,8 +35,9 @@ namespace WebUI.Controllers
             int pageSize = 10;
             int pageNumber = (page ?? 1);
             allModel.Users = allUsers.ToPagedList(pageNumber, pageSize);
-            allModel.TotalUsers = allUsers.Count;      
+            allModel.TotalUsers = allUsers.Count;
 
+            Logger.Log.Debug("all users are displayed for ID:" + currentUser.Id + " " + currentUser.Email);
             return View(allModel);
         }
 
@@ -63,6 +65,7 @@ namespace WebUI.Controllers
             int totalItems = tweets.Count;
             infoModel.Tweets = tweets.ToPagedList(pageNumber, pageSize);
 
+            Logger.Log.Debug("information about user ID:" + curUser.Id + " " + curUser.Email + " are displayed");
             return View(infoModel);
         }
 
@@ -83,6 +86,7 @@ namespace WebUI.Controllers
             int totalItems = tweets.Count;
             infoModel.Tweets = tweets.ToPagedList(pageNumber, pageSize);
 
+            Logger.Log.Debug("user " + currentUser.Id + " " + currentUser.Email + " entered on his userpage");
             return View(infoModel);
         }
 
@@ -93,6 +97,8 @@ namespace WebUI.Controllers
                 if (userService.IsEmailUnique(user.Email))
                 {
                     userService.EditUser(user);
+                    var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
+                    Logger.Log.Debug("user  ID:" + currentUser.Id + " " + currentUser.Email + " updated own information");
                 }
                 else { return false; }
                 return true;
@@ -106,6 +112,7 @@ namespace WebUI.Controllers
             var user = userService.GetById(currentUser.Id);
 
             HttpContext.Session["CurrentUser"]  = user;
+            Logger.Log.Debug("user  ID:" + currentUser.Id + " " + currentUser.Email + " has entered on his own profile");
 
             return View(user);
         }
@@ -115,6 +122,7 @@ namespace WebUI.Controllers
             var currentUser = (UserViewModel)HttpContext.Session["CurrentUser"];
             subsriberId = currentUser.Id;
             followService.Follow(publisherId, subsriberId);
+            Logger.Log.Debug("user ID:" + subsriberId + " now follows user ID:" + publisherId);
 
             return View();
         }

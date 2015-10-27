@@ -1,9 +1,7 @@
-﻿using System;
+﻿using DAL.Entities;
+using StaticLogger;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL.Entities;
 
 namespace DAL
 {
@@ -17,16 +15,16 @@ namespace DAL
             this.user = _user;
         }
 
-        public bool Add(int id, int id2)
+        public bool Add(int publisherId, int subscriberId)
         {
             bool result = false;
 
             var follow = new Follow
             {
-                Publisher_Id = id,
-                Subscriber_Id = id2,
-                User = user.GetById(id),
-                User1 = user.GetById(id2)
+                Publisher_Id = publisherId,
+                Subscriber_Id = subscriberId,
+                User = user.GetById(publisherId),
+                User1 = user.GetById(subscriberId)
             };
 
             using (var context = new TwitterEntities())
@@ -35,29 +33,23 @@ namespace DAL
                 context.Follows.Add(follow);
 
                 result = context.SaveChanges() > 0;
+                Logger.Log.Debug("A new follow pair created with publisherId " + follow.Publisher_Id + " and subscriberId " + follow.Subscriber_Id);
             }
-
             return result;
         }
 
         public ICollection<User> GetUserFollows(int currentUserId)
         {
             List<User> result = new List<User>();
-            try
-            {
-                using (var context = new TwitterEntities())
-                {
-                    var xd = context.Follows.Where(x => x.Subscriber_Id == currentUserId && x.Publisher_Id != null);
 
-                    foreach (var item in xd)
-                    {
-                        result.Add(user.GetById(item.Publisher_Id));
-                    }
-                }
-            }
-            catch (Exception e)
+            using (var context = new TwitterEntities())
             {
-                throw e;
+                var xd = context.Follows.Where(x => x.Subscriber_Id == currentUserId && x.Publisher_Id != null);
+
+                foreach (var item in xd)
+                {
+                    result.Add(user.GetById(item.Publisher_Id));
+                }
             }
             return result.ToList();
         }
@@ -88,6 +80,7 @@ namespace DAL
                 context.Follows.Attach(follow);
                 context.Follows.Remove(follow);
                 result = context.SaveChanges() > 0;
+                Logger.Log.Debug("A new follow pair deleted with publisherId " + follow.Publisher_Id + " and subscriberId " + follow.Subscriber_Id);
             }
             return result;
         }

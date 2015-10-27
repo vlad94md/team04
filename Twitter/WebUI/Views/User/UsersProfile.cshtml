@@ -1,6 +1,5 @@
 ﻿@model Models.UserViewModel
 
-
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     var currentUserId = ((Models.UserViewModel)HttpContext.Current.Session["CurrentUser"]).Id;
@@ -9,14 +8,33 @@
 <h3>Your profile</h3>
 
 <div id="@currentUserId" class="view-edit-parent">
-<button class="view-button-edit">Edit information</button><br />
-<p>First name: <span class="first-name-edit">@Model.First_name </span><input class="collapse first-name-text"   style=""/></p>  
-<p>Last name: <span class="last-name-edit">@Model.Last_name </span><input class="collapse last-name-text" /></p>
-<p>E-mail: <span class="email-edit">@Model.Email </span><input class="collapse email-text" /></p>
-        <div class="collapse save-cancel-buttons">
-        <button class="view-edit-save">Save</button>
-        <button class="view-edit-cancel">Cancel</button>
-       </div>
+    <button class="btn btn-danger view-button-edit">Edit information</button><br />
+    <hr />
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="form-group has-warning">
+                <label class="control-label" for="inputWarning">First name:</label>
+                <span class="first-name-edit">@Model.First_name </span>
+                <input type="text" class="form-control collapse first-name-text" id="inputWarning">
+            </div>
+            <div class="form-group has-warning">
+                <label class="control-label" for="inputWarning">Last name:</label>
+                <span class="last-name-edit">@Model.Last_name </span>
+                <input type="text" class="form-control collapse last-name-text" id="inputWarning">
+            </div>
+            <div class="form-group has-warning">
+                <label class="control-label" for="inputWarning">E-mail:</label>
+                <span class="email-edit">@Model.Email </span>
+                <input type="text" class="form-control collapse email-text" id="inputWarning">
+            </div>
+        </div>
+    </div>
+
+    <div class="collapse save-cancel-buttons">
+        <button class="btn btn-success view-edit-save">Save</button>
+        <button class="btn btn-default view-edit-cancel">Cancel</button>
+    </div>
 </div>
 
 <script>
@@ -46,5 +64,4 @@
         });
 
     });
-
-    </script>
+</script>

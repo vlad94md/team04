@@ -7,6 +7,7 @@ using DAL;
 using Models;
 using Converter;
 using DAL.Entities;
+using StaticLogger;
 
 namespace Services
 {
@@ -23,49 +24,96 @@ namespace Services
 
         public bool AddNewUser(UserModel user)
         {
-            return userContext.Add(UserConverter.ConvertToDB(user));
+            bool result = false;
+            try
+            {
+                result = userContext.Add(UserConverter.ConvertToDB(user));
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e);
+            }
+            return result;
         }
 
         public bool IsEmailUnique(string email)
         {
-            var allUsers = userContext.GetList();
-
-            return !allUsers.Any(x => x.Email == email);
+            bool result = false;
+            try
+            {
+                var allUsers = userContext.GetList();
+                result = !allUsers.Any(x => x.Email == email);
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e);
+            }
+            return result;
         }
 
         public UserViewModel IsEmailAndPassCorrect(LogInUserViewModel model)
         {
-            var curUser = userContext.GetList().FirstOrDefault(x => x.Email == model.Email);
-            if (curUser != null)
+            try
             {
-                if (curUser.Passwrd == model.Passwrd)
-                    return UserConverter.ConvertToViewModel(curUser);
+                var curUser = userContext.GetList().FirstOrDefault(x => x.Email == model.Email);
+                if (curUser != null)
+                {
+                    if (curUser.Passwrd == model.Passwrd)
+                        return UserConverter.ConvertToViewModel(curUser);
+                }
+            }
+            catch(Exception e)
+            {
+                Logger.Log.Error(e);
             }
             return null;
         }
 
         public UserViewModel GetById(int id)
         {
-            User currUser = userContext.GetById(id);
-            return UserConverter.ConvertToViewModel(currUser);
+            UserViewModel result = null;
+            try 
+            {
+                User currUser = userContext.GetById(id);
+                result = UserConverter.ConvertToViewModel(currUser);
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e);
+            }
+            return result;
         }
 
         public List<UserViewModel> GetAll(int currentUserId)
         {
             List<UserViewModel> result = new List<UserViewModel>();
-            var allUsers = userContext.GetList();
-            foreach (var user in allUsers)
+            try
             {
-                UserViewModel convertedUser = UserConverter.ConvertToViewModel(user);
-                convertedUser.IsFollowedByCurrent = (followContext.GetList().Where(h => h.SubId == currentUserId && h.PubId == user.Id).ToList().Count > 0); //change
-                result.Add(convertedUser); 
+                var allUsers = userContext.GetList();
+                foreach (var user in allUsers)
+                {
+                    UserViewModel convertedUser = UserConverter.ConvertToViewModel(user);
+                    convertedUser.IsFollowedByCurrent = (followContext.GetList().Exists(h => h.SubId == currentUserId && h.PubId == user.Id));
+                    result.Add(convertedUser);
+                }
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e.Message);
             }
             return result;
         }
 
         public void EditUser(UserViewModel user)
         {
-            userContext.Update(UserConverter.ConvertViewModelToDB(user));
+            try
+            {
+                userContext.Update(UserConverter.ConvertViewModelToDB(user));
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e.Message);
+            }
         }
     }
 }

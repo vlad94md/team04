@@ -43,11 +43,14 @@ textarea {
     margin-bottom: 0px;
 }
 
-.logout:hover {
-        background-color: orange !important;
+.myprofile:hover {
+        /*background-color: orange !important;*/
         color: black !important;
         text-decoration: none;
     }
+.open {
+    color: red !important;
+}
 
 html {
     position: relative;
@@ -76,9 +79,9 @@ body {
     }
 
 .action-follow {
-    position: absolute;
-    right: 475px;
-    top: 205px;
+    /*position: absolute;*/
+    /*right: 475px;
+    top: 205px;*/
     background: #3498db;
     border-radius: 0px;
     font-family: Arial;
@@ -94,9 +97,9 @@ body {
     }
 
 .action-unfollow {
-    position: absolute;
+    /*position: absolute;
     right: 475px;
-    top: 205px;
+    top: 205px;*/
     background: #FFA500;
     border-radius: 0px;
     font-family: Arial;

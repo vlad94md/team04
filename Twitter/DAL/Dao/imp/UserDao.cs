@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL.Entities;
-using System.Data;
+﻿using DAL.Entities;
 using StaticLogger;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace DAL
 {
@@ -16,7 +14,7 @@ namespace DAL
             ICollection<User> result;
             using (var context = new TwitterEntities())
             {
-                result = context.Users.ToList(); 
+                result = context.Users.ToList();
             }
             return result;
         }
@@ -26,6 +24,7 @@ namespace DAL
             if (user == null) return false;
 
             bool result = false;
+
             using (var context = new TwitterEntities())
             {
                 context.Users.Attach(user);
@@ -39,12 +38,13 @@ namespace DAL
         public bool Delete(User user)
         {
             bool result = false;
+
             using (var context = new TwitterEntities())
             {
                 context.Users.Attach(user);
                 context.Entry(user).State = EntityState.Deleted;
                 result = context.SaveChanges() > 0;
-                Logger.Log.Debug("new user ID:" + user.Id + " " + user.Email + " was deleted successfully");
+                Logger.Log.Debug("user ID:" + user.Id + " " + user.Email + " was deleted successfully");
             }
             return result;
         }
@@ -59,11 +59,13 @@ namespace DAL
             var pass = GetById(user.Id).Passwrd;
             bool result = false;
             user.Passwrd = pass;
+
             using (var context = new TwitterEntities())
             {
                 context.Users.Attach(user);
                 context.Entry(user).State = EntityState.Modified;
                 result = context.SaveChanges() > 0;
+                Logger.Log.Debug("User ID:" + user.Id + " " + user.Email + " was updated successfully");
             }
             return result;
         }
@@ -71,6 +73,7 @@ namespace DAL
         public User GetById(int id)
         {
             User result = null;
+
             using (var context = new TwitterEntities())
             {
                 result = context.Users.FirstOrDefault(x => x.Id == id);

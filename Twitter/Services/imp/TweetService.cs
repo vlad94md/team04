@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Converter;
 using DAL;
 using Models;
-using Converter;
+using StaticLogger;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Services
 {
@@ -22,38 +21,80 @@ namespace Services
 
         public bool Add(TweetModel tweet)
         {
-            return tweetContext.Add(TweetConverter.ConvertToDB(tweet));
+            bool result = false;
+            try
+            {
+                result = tweetContext.Add(TweetConverter.ConvertToDB(tweet));
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e.Message);
+            }
+            return result;
         }
 
         public List<TweetViewModel> GetListById(int userId)
         {
             List<TweetViewModel> result = new List<TweetViewModel>();
-            var thisUserTweets = tweetContext.GetList().Where( x => x.User_Id == userId);
-
-            foreach (var tweet in thisUserTweets)
+            try
             {
-                var convertedTweet = TweetConverter.ConvertToViewModel(tweet);
-                convertedTweet.Author = userContext.GetById(convertedTweet.AuthorId).First_name + " " + userContext.GetById(convertedTweet.AuthorId).Last_name;
-                result.Add(convertedTweet);
-            }
+                var thisUserTweets = tweetContext.GetList().Where(x => x.User_Id == userId);
 
-            result = result.OrderByDescending(x => x.DateAdded).ToList();
+                foreach (var tweet in thisUserTweets)
+                {
+                    var convertedTweet = TweetConverter.ConvertToViewModel(tweet);
+                    convertedTweet.Author = userContext.GetById(convertedTweet.AuthorId).First_name + " " + userContext.GetById(convertedTweet.AuthorId).Last_name;
+                    result.Add(convertedTweet);
+                }
+                result = result.OrderByDescending(x => x.DateAdded).ToList();
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e.Message);
+            }
             return result;
         }
 
         public bool Update(TweetViewModel tweet)
         {
-            return tweetContext.Update(TweetConverter.ConvertToDB(tweet));
+            bool result = false;
+            try
+            {
+                result = tweetContext.Update(TweetConverter.ConvertToDB(tweet));
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e.Message);
+            }
+            return result;
         }
 
         public bool Update(int id, string text)
         {
-            return tweetContext.Save(id, text);
+            bool result = false;
+            try
+            {
+                result = tweetContext.Save(id, text);
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e.Message);
+            }
+            return result;
         }
 
         public bool Delete(int id)
         {
-            return tweetContext.Delete(id);
+            bool result = false;
+            try
+            {
+                result = tweetContext.Delete(id);
+            }
+            catch (Exception e)
+            {
+                Logger.Log.Error(e.Message);
+            }
+            return result;
         }
     }
 }

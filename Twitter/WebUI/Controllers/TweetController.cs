@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using StaticLogger;
 
 namespace WebUI.Controllers
 {
@@ -44,6 +45,7 @@ namespace WebUI.Controllers
 
             allFollowingUsersTweets = allFollowingUsersTweets.OrderByDescending(x => x.DateAdded).ToList();
 
+            Logger.Log.Debug("newsfeed page displayed for user " + currentUser.Id + " " + currentUser.Email);
             return View("Newsfeed", allFollowingUsersTweets.ToPagedList(pageNumber, pageSize));
         }
 
@@ -62,6 +64,7 @@ namespace WebUI.Controllers
                 };
 
                 tweetService.Add(newTweet);
+                Logger.Log.Debug("user ID:" + currentUser.Id + " " + currentUser.Email + " added new tweet from newsfeed page");
             }
             else
             {

@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DAL.Entities;
-using System.Data;
+﻿using DAL.Entities;
 using StaticLogger;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 
 namespace DAL
 {
     public class TweetsDao : ITweetsDao
     {
-        TwitterEntities context;
-        IUserDao userDao;
+        private TwitterEntities context;
+        private IUserDao userDao;
 
         public TweetsDao(IUserDao userContext)
         {
@@ -29,19 +26,10 @@ namespace DAL
             return result;
         }
 
-        public ICollection<Tweet> GetTweetCount(int amount, int counter)
-        {
-            ICollection<Tweet> result;
-            using (var context = new TwitterEntities())
-            {
-                result = context.Tweets.Skip(counter * amount).Take(amount).ToList();
-            }
-            return result;
-        }
-
         public bool Add(Tweet tweet)
         {
             bool result = false;
+
             using (context = new TwitterEntities())
             {
                 tweet.User = userDao.GetById(tweet.User_Id);
@@ -51,6 +39,7 @@ namespace DAL
                 result = context.SaveChanges() > 0;
                 Logger.Log.Debug("user ID:" + tweet.User_Id + " " + userDao.GetById(tweet.User_Id).Email + " added a new tweet ID:" + tweet.Id);
             }
+
             return result;
         }
 
@@ -63,6 +52,7 @@ namespace DAL
                 context.Tweets.Attach(tweet);
                 context.Tweets.Remove(tweet);
                 result = context.SaveChanges() > 0;
+                Logger.Log.Debug("user ID:" + tweet.User_Id + " " + userDao.GetById(tweet.User_Id).Email + " deleted a tweet ID:" + tweet.Id);
             }
             return result;
         }
@@ -77,6 +67,7 @@ namespace DAL
                 result = context.SaveChanges() > 0;
                 Logger.Log.Debug("user ID:" + tweet.User_Id + " " + userDao.GetById(tweet.User_Id).Email + " deleted a tweet ID:" + tweet.Id);
             }
+
             return result;
         }
 
@@ -89,7 +80,9 @@ namespace DAL
                 context.Tweets.Attach(tweet);
                 context.Entry(tweet).State = EntityState.Modified;
                 result = context.SaveChanges() > 0;
+                Logger.Log.Debug("user ID:" + tweet.User_Id + " " + userDao.GetById(tweet.User_Id).Email + " updated a tweet ID:" + tweet.Id);
             }
+
             return result;
         }
 

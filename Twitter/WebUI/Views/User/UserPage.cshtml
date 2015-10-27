@@ -12,11 +12,17 @@
 <body>
     <div id="this-user-page">
         <h3>Your information:</h3>
-        @Html.Partial("UserInfo", @Model.User)
-        <br />
-        <span class="badge">Tweets: <span id="tweet-badge">@Model.TweetsCount</span></span>
-        <span class="badge">Following: @Model.CurrentUserFollows.Where(h => h.SubId == currentUserId).Count()</span>
-        <span class="badge">Followers: @Model.CurrentUserFollows.Where(h => h.PubId == currentUserId).Count()</span>
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+                @Html.Partial("UserInfo", @Model.User)
+                <br />
+                <span class="badge">Tweets: <span id="tweet-badge">@Model.TweetsCount</span></span>
+                <span class="badge">Following: @Model.CurrentUserFollows.Where(h => h.SubId == currentUserId).Count()</span>
+                <span class="badge">Followers: @Model.CurrentUserFollows.Where(h => h.PubId == currentUserId).Count()</span>
+            </div>
+        </div>
+
         <hr />
 
         @Html.Partial("UserPageTweetsPartial", Model.Tweets)
