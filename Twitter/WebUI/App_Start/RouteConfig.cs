@@ -18,6 +18,12 @@ namespace WebUI
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                    "Info", // Route name
+                    "People/Info/{id}",  // URL with parameters
+                    new { controller = "User", action = "Info", id = UrlParameter.Optional }  // Parameter defaults
+            );
         }
     }
 }

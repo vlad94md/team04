@@ -6,28 +6,25 @@ using Models;
 using System;
 using Services;
 namespace WebUI.Controllers
-{
+{   
+    [AllowAnonymous]
     public class HomeController : Controller
     {
-        private IUserService userService;
-        //private bool loggedIn = false;
+        private ITweetService tweetS;
 
-        public HomeController(IUserService _userService)
+        public HomeController(ITweetService _tweetS)
         {
-            userService = _userService;
+            this.tweetS = _tweetS;
         }
 
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult Newsfeed()
-        {
-            if (true)
-                return View();
+            if (HttpContext.Session["CurrentUser"] != null)
+            {
+                return RedirectToAction("Newsfeed", "Tweet");
+            }
             else
-                return RedirectToAction("Index", "Home", new { Msg = "Not logged In" });
+                return View();
         }
     }
 }

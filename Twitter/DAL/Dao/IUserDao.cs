@@ -7,8 +7,10 @@ using DAL.Entities;
 
 namespace DAL
 {
-    public interface IUserDao
+    public interface IUserDao : IBaseDao<User>
     {
-        bool Add(User user);
+         bool Update(User user);
+         bool Delete(User user);
+         bool Add(User user);
     }
 }

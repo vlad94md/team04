@@ -23,6 +23,10 @@ namespace WebUI.App_Start
             //builder.RegisterType<BookRepository>().As<IRepository<Book>>();
             builder.RegisterType<UserService>().As<IUserService>();
             builder.RegisterType<UserDao>().As<IUserDao>();
+            builder.RegisterType<TweetService>().As<ITweetService>();
+            builder.RegisterType<TweetsDao>().As<ITweetsDao>();
+            builder.RegisterType<FollowService>().As<IFollowService>();
+            builder.RegisterType<FollowsDao>().As<IFollowsDao>();
 
             Container = builder.Build();
 

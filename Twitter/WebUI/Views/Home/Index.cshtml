@@ -1,6 +1,6 @@
 ﻿@model Models.UserModel
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_StartLayout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -11,23 +11,30 @@
     <title>Index</title>
 </head>
 <body>
-    <h1> Welcome to Twitter! :)</h1>
-
-    @using (Html.BeginForm())
-    {
-        <p>Username: @Html.TextBoxFor(x => x.Username) </p>
-        <p>Password: @Html.PasswordFor(x => x.Passwrd)</p>
-        <input type="submit" value="Log In!" />   
-    }
-
-    @using (Html.BeginForm())
-    {
-        <h2>Don't have a Twitter account? Sign up now!</h2> 
-        <p>Your Full Name: @Html.TextBoxFor(x => x.FullName) </p>
-        <p>Your Username: @Html.TextBoxFor(x => x.Username) </p>
-        <p>Your Email: @Html.TextBoxFor(x => x.Email)</p>
-        <p>Your Password: @Html.PasswordFor(x => x.Passwrd)</p>
-        <input type="submit" value="Register!" />   
-    }
+    <div id="startPage" style="padding: 10%; width: 70%; margin: 0 auto">
+        <div class="panel panel-default">
+            <center>
+            <div class="panel-body">
+                    <h1>Welcome to Twitter! :)</h1>
+                    <form class="form-horizontal">
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="button" id="login" class="btn btn-default" value="LogIn" style="width: 200px; margin: 5px"
+                             onclick="location.href='@Url.Action("LogIn", "Account")'">
+                                    Sign In</button>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                                <button type="button" id="register" class="btn btn-default" value="Register" style="width: 200px; margin: 5px"
+                             onclick="location.href='@Url.Action("SignUp", "Account")'">
+                                    Register</button>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+            </center>
+        </div>
+    </div>
 </body>
 </html>
