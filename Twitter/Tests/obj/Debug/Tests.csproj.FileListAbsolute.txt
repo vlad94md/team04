@@ -169,3 +169,5 @@ C:\Users\vguleaev\Desktop\Twitter\Tests\bin\Debug\log4net.xml
 C:\Users\vguleaev\Desktop\Twitter\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
 C:\Users\vguleaev\Desktop\Twitter\Tests\obj\Debug\Tests.dll
 C:\Users\vguleaev\Desktop\Twitter\Tests\obj\Debug\Tests.pdb
+D:\GIT\team04\Twitter\Tests\bin\Debug\WebDriver.xml
+D:\GIT\team04\Twitter\Tests\bin\Debug\WebDriver.Support.xml

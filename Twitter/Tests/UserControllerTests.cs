@@ -10,24 +10,40 @@ using OpenQA.Selenium.Support.UI;
 
 namespace Tests
 {
-    //[TestClass]
-    //public class UserController
-    //{
-    //    FirefoxDriver firefox;
+    [TestClass]
+    public class UserController
+    {
+        FirefoxDriver firefox;
 
-    //    [TestMethod]
-    //    public void LogIn_TestUser_NewsfeedTitle()
-    //    {
-    //        firefox = new FirefoxDriver();
-    //        firefox.Navigate().GoToUrl("http://www.google.com/");
-    //        firefox.FindElement(By.Id("gbqfq")).SendKeys("Google");
-    //        firefox.FindElement(By.Id("gbqfq")).SendKeys(Keys.Enter); 
-    //    }
+        [TestMethod]
+        public void SingUp_TestUser_FindNameInHelloString()
+        {
+            firefox = new FirefoxDriver();
+            firefox.Navigate().GoToUrl("http://localhost:57336/");
+            firefox.FindElement(By.Id("register")).Click();
 
-    //    [TestCleanup]
-    //    public void TearDown()
-    //    {
-    //        firefox.Quit();
-    //    }
-    //}
+            //register page
+            firefox.FindElement(By.Id("inputFirstName")).SendKeys("testFirstName");
+            firefox.FindElement(By.Id("inputLastName")).SendKeys("testLastName");
+            firefox.FindElement(By.Id("inputEmail")).SendKeys("test@mail.com");
+            firefox.FindElement(By.Id("inputPassword")).SendKeys("123");
+            firefox.FindElement(By.Id("submit")).Click();
+            firefox.FindElement(By.Id("login")).Click();
+
+            //log in page
+            firefox.FindElement(By.Id("inputEmail")).SendKeys("test@mail.com");
+            firefox.FindElement(By.Id("inputPassword")).SendKeys("123");
+            firefox.FindElement(By.Id("login")).Click();
+
+            string helloString = firefox.FindElement(By.Id("helloString")).Text;
+            string result = "Hello, testFirstName testLastName";
+            Assert.IsTrue(result == helloString);
+        }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            firefox.Quit();
+        }
+    }
 }

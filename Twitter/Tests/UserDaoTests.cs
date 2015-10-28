@@ -18,7 +18,7 @@ namespace Tests
             testUser = new User()
             {
                 First_name = "Vlad Guleaev",
-                Email = "vlad@gmail.com",
+                Email = "test@test.com",
                 Passwrd = "123",
                 Last_name = "testUser"
             };

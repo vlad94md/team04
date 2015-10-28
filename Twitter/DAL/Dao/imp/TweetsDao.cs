@@ -51,6 +51,7 @@ namespace DAL
                 tweet.User = userDao.GetById(tweet.User_Id);
                 context.Tweets.Attach(tweet);
                 context.Tweets.Remove(tweet);
+                //context.Entry(tweet).State = EntityState.Deleted;
                 result = context.SaveChanges() > 0;
                 Logger.Log.Debug("user ID:" + tweet.User_Id + " " + userDao.GetById(tweet.User_Id).Email + " deleted a tweet ID:" + tweet.Id);
             }

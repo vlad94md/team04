@@ -21,9 +21,13 @@
 </div>
 
 <div class="text-center">
-    <div class="btn-group">
-        Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
-        from @Model.PageCount
-        @Html.PagedListPager(Model, page => Url.Action("Info", new { page }))
-    </div>
+            <div class="btn-group">
+                @if (Model.PageCount > 1) 
+                {
+                    <span>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+                    from @Model.PageCount
+                    </span>
+                    @Html.PagedListPager(Model, page => Url.Action("Info", new { page }))
+                }
+            </div>
 </div>
